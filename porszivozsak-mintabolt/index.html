@@ -1,0 +1,823 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Porszívózsák mintabolt – porzsák, szűrő, alkatrész és porszívójavítás | Budapest, Vörösvári út 7</title>
+<meta name="description" content="Porszívózsákok, szűrők, alkatrészek, porszívójavítás és szerelés Óbudán, a Vörösvári út 7. alatt. Telefon: +36 70 325 8905. Nyitva hétfőtől szombatig.">
+<meta name="theme-color" content="#ffd400">
+<!--
+  Megjegyzés a képekről: internetről letöltött képeket nem építettem be. Nem ellenőrizhető,
+  hogy valóban ezt a boltot ábrázolják-e, és hogy szabadon felhasználhatók-e.
+  Az oldalon szereplő rajzok egyszerű, díszítő célú vektoros illusztrációk, nem a boltot ábrázolják.
+  A bolt saját fotói (kirakat, pult, polcok) később ide beilleszthetők.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Porszívózsák mintabolt",
+  "description": "Porszívózsákok, szűrők és alkatrészek árusítása, porszívójavítás és szerelés.",
+  "telephone": "+36 70 325 8905",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Vörösvári út 7",
+    "addressLocality": "Budapest",
+    "postalCode": "1035",
+    "addressCountry": "HU"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Friday"], "opens": "09:00", "closes": "15:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday"], "opens": "09:00", "closes": "17:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "12:00"}
+  ]
+}
+</script>
+<style>
+:root{
+  --fekete:#111111;
+  --fekete-2:#2a2a2a;
+  --sarga:#ffd400;
+  --sarga-2:#ffe14d;
+  --sarga-halvany:#fff1a8;
+  --krem:#fff8e1;
+  --bg:#fffcf0;
+  --paper:#ffffff;
+  --ink:#111111;
+  --muted:#333333;
+  --line:#e8dfb3;
+  --csik:repeating-linear-gradient(-45deg,var(--fekete) 0 14px,var(--sarga) 14px 28px);
+  --fej:"Archivo", "Arial Black", Arial, sans-serif;
+  --test:"Atkinson Hyperlegible", Verdana, Arial, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{font-size:112.5%;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html.nagy{font-size:131.25%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--test);line-height:1.6;overflow-x:hidden;padding-bottom:4.75rem}
+@media (min-width:768px){body{padding-bottom:0}}
+img,iframe{max-width:100%}
+h1,h2,h3{font-family:var(--fej);line-height:1.1;margin:0 0 .6em;letter-spacing:-.015em;font-weight:900}
+h2{font-size:clamp(1.85rem,5.5vw,2.8rem)}
+h3{font-size:1.3rem}
+p{margin:0 0 1em}
+strong,b{font-weight:700}
+a{color:var(--ink);font-weight:700;text-underline-offset:.18em;text-decoration-thickness:2px}
+a:hover{color:var(--fekete-2)}
+:focus-visible{outline:3px solid var(--fekete);outline-offset:3px;border-radius:2px}
+.wrap{width:100%;max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.skip{position:absolute;left:-9999px;top:0;background:var(--fekete);color:var(--sarga);padding:.75rem 1rem;z-index:100;font-weight:700}
+.skip:focus{left:1rem;top:1rem}
+.kiemel{background:linear-gradient(transparent 58%,var(--sarga) 58%,var(--sarga) 92%,transparent 92%);padding:0 .1em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+/* Fejléc */
+.fejlec{position:sticky;top:0;z-index:50;background:var(--sarga);border-bottom:4px solid var(--fekete)}
+.fejlec .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4.25rem}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-family:var(--fej);font-weight:900;font-size:1.1rem;line-height:1.1}
+.logo-jel{flex:none;width:2.6rem;height:2.6rem;border-radius:50%;background:var(--fekete);display:grid;place-items:center;transition:transform .4s}
+.logo:hover .logo-jel{transform:rotate(180deg)}
+.logo-jel span{display:block;width:1.1rem;height:1.1rem;border-radius:50%;border:4px solid var(--sarga);border-right-color:transparent}
+.logo small{display:block;font-family:var(--test);font-weight:700;font-size:.8rem;color:var(--ink)}
+.menu-gomb{display:inline-flex;align-items:center;gap:.5rem;background:var(--fekete);color:var(--sarga);border:0;font:inherit;font-weight:700;padding:.6rem .9rem;min-height:3rem;cursor:pointer;border-radius:999px}
+.menu-gomb .vonalak{width:1.3rem;height:2px;background:var(--sarga);position:relative;display:block}
+.menu-gomb .vonalak::before,.menu-gomb .vonalak::after{content:"";position:absolute;left:0;width:100%;height:2px;background:var(--sarga);transition:transform .2s}
+.menu-gomb .vonalak::before{top:-6px}.menu-gomb .vonalak::after{top:6px}
+.menu-gomb[aria-expanded="true"] .vonalak{background:transparent}
+.menu-gomb[aria-expanded="true"] .vonalak::before{transform:translateY(6px) rotate(45deg)}
+.menu-gomb[aria-expanded="true"] .vonalak::after{transform:translateY(-6px) rotate(-45deg)}
+.nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--sarga);border-bottom:4px solid var(--fekete);padding:.5rem 1.25rem 1.25rem}
+.nav.nyitva{display:block}
+.nav ul{list-style:none;margin:0;padding:0}
+.nav li a{display:block;padding:.85rem 0;border-bottom:2px solid rgba(0,0,0,.18);text-decoration:none;color:var(--ink);font-weight:700;font-size:1.1rem}
+.nav .nav-extra{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+.betu-gomb{font:inherit;font-weight:700;background:var(--paper);color:var(--ink);border:3px solid var(--fekete);padding:.5rem .9rem;min-height:3rem;cursor:pointer;border-radius:999px}
+.betu-gomb[aria-pressed="true"]{background:var(--fekete);color:var(--sarga)}
+.fej-tel{display:none}
+
+@media (min-width:1024px){
+  .menu-gomb{display:none}
+  .nav{display:flex !important;position:static;border:0;padding:0;align-items:center;gap:1.5rem;background:none}
+  .nav ul{display:flex;gap:.4rem}
+  .nav li a{border:0;padding:.35rem .75rem;font-size:1rem;border-radius:999px;transition:background-color .15s,color .15s}
+  .nav li a:hover{background:var(--fekete);color:var(--sarga)}
+  .nav .nav-extra{margin:0;align-items:center}
+  .fej-tel{display:inline-flex}
+}
+
+/* Gombok */
+.gomb{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font-weight:700;text-decoration:none;min-height:3.4rem;padding:.8rem 1.5rem;border-radius:999px;font-size:1.1rem;transition:transform .15s,background-color .15s,color .15s,box-shadow .15s}
+.gomb-sarga{background:var(--sarga);color:var(--ink);border:3px solid var(--fekete)}
+.gomb-sarga:hover{background:var(--sarga-2);color:var(--ink);transform:translateY(-1px)}
+.gomb-keret{border:3px solid var(--fekete);color:var(--ink);background:var(--paper);box-shadow:4px 4px 0 var(--fekete)}
+.gomb-keret:hover{background:var(--fekete);color:var(--sarga);transform:translate(2px,2px);box-shadow:2px 2px 0 var(--fekete)}
+.gomb-sotet{background:var(--fekete);color:var(--sarga);border:3px solid var(--fekete);box-shadow:4px 4px 0 rgba(0,0,0,.25)}
+.gomb-sotet:hover{background:var(--fekete-2);color:var(--sarga-2);transform:translateY(-2px)}
+.gomb svg{width:1.3em;height:1.3em;flex:none}
+
+/* Hero */
+.hero{position:relative;background-color:var(--sarga);background-image:radial-gradient(rgba(0,0,0,.09) 1.6px,transparent 1.7px);background-size:22px 22px;color:var(--ink);overflow:hidden}
+.hero::after{content:"";position:absolute;left:-7rem;bottom:-9rem;width:22rem;height:22rem;border-radius:50%;border:2.5rem solid rgba(0,0,0,.07);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;padding-top:2.75rem;padding-bottom:4rem;display:grid;gap:2.5rem;align-items:center}
+.hely{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;background:var(--fekete);color:var(--sarga);padding:.3rem .85rem;margin-bottom:1.1rem;font-size:.95rem;border-radius:999px}
+.hely svg{width:1em;height:1em}
+.hero h1{font-size:clamp(2.2rem,8.5vw,4.4rem);max-width:17ch;margin-bottom:.5em}
+.hero h1 em{font-style:normal;background:var(--fekete);color:var(--sarga);padding:0 .2em;-webkit-box-decoration-break:clone;box-decoration-break:clone;line-height:1.3}
+.hero .bevezeto{font-size:1.2rem;max-width:36rem;font-weight:700}
+.hero-gombok{display:flex;flex-wrap:wrap;gap:.9rem;margin:1.6rem 0 1.4rem}
+.hero-info{display:flex;flex-wrap:wrap;gap:.75rem;font-size:1rem;font-weight:700}
+.hero-info > span,.hero-info > a{background:var(--paper);border:2px solid var(--fekete);border-radius:999px;padding:.3rem .85rem}
+.hero-info > a.bolti-chip{display:inline-flex;align-items:center;gap:.45rem;background:var(--fekete);color:var(--sarga);text-decoration:none}
+.hero-info > a.bolti-chip:hover{background:var(--fekete-2);color:var(--sarga-2)}
+.hero-info > a.bolti-chip svg{width:1.1em;height:1.1em;flex:none}
+.allapot{display:inline-flex;align-items:center;gap:.55rem;font-weight:700}
+.allapot::before{content:"";width:.9rem;height:.9rem;border-radius:50%;background:#9a9a9a;border:2px solid var(--fekete);flex:none}
+.allapot.nyitva::before{background:#22c55e}
+.allapot.zarva::before{background:#ef4444}
+.csillag-sor{display:inline-flex;align-items:center;gap:.4rem}
+.csillag-sor b{color:var(--ink)}
+.hero-kep{display:none;position:relative}
+.hero-kep .rajz{display:block;width:100%;height:auto;border-radius:36px;border:4px solid var(--fekete);box-shadow:12px 12px 0 var(--fekete);background:var(--fekete)}
+.matrica{position:absolute;right:-1rem;top:-1.5rem;width:8.5rem;height:8.5rem;border-radius:50%;background:var(--paper);border:3px solid var(--fekete);display:grid;place-content:center;text-align:center;transform:rotate(12deg);box-shadow:5px 5px 0 var(--fekete);line-height:1.1}
+.matrica strong{font-family:var(--fej);font-weight:900;font-size:2.3rem;display:block}
+.matrica span{font-size:.8rem;font-weight:700;display:block}
+@media (min-width:768px){
+  .hero .wrap{padding-top:4.5rem;padding-bottom:5.5rem}
+}
+@media (min-width:900px){
+  .hero .wrap{grid-template-columns:1.35fr .9fr;gap:3.5rem}
+  .hero-kep{display:block}
+}
+
+/* Futó szalag */
+.futo{position:relative;z-index:3;background:var(--fekete);color:var(--sarga);overflow:hidden;transform:rotate(-1.2deg);margin:-1.4rem -1rem 0;border-top:4px solid var(--sarga);border-bottom:4px solid var(--sarga);box-shadow:0 6px 0 rgba(0,0,0,.12)}
+.futo-sav{display:flex;width:max-content;animation:fut 32s linear infinite}
+.futo-sav span{font-family:var(--fej);font-weight:900;font-size:1.25rem;text-transform:uppercase;letter-spacing:.04em;padding:.75rem 0;white-space:nowrap}
+.futo-sav i{font-style:normal;color:#fff;padding:0 1.1rem}
+@keyframes fut{to{transform:translateX(-50%)}}
+
+/* Szekciók */
+section{scroll-margin-top:5rem}
+.szekcio{padding:3.5rem 0;position:relative}
+@media (min-width:768px){.szekcio{padding:5rem 0}}
+.felcim{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;background:var(--fekete);color:var(--sarga);text-transform:uppercase;letter-spacing:.08em;font-size:.9rem;margin-bottom:.9rem;padding:.25rem .8rem;border-radius:999px}
+.felcim::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--sarga)}
+.szekcio-fej{max-width:40rem;margin-bottom:2.25rem}
+.szekcio-fej p{color:var(--muted);font-size:1.1rem}
+.szekcio-fej p.felcim{color:var(--sarga);font-size:.9rem}
+
+/* Vásárlás csak a boltban */
+.bolti{padding-top:4.5rem;padding-bottom:0}
+@media (min-width:768px){.bolti{padding-top:5.5rem;padding-bottom:0}}
+.bolti-doboz{position:relative;background:var(--paper);border:4px solid var(--fekete);border-radius:28px;box-shadow:10px 10px 0 var(--fekete);padding:2.8rem 1.4rem 1.8rem;overflow:hidden;display:grid;gap:2rem}
+.bolti-doboz::before{content:"";position:absolute;left:0;right:0;top:0;height:16px;background:var(--csik)}
+.bolti-fej{display:flex;align-items:flex-start;gap:1rem;margin-bottom:.4rem}
+.bolti-ikon{flex:none;width:4.2rem;height:4.2rem;border-radius:50%;background:var(--sarga);border:3px solid var(--fekete);box-shadow:3px 3px 0 var(--fekete);display:grid;place-items:center;color:var(--fekete);transform:rotate(-8deg)}
+.bolti-ikon svg{width:2.2rem;height:2.2rem}
+.bolti h2{font-size:clamp(1.75rem,5.2vw,2.6rem);margin-bottom:.5em}
+.bolti .felcim{margin-bottom:.7rem}
+.bolti-szoveg{font-size:1.15rem}
+.bolti-szoveg strong{background:var(--sarga);padding:0 .2em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.bolti-gombok{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.4rem;align-items:center}
+.bolti-gombok .allapot{background:var(--krem);border:2px solid var(--fekete);border-radius:999px;padding:.35rem .9rem}
+.bolti-gombok .allapot:empty{display:none}
+.bolti-lista{list-style:none;margin:0;padding:0;display:grid;gap:1rem;align-content:center}
+.bolti-lista li{display:flex;gap:.9rem;align-items:flex-start;background:var(--krem);border:3px solid var(--fekete);border-radius:16px;padding:1rem 1.1rem;box-shadow:4px 4px 0 var(--fekete)}
+.bolti-lista li:nth-child(2){background:var(--sarga)}
+.bolti-lista .pont{flex:none;width:2.6rem;height:2.6rem;border-radius:50%;background:var(--fekete);color:var(--sarga);display:grid;place-items:center}
+.bolti-lista .pont svg{width:1.35rem;height:1.35rem}
+.bolti-lista strong{display:block;font-family:var(--fej);font-weight:900;font-size:1.1rem;line-height:1.2;margin-bottom:.2rem}
+.bolti-lista span.leiras{display:block;color:var(--muted)}
+.bolti-lista li:nth-child(2) span.leiras{color:var(--ink)}
+@media (min-width:768px){
+  .bolti-doboz{padding:3.2rem 2.5rem 2.5rem}
+}
+@media (min-width:1024px){
+  .bolti-doboz{grid-template-columns:1.15fr 1fr;gap:3rem;align-items:center}
+  .bolti-lista li:nth-child(1){transform:rotate(-1deg)}
+  .bolti-lista li:nth-child(2){transform:rotate(1deg) translateX(.6rem)}
+  .bolti-lista li:nth-child(3){transform:rotate(-.5deg)}
+}
+
+/* Kínálat */
+.kartyak{list-style:none;margin:0;padding:0;display:grid;gap:1.5rem}
+.kartya{position:relative;padding:1.6rem 1.6rem 1.8rem;border:3px solid var(--fekete);border-radius:22px;background:var(--paper);overflow:hidden;box-shadow:6px 6px 0 var(--fekete);transition:transform .2s,box-shadow .2s}
+.kartya:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--fekete)}
+.kartya .ikon{width:3.7rem;height:3.7rem;border-radius:50%;display:grid;place-items:center;background:var(--fekete);color:var(--sarga);margin-bottom:1.1rem}
+.kartya .ikon svg{width:1.9rem;height:1.9rem}
+.kartya .szam{position:absolute;right:1rem;top:.5rem;font-family:var(--fej);font-weight:900;font-size:4rem;line-height:1;color:rgba(0,0,0,.12)}
+@supports (-webkit-text-stroke:2px black){
+  .kartya .szam{color:transparent;-webkit-text-stroke:2px rgba(0,0,0,.35)}
+  .k-fekete .szam{-webkit-text-stroke-color:rgba(255,212,0,.55)}
+}
+.kartya h3{position:relative}
+.kartya p{margin:0;color:var(--muted);position:relative}
+.k-sarga{background:var(--sarga)}
+.k-sarga p{color:var(--ink)}
+.k-fekete{background:var(--fekete);color:#fff;box-shadow:6px 6px 0 var(--sarga)}
+.k-fekete:hover{box-shadow:9px 9px 0 var(--sarga)}
+.k-fekete h3{color:var(--sarga)}
+.k-fekete p{color:#ececec}
+.k-fekete .ikon{background:var(--sarga);color:var(--fekete)}
+.k-csikos{background:var(--krem);padding-top:2.4rem}
+.k-csikos::before{content:"";position:absolute;left:0;right:0;top:0;height:14px;background:var(--csik)}
+@media (min-width:768px){.kartyak{grid-template-columns:1fr 1fr}}
+@media (min-width:1024px){
+  .kartyak{grid-template-columns:repeat(3,1fr)}
+  .kartyak li:nth-child(1){grid-column:span 2}
+  .kartyak li:nth-child(4){grid-column:span 2}
+}
+
+/* Javítás sáv */
+.javitas{background:var(--sarga);color:var(--ink);overflow:hidden}
+.javitas::before,.javitas::after{content:"";position:absolute;left:0;right:0;height:16px;background:var(--csik)}
+.javitas::before{top:0}
+.javitas::after{bottom:0}
+.javitas .hatter-ikon{position:absolute;right:-4rem;top:50%;width:26rem;height:26rem;transform:translateY(-50%) rotate(-20deg);color:rgba(0,0,0,.06);pointer-events:none}
+.javitas .wrap{display:grid;gap:2.5rem;position:relative;z-index:1}
+.javitas h2{font-size:clamp(2.1rem,6.5vw,3.4rem);max-width:14ch}
+.tunetek{list-style:none;margin:0 0 1.75rem;padding:0;display:grid;gap:.6rem}
+.tunetek li{display:flex;align-items:center;gap:.75rem;font-size:1.1rem;font-weight:700;background:rgba(255,255,255,.55);border:2px solid var(--fekete);border-radius:12px;padding:.55rem .9rem}
+.tunetek li::before{content:"";flex:none;width:1.4rem;height:1.4rem;border-radius:50%;background:var(--fekete) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6l6 6-6 6' fill='none' stroke='%23ffd400' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/70% no-repeat}
+.jegyzet{position:relative;margin:1rem 0 0;background:var(--paper);color:var(--ink);border:3px solid var(--fekete);border-radius:6px;padding:2.4rem 1.6rem 1.5rem;transform:rotate(2deg);box-shadow:10px 10px 0 var(--fekete)}
+.jegyzet::before{content:"";position:absolute;top:-16px;left:50%;width:120px;height:30px;transform:translateX(-50%) rotate(-4deg);background:var(--csik);border:2px solid var(--fekete);opacity:.9}
+.jegyzet .idezojel{display:block;font-family:var(--fej);font-weight:900;font-size:5rem;line-height:.5;color:var(--sarga);margin-bottom:.6rem}
+@supports (-webkit-text-stroke:2px black){.jegyzet .idezojel{-webkit-text-stroke:2px var(--fekete)}}
+.jegyzet p{font-size:1.3rem;font-style:italic;font-weight:700;margin-bottom:.8rem}
+.jegyzet figcaption{display:flex;align-items:center;gap:.6rem;font-weight:700}
+@media (min-width:768px){.javitas .wrap{grid-template-columns:1.1fr .9fr;align-items:center;gap:4rem}}
+
+/* Tippek */
+.tippek{background:var(--krem)}
+.lepesek{list-style:none;margin:0;padding:0;display:grid;gap:1.75rem;counter-reset:lepes;position:relative}
+.lepesek li{counter-increment:lepes;background:var(--paper);border:3px solid var(--fekete);border-radius:20px;box-shadow:6px 6px 0 var(--fekete);padding:4.6rem 1.4rem 1.5rem;position:relative;z-index:1}
+.lepesek li::before{content:counter(lepes);position:absolute;left:1.2rem;top:-1.3rem;width:3.4rem;height:3.4rem;border-radius:50%;display:grid;place-items:center;background:var(--sarga);font-family:var(--fej);font-weight:900;font-size:1.6rem;border:3px solid var(--fekete);box-shadow:3px 3px 0 var(--fekete)}
+.lepesek .mini{position:absolute;right:1.2rem;top:1.1rem;width:2.4rem;height:2.4rem;color:var(--fekete);opacity:.85}
+.lepesek h3{margin-bottom:.3em}
+.lepesek p{margin:0;color:var(--muted)}
+.lepesek{margin-top:2.5rem}
+.tipp-cta{margin-top:2.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+.tipp-cta .allapot{background:var(--paper);border:2px solid var(--fekete);border-radius:999px;padding:.35rem .9rem}
+.tipp-cta .allapot:empty{display:none}
+@media (min-width:1024px){
+  .lepesek{grid-template-columns:repeat(3,1fr);gap:2rem}
+  .lepesek::before{content:"";position:absolute;left:3rem;right:3rem;top:.4rem;border-top:3px dashed var(--fekete);z-index:0}
+  .lepesek li:nth-child(1){transform:rotate(-1deg)}
+  .lepesek li:nth-child(2){transform:rotate(1deg) translateY(1rem)}
+  .lepesek li:nth-child(3){transform:rotate(-.5deg)}
+}
+
+/* Rólunk */
+.rolunk{background:var(--paper);overflow:hidden}
+.rolunk .folt{position:absolute;left:-10rem;top:-8rem;width:28rem;height:28rem;border-radius:46% 54% 60% 40% / 50% 42% 58% 50%;background:var(--sarga-halvany);pointer-events:none}
+.rolunk .wrap{display:grid;gap:2.5rem;position:relative;z-index:1}
+.rolunk .nagy-szoveg{font-size:1.25rem;font-weight:700}
+.tenyek{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.tenyek li{border:3px solid var(--fekete);border-radius:16px;padding:1rem 1.25rem;background:var(--krem);box-shadow:5px 5px 0 var(--fekete)}
+.tenyek strong{display:block;font-family:var(--fej);font-weight:900;font-size:1.2rem}
+.tenyek li:nth-child(1){background:var(--sarga)}
+.tenyek li:nth-child(2){background:var(--fekete);color:#f0f0f0;box-shadow:5px 5px 0 var(--sarga)}
+.tenyek li:nth-child(2) strong{color:var(--sarga)}
+@media (min-width:768px){
+  .rolunk .wrap{grid-template-columns:1.3fr 1fr;gap:4rem;align-items:center}
+  .tenyek li:nth-child(1){transform:rotate(-1.5deg)}
+  .tenyek li:nth-child(2){transform:rotate(1deg) translateX(1rem)}
+  .tenyek li:nth-child(3){transform:rotate(-.5deg)}
+}
+
+/* Vélemények */
+.velemeny-szekcio{background-color:var(--bg);background-image:radial-gradient(rgba(0,0,0,.06) 1.4px,transparent 1.5px);background-size:26px 26px}
+.ertekeles-fej{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;margin-bottom:2.25rem;font-weight:700}
+.ertekeles-fej .nagyszam{font-family:var(--fej);font-weight:900;font-size:3rem;line-height:1;color:var(--ink);background:var(--sarga);border:3px solid var(--fekete);border-radius:16px;padding:.25rem .6rem;box-shadow:4px 4px 0 var(--fekete);transform:rotate(-3deg)}
+.velemenyek{display:grid;gap:1.5rem}
+.velemeny{margin:0;background:var(--paper);padding:1.5rem;border:3px solid var(--fekete);border-radius:20px;box-shadow:5px 5px 0 rgba(0,0,0,.85);position:relative;display:flex;flex-direction:column;transition:transform .2s}
+.velemeny:hover{transform:rotate(-.8deg) translateY(-3px)}
+.velemeny.kiemelt{background:var(--sarga);color:var(--ink);box-shadow:8px 8px 0 var(--fekete)}
+.velemeny.kiemelt:hover{transform:none}
+.velemeny.kiemelt::after{content:"”";position:absolute;right:1.2rem;bottom:-1.5rem;font-family:var(--fej);font-weight:900;font-size:9rem;line-height:1;color:rgba(0,0,0,.12);pointer-events:none}
+.velemeny.kiemelt blockquote{font-size:1.2rem;font-weight:700}
+.velemeny blockquote{margin:0 0 1.1rem;flex:1}
+.velemeny .csillagok{color:var(--ink);font-size:1.2rem;letter-spacing:.1em;margin-bottom:.5rem}
+.velemeny:not(.kiemelt) .csillagok{display:inline-block;align-self:flex-start;background:var(--sarga);border-radius:999px;padding:0 .6rem;font-size:1rem}
+.velemeny figcaption{font-weight:700;display:flex;align-items:center;gap:.6rem}
+.monogram{flex:none;width:2.5rem;height:2.5rem;border-radius:50%;display:grid;place-items:center;background:var(--fekete);color:var(--sarga);font-family:var(--fej);font-weight:900;font-size:.95rem}
+.velemeny figcaption span.forras{font-weight:400;color:var(--muted)}
+.velemeny.kiemelt figcaption span.forras{color:var(--ink)}
+@media (min-width:768px){
+  .velemenyek{grid-template-columns:1fr 1fr}
+  .velemeny.kiemelt{grid-column:1 / -1}
+}
+@media (min-width:1024px){
+  .velemenyek{grid-template-columns:repeat(3,1fr)}
+  .velemeny.kiemelt{grid-column:1 / 3;grid-row:1 / 3;justify-content:center;padding:2.5rem}
+  .velemeny.kiemelt blockquote{font-size:1.45rem;flex:none}
+}
+
+/* Kapcsolat */
+.kapcsolat{background:var(--fekete);color:#fff;padding-top:4.5rem}
+.kapcsolat::before{content:"";position:absolute;left:0;right:0;top:0;height:16px;background:var(--csik)}
+.kapcsolat :focus-visible{outline-color:var(--sarga)}
+.kapcsolat .felcim{background:var(--sarga);color:var(--ink)}
+.kapcsolat .felcim::before{background:var(--fekete)}
+.kapcsolat .szekcio-fej p.felcim{color:var(--ink)}
+.kapcsolat h2{color:#fff}
+.kapcsolat h2 .sarga{color:var(--sarga)}
+.kapcsolat a{color:#fff}
+.kapcsolat a:hover{color:var(--sarga)}
+.kapcs-racs{display:grid;gap:2rem}
+.adat{margin-bottom:1.6rem;padding-left:1rem;border-left:4px solid var(--sarga)}
+.adat h3{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;color:var(--sarga);margin-bottom:.3rem;font-family:var(--test);font-weight:700}
+.adat .nagy-tel{font-family:var(--fej);font-weight:900;font-size:clamp(1.7rem,6vw,2.4rem);text-decoration:none;display:inline-block;color:var(--sarga)}
+.adat .nagy-tel:hover{color:var(--sarga-2)}
+.adat address{font-style:normal;font-size:1.2rem;font-weight:700}
+.kapcsolat .allapot::before{border-color:#fff}
+.nyitva-tabla{width:100%;max-width:26rem;border-collapse:collapse;font-size:1.1rem}
+.nyitva-tabla th,.nyitva-tabla td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid rgba(255,255,255,.2)}
+.nyitva-tabla td{text-align:right;font-variant-numeric:tabular-nums}
+.nyitva-tabla th{font-weight:400}
+.nyitva-tabla tr.ma{background:var(--sarga);color:var(--ink);font-weight:700}
+.nyitva-tabla tr.ma th{font-weight:700}
+.nyitva-tabla tr.ma th::after{content:" (ma)"}
+.terkep{width:100%;height:20rem;border:4px solid var(--sarga);border-radius:20px;display:block;background:#2a2a2a}
+.terkep-link{display:inline-block;margin-top:.8rem;font-weight:700}
+.kapcsolat .allapot{margin-bottom:1rem;font-size:1.1rem}
+.kapcs-megjegyzes{font-size:1rem;color:#e0e0e0;margin-top:.4rem}
+@media (min-width:768px){
+  .kapcs-racs{grid-template-columns:1fr 1fr;gap:3rem}
+  .terkep{height:100%;min-height:28rem}
+}
+
+/* Lábléc */
+.lablec{background:#000;color:#e0e0e0;padding:2.5rem 0 6rem;font-size:1rem;border-top:2px solid #333}
+@media (min-width:768px){.lablec{padding-bottom:2.5rem}}
+.lablec :focus-visible{outline-color:var(--sarga)}
+.lablec a{color:var(--sarga)}
+.lablec a:hover{color:var(--sarga-2)}
+.lablec .nev{display:inline-block;font-family:var(--fej);font-weight:900;color:var(--ink);background:var(--sarga);padding:.2rem .8rem;font-size:1.2rem;margin-bottom:.8rem;border-radius:999px}
+.lablec .keszito{margin-top:1.75rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.15);font-size:.85rem;color:#bdbdbd}
+
+/* Mobil hívássáv */
+.hivas-sav{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--fekete);border-top:3px solid var(--sarga);padding:.6rem 1rem}
+.hivas-sav :focus-visible{outline-color:var(--sarga)}
+.hivas-sav .gomb{width:100%}
+@media (min-width:768px){.hivas-sav{display:none}}
+
+/* Animáció */
+.js .felbukkan{opacity:0;translate:0 16px;transition:opacity .6s ease,translate .6s ease}
+.js .felbukkan.lathato{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .felbukkan{opacity:1;translate:none;transition:none}
+  .futo-sav{animation:none}
+  .gomb,.kartya,.velemeny,.logo-jel,.menu-gomb .vonalak::before,.menu-gomb .vonalak::after{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#tartalom">Ugrás a tartalomhoz</a>
+
+<header class="fejlec">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Porszívózsák mintabolt – vissza az oldal tetejére">
+      <span class="logo-jel" aria-hidden="true"><span></span></span>
+      <span>Porszívózsák mintabolt<small>Budapest, Vörösvári út 7</small></span>
+    </a>
+    <button class="menu-gomb" type="button" aria-expanded="false" aria-controls="fomenu">
+      <span class="vonalak" aria-hidden="true"></span>Menü
+    </button>
+    <nav class="nav" id="fomenu" aria-label="Főmenü">
+      <ul>
+        <li><a href="#vasarlas">Vásárlás</a></li>
+        <li><a href="#kinalat">Kínálat</a></li>
+        <li><a href="#javitas">Javítás</a></li>
+        <li><a href="#tippek">Mielőtt jössz</a></li>
+        <li><a href="#velemenyek">Vélemények</a></li>
+        <li><a href="#kapcsolat">Nyitvatartás és cím</a></li>
+      </ul>
+      <div class="nav-extra">
+        <button class="betu-gomb" type="button" aria-pressed="false" id="betuGomb">Nagyobb betű</button>
+        <a class="gomb gomb-sotet fej-tel" href="tel:+36703258905">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          +36 70 325 8905
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+  <section class="hero" id="top" aria-labelledby="hero-cim">
+    <div class="wrap">
+      <div>
+        <span class="hely">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          Óbuda · Vörösvári út 7
+        </span>
+        <h1 id="hero-cim">Porzsák, szűrő, alkatrész. <em>És ha elromlott a porszívód, javítás is.</em></h1>
+        <p class="bevezeto">Nem találod sehol a porszívódhoz illő zsákot? Gyengén szív a gép? Hívj fel, vagy gyere be a boltba – segítünk.</p>
+        <div class="hero-gombok">
+          <a class="gomb gomb-sotet" href="tel:+36703258905">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            Hívás: +36 70 325 8905
+          </a>
+          <a class="gomb gomb-keret" href="#kapcsolat">Nyitvatartás és térkép</a>
+        </div>
+        <div class="hero-info">
+          <span class="allapot js-allapot" role="status">Nyitvatartás: hétfőtől szombatig</span>
+          <span class="csillag-sor"><b aria-hidden="true">★</b> 4,5 / 5 a Google-on (19 értékelés)</span>
+          <a class="bolti-chip" href="#vasarlas">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg>
+            Vásárlás csak személyesen, a boltban
+          </a>
+        </div>
+      </div>
+      <div class="hero-kep" aria-hidden="true">
+        <svg class="rajz" viewBox="0 0 320 300">
+          <defs>
+            <pattern id="pottyok" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#ffd400" opacity=".18"/></pattern>
+          </defs>
+          <rect width="320" height="300" fill="#111"/>
+          <rect width="320" height="300" fill="url(#pottyok)"/>
+          <path d="M30 70 C 80 40, 120 100, 170 70" fill="none" stroke="#ffd400" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 12" opacity=".7"/>
+          <path d="M20 105 C 70 80, 110 130, 150 110" fill="none" stroke="#fff8e1" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 12" opacity=".5"/>
+          <line x1="20" y1="262" x2="300" y2="262" stroke="#ffd400" stroke-width="4" stroke-linecap="round" stroke-dasharray="14 10" opacity=".55"/>
+          <rect x="40" y="165" width="150" height="80" rx="40" fill="#ffd400"/>
+          <rect x="70" y="148" width="86" height="30" rx="13" fill="#ffe14d" stroke="#111" stroke-width="5"/>
+          <rect x="62" y="190" width="58" height="10" rx="5" fill="#111" opacity=".85"/>
+          <rect x="62" y="208" width="40" height="10" rx="5" fill="#111" opacity=".85"/>
+          <circle cx="160" cy="205" r="14" fill="#111"/>
+          <circle cx="160" cy="205" r="6" fill="#ffd400"/>
+          <circle cx="78" cy="246" r="16" fill="#111" stroke="#ffd400" stroke-width="6"/>
+          <circle cx="160" cy="246" r="16" fill="#111" stroke="#ffd400" stroke-width="6"/>
+          <path d="M188 192 C 235 188, 222 118, 238 100" fill="none" stroke="#fff8e1" stroke-width="13" stroke-linecap="round"/>
+          <path d="M188 192 C 235 188, 222 118, 238 100" fill="none" stroke="#111" stroke-width="13" stroke-linecap="round" stroke-dasharray="2 9" opacity=".35"/>
+          <rect x="226" y="84" width="34" height="18" rx="8" fill="#ffd400" transform="rotate(20 243 93)"/>
+          <line x1="246" y1="104" x2="272" y2="244" stroke="#fff8e1" stroke-width="9" stroke-linecap="round"/>
+          <rect x="246" y="242" width="58" height="16" rx="6" fill="#ffd400"/>
+          <circle cx="296" cy="226" r="4" fill="#fff8e1" opacity=".8"/>
+          <circle cx="306" cy="212" r="3" fill="#fff8e1" opacity=".6"/>
+          <circle cx="292" cy="206" r="2.5" fill="#fff8e1" opacity=".45"/>
+        </svg>
+        <div class="matrica">
+          <strong>4,5</strong>
+          <span>★ Google</span>
+          <span>19 értékelés</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="futo" aria-hidden="true">
+    <div class="futo-sav">
+      <span>Porszívózsák<i>✦</i>Szűrő<i>✦</i>Alkatrész<i>✦</i>Javítás<i>✦</i>Szerelés<i>✦</i>Vörösvári út 7<i>✦</i></span>
+      <span>Porszívózsák<i>✦</i>Szűrő<i>✦</i>Alkatrész<i>✦</i>Javítás<i>✦</i>Szerelés<i>✦</i>Vörösvári út 7<i>✦</i></span>
+    </div>
+  </div>
+
+  <section class="szekcio bolti" id="vasarlas" aria-labelledby="vasarlas-cim">
+    <div class="wrap">
+      <div class="bolti-doboz felbukkan">
+        <div>
+          <p class="felcim">Jó tudni</p>
+          <div class="bolti-fej">
+            <span class="bolti-ikon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.2 10.2a1 1 0 0 0 1 .8h8.6a1 1 0 0 0 1-.8L19.5 8H6.2"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/><path d="M3 3l18 18"/></svg>
+            </span>
+            <h2 id="vasarlas-cim">Online rendelés nincs – <span class="kiemel">a boltban</span> várunk</h2>
+          </div>
+          <p class="bolti-szoveg">Weboldalunkon keresztül nem lehet rendelni. A zsákokat, szűrőket és alkatrészeket <strong>személyesen, a boltunkban</strong> tudod megvásárolni: 1035 Budapest, Vörösvári út 7.</p>
+          <p>Ez neked is jó: a pultnál együtt megnézzük, melyik zsák, szűrő vagy alkatrész illik a porszívódhoz, így nem kell találgatnod, és nem kell kétszer fordulnod.</p>
+          <div class="bolti-gombok">
+            <a class="gomb gomb-sotet" href="tel:+36703258905">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+              Kérdezz előtte telefonon
+            </a>
+            <a class="gomb gomb-keret" href="#kapcsolat">Nyitvatartás és útvonal</a>
+            <span class="allapot js-allapot"></span>
+          </div>
+        </div>
+        <ul class="bolti-lista">
+          <li>
+            <span class="pont" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+            <span><strong>Gyere be nyitvatartási időben</strong><span class="leiras">Hétfőtől szombatig várunk a Vörösvári út 7. alatt.</span></span>
+          </li>
+          <li>
+            <span class="pont" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 3h12l1 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7z"/><circle cx="12" cy="13" r="3"/><path d="M5 7h14"/></svg></span>
+            <span><strong>Hozd a régi zsákot vagy a típusszámot</strong><span class="leiras">Így elsőre a megfelelőt viszed haza.</span></span>
+          </li>
+          <li>
+            <span class="pont" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></span>
+            <span><strong>Bizonytalan vagy? Hívj fel előtte</strong><span class="leiras">Egy rövid telefon, és megtudod, mire számíthatsz, mielőtt elindulsz.</span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="szekcio" id="kinalat" aria-labelledby="kinalat-cim">
+    <div class="wrap">
+      <div class="szekcio-fej felbukkan">
+        <p class="felcim">Kínálat</p>
+        <h2 id="kinalat-cim">Minden, ami a <span class="kiemel">porszívódhoz</span> kell</h2>
+        <p>Egy helyen kapod meg a zsákot, a szűrőt és az alkatrészt. Ha valami nincs a polcon, kérdezz rá nyugodtan.</p>
+      </div>
+      <ul class="kartyak">
+        <li class="kartya k-sarga felbukkan">
+          <span class="szam" aria-hidden="true">01</span>
+          <span class="ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 3h12l1 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7z"/><circle cx="12" cy="13" r="3"/><path d="M5 7h14"/></svg></span>
+          <h3>Porszívózsákok</h3>
+          <p>Sokféle porszívóhoz, a nehezen beszerezhető típusokhoz is. Választhatsz gyári és utángyártott zsák közül.</p>
+        </li>
+        <li class="kartya felbukkan">
+          <span class="szam" aria-hidden="true">02</span>
+          <span class="ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v14M11 5v14M15 5v14M19 5v14" stroke-width="1.6"/></svg></span>
+          <h3>Szűrők</h3>
+          <p>Ha a gép port enged ki, vagy rossz szaga van, sokszor elég egy új szűrő.</p>
+        </li>
+        <li class="kartya k-fekete felbukkan">
+          <span class="szam" aria-hidden="true">03</span>
+          <span class="ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z"/><circle cx="12" cy="12" r="3.5"/></svg></span>
+          <h3>Alkatrészek</h3>
+          <p>Különböző porszívóalkatrészek, hogy ne kelljen egy apró hiba miatt új gépet venned.</p>
+        </li>
+        <li class="kartya k-csikos felbukkan">
+          <span class="szam" aria-hidden="true">04</span>
+          <span class="ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span>
+          <h3>Javítás és szerelés</h3>
+          <p>Elromlott a porszívód? Hozd be, és megnézzük, mi a baja.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="szekcio javitas" id="javitas" aria-labelledby="javitas-cim">
+    <svg class="hatter-ikon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+    <div class="wrap">
+      <div class="felbukkan">
+        <p class="felcim">Porszívójavítás</p>
+        <h2 id="javitas-cim">Mielőtt kidobod, hozd be!</h2>
+        <p style="font-size:1.15rem;font-weight:700">Egy porszívó sokszor megmenthető. Hozd be, ha:</p>
+        <ul class="tunetek">
+          <li>gyengén szív, vagy egyáltalán nem szív,</li>
+          <li>furcsa hangot ad, zörög vagy sípol,</li>
+          <li>nem indul el,</li>
+          <li>port enged ki magából.</li>
+        </ul>
+        <a class="gomb gomb-sotet" href="tel:+36703258905">Hívj fel, és kérdezz!</a>
+      </div>
+      <figure class="jegyzet felbukkan">
+        <span class="idezojel" aria-hidden="true">„</span>
+        <p>„Ajánlani tudom, megmentette a porszívómat.! Motorcsere..!”</p>
+        <figcaption><span class="monogram" aria-hidden="true">SL</span><span>S. L., Google-értékelés</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="szekcio tippek" id="tippek" aria-labelledby="tippek-cim">
+    <div class="wrap">
+      <div class="szekcio-fej felbukkan">
+        <p class="felcim">Mielőtt jössz</p>
+        <h2 id="tippek-cim">Így viszed haza <span class="kiemel">elsőre</span> a jó zsákot</h2>
+        <p>Három egyszerű lépés, és nem kell kétszer fordulnod.</p>
+      </div>
+      <ol class="lepesek">
+        <li class="felbukkan">
+          <svg class="mini" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          <h3>Nézd meg a típust</h3>
+          <p>A porszívó alján vagy a porzsáktartó fedele alatt általában van egy címke. Írd fel a márkát és a típusszámot, vagy fotózd le telefonnal.</p>
+        </li>
+        <li class="felbukkan">
+          <svg class="mini" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l1 4v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7z"/><path d="M5 7h14"/><circle cx="12" cy="13" r="3"/></svg>
+          <h3>Hozz mintát</h3>
+          <p>Ha megvan a régi zsák vagy szűrő, hozd el magaddal. Így biztosan a megfelelőt kapod.</p>
+        </li>
+        <li class="felbukkan">
+          <svg class="mini" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          <h3>Hívj fel előtte</h3>
+          <p>Egy rövid telefon, és megtudod, mire számíthatsz. Felesleges út nélkül.</p>
+        </li>
+      </ol>
+      <div class="tipp-cta felbukkan">
+        <a class="gomb gomb-sotet" href="tel:+36703258905">Hívás: +36 70 325 8905</a>
+        <span class="allapot js-allapot" style="color:var(--ink)"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="szekcio rolunk" id="rolunk" aria-labelledby="rolunk-cim">
+    <div class="folt" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="felbukkan">
+        <p class="felcim">Rólunk</p>
+        <h2 id="rolunk-cim">Porszívós szaküzlet <span class="kiemel">Óbudán</span></h2>
+        <p class="nagy-szoveg">Porszívózsákokat, szűrőket és alkatrészeket árulunk, és porszívókat javítunk, szerelünk.</p>
+        <p>Nálunk nem egy nagy áruház polcai között kell keresgélned. Elmondod, milyen géped van, és segítünk megtalálni hozzá a megfelelőt. Ha kérdésed van a porszívóddal kapcsolatban, nyugodtan tedd fel.</p>
+      </div>
+      <ul class="tenyek felbukkan">
+        <li><strong>Vásárlás és javítás egy helyen</strong>Zsák, szűrő, alkatrész és szerviz.</li>
+        <li><strong>4,5 csillag a Google-on</strong>19 vásárlói értékelés alapján.</li>
+        <li><strong>Szombaton is nyitva</strong>9:00 és 12:00 között.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="szekcio velemeny-szekcio" id="velemenyek" aria-labelledby="velemenyek-cim">
+    <div class="wrap">
+      <div class="szekcio-fej felbukkan" style="margin-bottom:1rem">
+        <p class="felcim">Vélemények</p>
+        <h2 id="velemenyek-cim">Ezt mondják rólunk a vásárlók</h2>
+      </div>
+      <div class="ertekeles-fej felbukkan">
+        <span class="nagyszam">4,5</span>
+        <span>az 5-ből, 19 Google-értékelés alapján</span>
+      </div>
+      <div class="velemenyek">
+        <figure class="velemeny kiemelt felbukkan">
+          <div class="csillagok" aria-label="5 csillagból 5">★★★★★</div>
+          <blockquote>„Én eddig csak jót tapasztaltam az eladó részéről. Javított Samsung porszívót és Elektroluxomat is, kiválóan! Meg lehetett menteni mindkettőt és korrekt volt a javítás tisztítás is minden esetben. A porzsákok beszerzése is csak azon múlik, hogy az ember  a gyári jó minőség mellett, vagy egy után gyártott mellett dönt.”</blockquote>
+          <figcaption><span class="monogram" aria-hidden="true">LL</span>L. L. <span class="forras">· Google</span></figcaption>
+        </figure>
+        <figure class="velemeny felbukkan">
+          <div class="csillagok" aria-label="5 csillagból 5">★★★★★</div>
+          <blockquote>„Nehezen beszerezhető porzsákot tudtam venni , ès a kiszolgálás is kedves volt.”</blockquote>
+          <figcaption><span class="monogram" aria-hidden="true">NR</span>N. R. <span class="forras">· Google</span></figcaption>
+        </figure>
+        <figure class="velemeny felbukkan">
+          <div class="csillagok" aria-label="5 csillagból 5">★★★★★</div>
+          <blockquote>„Szimpatikus, kedves a kiszolgálás, a javítás gyorsan, az ígért határidőre elkészül.”</blockquote>
+          <figcaption><span class="monogram" aria-hidden="true">GB</span>G. B. <span class="forras">· Google</span></figcaption>
+        </figure>
+        <figure class="velemeny felbukkan">
+          <div class="csillagok" aria-label="5 csillagból 5">★★★★★</div>
+          <blockquote>„Pompás és mindenféle porszívóval kapcsolatos kérdésre is választ kapunk. Melegen ajánlom.”</blockquote>
+          <figcaption><span class="monogram" aria-hidden="true">SS</span>S. S. <span class="forras">· Google</span></figcaption>
+        </figure>
+        <figure class="velemeny felbukkan">
+          <div class="csillagok" aria-label="5 csillagból 5">★★★★★</div>
+          <blockquote>„Professzionális kereskedő, nagyon kedves és segítőkész, kiváló áruk.”</blockquote>
+          <figcaption><span class="monogram" aria-hidden="true">DS</span>D. S. <span class="forras">· Google</span></figcaption>
+        </figure>
+        <figure class="velemeny felbukkan">
+          <div class="csillagok" aria-label="5 csillagból 5">★★★★★</div>
+          <blockquote>„Gyors, szakszerű, segítőkész hozzáállás.”</blockquote>
+          <figcaption><span class="monogram" aria-hidden="true">LH</span>L. H. <span class="forras">· Google</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="szekcio kapcsolat" id="kapcsolat" aria-labelledby="kapcsolat-cim">
+    <div class="wrap">
+      <div class="szekcio-fej felbukkan">
+        <p class="felcim">Kapcsolat</p>
+        <h2 id="kapcsolat-cim">Gyere be, <span class="sarga">vagy hívj fel</span></h2>
+      </div>
+      <div class="kapcs-racs">
+        <div class="felbukkan">
+          <div class="adat">
+            <h3>Telefon</h3>
+            <a class="nagy-tel" href="tel:+36703258905">+36 70 325 8905</a>
+          </div>
+          <div class="adat">
+            <h3>Cím</h3>
+            <address>1035 Budapest,<br>Vörösvári út 7.</address>
+            <p class="kapcs-megjegyzes">Online rendelés nincs – vásárolni személyesen, a boltban tudsz.</p>
+            <a class="terkep-link" href="https://www.google.com/maps/search/?api=1&amp;query=Budapest%2C%20V%C3%B6r%C3%B6sv%C3%A1ri%20%C3%BAt%207%2C%201035%20Magyarorsz%C3%A1g" target="_blank" rel="noopener">Útvonaltervezés a Google Térképen (új ablakban)</a>
+          </div>
+          <div class="adat">
+            <h3>Nyitvatartás</h3>
+            <p class="allapot js-allapot" role="status"></p>
+            <table class="nyitva-tabla">
+              <caption class="skip">Nyitvatartási idő</caption>
+              <tbody>
+                <tr data-nap="1"><th scope="row">Hétfő</th><td>9:00 – 15:00</td></tr>
+                <tr data-nap="2"><th scope="row">Kedd</th><td>9:00 – 17:00</td></tr>
+                <tr data-nap="3"><th scope="row">Szerda</th><td>9:00 – 17:00</td></tr>
+                <tr data-nap="4"><th scope="row">Csütörtök</th><td>9:00 – 17:00</td></tr>
+                <tr data-nap="5"><th scope="row">Péntek</th><td>9:00 – 15:00</td></tr>
+                <tr data-nap="6"><th scope="row">Szombat</th><td>9:00 – 12:00</td></tr>
+                <tr data-nap="0"><th scope="row">Vasárnap</th><td>Zárva</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="felbukkan">
+          <iframe class="terkep" title="Térkép: Porszívózsák mintabolt, 1035 Budapest, Vörösvári út 7." src="https://www.google.com/maps?q=Budapest%2C%20V%C3%B6r%C3%B6sv%C3%A1ri%20%C3%BAt%207%2C%201035%20Magyarorsz%C3%A1g&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="lablec">
+  <div class="wrap">
+    <p class="nev">Porszívózsák mintabolt</p>
+    <p>Porszívózsákok, szűrők, alkatrészek, javítás és szerelés<br>
+    1035 Budapest, Vörösvári út 7.<br>
+    Telefon: <a href="tel:+36703258905">+36 70 325 8905</a><br>
+    H, P: 9:00–15:00 · K–Cs: 9:00–17:00 · Szo: 9:00–12:00 · V: zárva<br>
+    Online rendelés nincs, vásárlás személyesen a boltban.</p>
+    <p class="keszito">Készítette: <a href="https://auracode.hu" target="_blank" rel="noopener">AuraCode</a></p>
+  </div>
+</footer>
+
+<div class="hivas-sav">
+  <a class="gomb gomb-sarga" href="tel:+36703258905">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+    Hívás: +36 70 325 8905
+  </a>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  root.classList.add('js');
+
+  // Hamburger menü
+  var gomb=document.querySelector('.menu-gomb');
+  var nav=document.getElementById('fomenu');
+  function zar(){nav.classList.remove('nyitva');gomb.setAttribute('aria-expanded','false');}
+  gomb.addEventListener('click',function(){
+    var nyitva=nav.classList.toggle('nyitva');
+    gomb.setAttribute('aria-expanded',nyitva?'true':'false');
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',zar);});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&nav.classList.contains('nyitva')){zar();gomb.focus();}
+  });
+
+  // Nagyobb betű
+  var betu=document.getElementById('betuGomb');
+  function betuBeallit(be){
+    root.classList.toggle('nagy',be);
+    betu.setAttribute('aria-pressed',be?'true':'false');
+    betu.textContent=be?'Normál betű':'Nagyobb betű';
+  }
+  try{ if(localStorage.getItem('nagybetu')==='1'){betuBeallit(true);} }catch(e){}
+  betu.addEventListener('click',function(){
+    var be=!root.classList.contains('nagy');
+    betuBeallit(be);
+    try{localStorage.setItem('nagybetu',be?'1':'0');}catch(e){}
+  });
+
+  // Nyitvatartás állapot (budapesti idő szerint)
+  var orak={0:null,1:[9,15],2:[9,17],3:[9,17],4:[9,17],5:[9,15],6:[9,12]};
+  var napok=['vasárnap','hétfőn','kedden','szerdán','csütörtökön','pénteken','szombaton'];
+  function most(){
+    var nap,ora,perc;
+    try{
+      var f=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Budapest',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
+      var map={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+      f.formatToParts(new Date()).forEach(function(p){
+        if(p.type==='weekday')nap=map[p.value];
+        if(p.type==='hour')ora=parseInt(p.value,10)%24;
+        if(p.type==='minute')perc=parseInt(p.value,10);
+      });
+    }catch(e){}
+    if(nap===undefined){var d=new Date();nap=d.getDay();ora=d.getHours();perc=d.getMinutes();}
+    return {nap:nap,ido:ora+perc/60};
+  }
+  function frissit(){
+    var m=most(),ma=orak[m.nap],szoveg,allapot;
+    if(ma&&m.ido>=ma[0]&&m.ido<ma[1]){
+      allapot='nyitva';szoveg='Most nyitva – ma '+ma[1]+':00-ig';
+    }else{
+      allapot='zarva';
+      if(ma&&m.ido<ma[0]){szoveg='Most zárva – ma '+ma[0]+':00-kor nyitunk';}
+      else{
+        for(var i=1;i<=7;i++){
+          var n=(m.nap+i)%7;
+          if(orak[n]){szoveg='Most zárva – '+(i===1?'holnap':napok[n])+' '+orak[n][0]+':00-kor nyitunk';break;}
+        }
+      }
+    }
+    document.querySelectorAll('.js-allapot').forEach(function(el){
+      el.textContent=szoveg;
+      el.classList.remove('nyitva','zarva');
+      el.classList.add(allapot);
+    });
+    document.querySelectorAll('.nyitva-tabla tr').forEach(function(tr){
+      tr.classList.toggle('ma',parseInt(tr.getAttribute('data-nap'),10)===m.nap);
+    });
+  }
+  frissit();
+  setInterval(frissit,60000);
+
+  // Finom megjelenés görgetéskor
+  var elemek=document.querySelectorAll('.felbukkan');
+  var csokkentett=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(csokkentett||!('IntersectionObserver' in window)){
+    elemek.forEach(function(el){el.classList.add('lathato');});
+  }else{
+    var io=new IntersectionObserver(function(bejegyzesek){
+      bejegyzesek.forEach(function(b){
+        if(b.isIntersecting){b.target.classList.add('lathato');io.unobserve(b.target);}
+      });
+    },{rootMargin:'0px 0px -8% 0px',threshold:0.05});
+    elemek.forEach(function(el){io.observe(el);});
+  }
+})();
+</script>
+</body>
+</html>
