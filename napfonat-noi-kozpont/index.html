@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Napfonat Női Központ – Edzőterem Monostorpályiban</title>
+<meta name="description" content="Napfonat Női Központ, edzőterem Monostorpályiban, a Vasvári Pál utca 33. szám alatt. Hívjon bizalommal: +36 70 593 3908.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&subset=latin-ext&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Napfonat Női Központ",
+  "description": "Edzőterem Monostorpályiban.",
+  "telephone": "+36 70 593 3908",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Vasvári Pál u. 33",
+    "postalCode": "4275",
+    "addressLocality": "Monostorpályi",
+    "addressCountry": "HU"
+  }
+}
+</script>
+<style>
+:root{
+  --teal:#0f4c4c;
+  --amber:#f2a33a;
+  --ink:#1d2528;
+  --paper:#fbfaf7;
+  --line:#d9d4c8;
+  --max:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Work Sans",system-ui,sans-serif;
+  font-size:1.0625rem;
+  line-height:1.6;
+  color:var(--ink);
+  background:var(--paper);
+  overflow-x:hidden;
+}
+img,iframe{max-width:100%}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{width:min(100% - 2rem,var(--max));margin-inline:auto}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;margin:0 0 .6em}
+h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:700}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:600}
+h3{font-size:1.25rem;font-weight:600}
+p{margin:0 0 1em}
+
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:10;
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  min-height:64px;
+}
+.brand{
+  font-family:"Fraunces",Georgia,serif;font-weight:700;
+  color:var(--teal);text-decoration:none;font-size:1.15rem;
+}
+.nav-toggle{
+  background:none;border:2px solid var(--teal);border-radius:4px;
+  padding:.4rem .6rem;cursor:pointer;color:var(--teal);
+  font:inherit;font-weight:600;
+}
+.nav{
+  display:none;position:absolute;left:0;right:0;top:100%;
+  background:var(--paper);border-bottom:1px solid var(--line);
+}
+.nav.open{display:block}
+.nav ul{list-style:none;margin:0;padding:.5rem 0}
+.nav a{
+  display:block;padding:.75rem 1rem;text-decoration:none;
+  color:var(--ink);font-weight:500;
+}
+.nav a:hover,.nav a:focus-visible{background:#f1ede4}
+.site-header{position:sticky}
+
+/* Hero */
+.hero{
+  background:
+    repeating-linear-gradient(45deg,rgba(242,163,58,.16) 0 2px,transparent 2px 22px),
+    var(--teal);
+  color:#fff;
+  padding:4.5rem 0 4rem;
+}
+.hero h1{color:#fff;max-width:14ch}
+.hero .lead{font-size:1.2rem;max-width:36ch;color:#f4efe4}
+.eyebrow{
+  display:inline-block;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;font-size:.85rem;color:var(--amber);
+  margin-bottom:1rem;
+}
+.btn{
+  display:inline-block;margin-top:1.5rem;
+  background:var(--amber);color:var(--ink);
+  padding:.9rem 1.6rem;border-radius:4px;
+  font-weight:600;text-decoration:none;
+  transition:transform .2s ease,background-color .2s ease;
+}
+.btn:hover{background:#ffb75a;transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+/* Sections */
+section{padding:3.5rem 0}
+section + section{border-top:1px solid var(--line)}
+.kicker{color:var(--teal);font-weight:600;margin-bottom:.5rem}
+.offer{
+  border-left:4px solid var(--amber);
+  padding:.25rem 0 .25rem 1.25rem;
+  max-width:60ch;
+}
+.about-grid{display:grid;gap:1.5rem}
+.about-grid p{max-width:60ch}
+.contact-list{list-style:none;padding:0;margin:0 0 1.5rem}
+.contact-list li{padding:.5rem 0;border-bottom:1px solid var(--line)}
+.contact-list strong{display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--teal)}
+.contact-list a{color:var(--ink);font-weight:500}
+.map{
+  width:100%;height:320px;border:0;border-radius:4px;
+  display:block;background:#eee;
+}
+
+/* Footer */
+.site-footer{background:var(--teal);color:#fff;padding:2.5rem 0 1.5rem}
+.site-footer p{margin:0 0 .4rem}
+.site-footer .small{font-size:.85rem;color:#d7e4e2;margin-top:1.5rem}
+.site-footer a{color:#fff}
+.site-footer a:focus-visible{outline-color:#fff}
+
+/* Animation */
+.fade-in{animation:fadeUp .7s ease both}
+.fade-in.d1{animation-delay:.1s}
+.fade-in.d2{animation-delay:.2s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+
+/* Tablet & desktop */
+@media (min-width:768px){
+  .nav-toggle{display:none}
+  .nav{display:block;position:static;background:none;border:0}
+  .nav ul{display:flex;gap:.5rem;padding:0}
+  .nav a{padding:.5rem .9rem;border-radius:4px}
+  .hero{padding:6rem 0 5.5rem}
+  section{padding:4.5rem 0}
+  .about-grid{grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+  .map{height:380px}
+}
+@media (min-width:1440px){
+  .hero{padding:7.5rem 0 6.5rem}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Napfonat Női Központ</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" id="toggle">Menü</button>
+    <nav class="nav" id="menu" aria-label="Fő menü">
+      <ul>
+        <li><a href="#kinalat">Kínálat</a></li>
+        <li><a href="#rolunk">Rólunk</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow fade-in">Edzőterem · Monostorpályi</span>
+    <h1 class="fade-in d1">Napfonat Női Központ</h1>
+    <p class="lead fade-in d2">Edzőterem a Vasvári Pál utca 33. szám alatt, Monostorpályiban.</p>
+    <a class="btn fade-in d2" href="tel:+36705933908">Hívjon most: +36 70 593 3908</a>
+  </div>
+</div>
+
+<section id="kinalat">
+  <div class="wrap">
+    <p class="kicker">Kínálat</p>
+    <h2>Edzőterem a Napfonatban</h2>
+    <div class="offer">
+      <p>Edzőtermünkben várjuk a női vendégeket. Az aktuális kínálatról, az árakról és a szabad időpontokról telefonon tájékozódhat.</p>
+      <p><a href="tel:+36705933908">+36 70 593 3908</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="rolunk">
+  <div class="wrap about-grid">
+    <div>
+      <p class="kicker">Rólunk</p>
+      <h2>Monostorpályi, Vasvári Pál utca 33.</h2>
+    </div>
+    <div>
+      <p>A Napfonat Női Központ Monostorpályiban működik. Az edzőterem a női vendégek igényeire épül, és a helyi közösség számára érhető el.</p>
+      <p>Ha kérdése van, keressen minket telefonon, vagy látogasson el hozzánk a fenti címen.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kapcsolat">
+  <div class="wrap about-grid">
+    <div>
+      <p class="kicker">Kapcsolat</p>
+      <h2>Keressen minket</h2>
+      <ul class="contact-list">
+        <li>
+          <strong>Cím</strong>
+          Monostorpályi, Vasvári Pál u. 33, 4275 Magyarország
+        </li>
+        <li>
+          <strong>Telefon</strong>
+          <a href="tel:+36705933908">+36 70 593 3908</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <iframe class="map" title="Napfonat Női Központ térkép" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Monostorp%C3%A1lyi%2C+Vasv%C3%A1ri+P%C3%A1l+u.+33%2C+4275+Magyarorsz%C3%A1g&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Napfonat Női Központ</strong></p>
+    <p>Monostorpályi, Vasvári Pál u. 33, 4275 Magyarország</p>
+    <p>Telefon: <a href="tel:+36705933908">+36 70 593 3908</a></p>
+    <p class="small">Készítette: AuraCode, link: <a href="https://auracode.hu">https://auracode.hu</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById('toggle');
+  var menu = document.getElementById('menu');
+  toggle.addEventListener('click', function () {
+    var open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+</body>
+</html>
