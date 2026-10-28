@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gladiátor Box Club – ökölvívás és edzőterem Győrben</title>
+<meta name="description" content="Gladiátor Box Club Győrben: ökölvívás és jól felszerelt edzőterem a Radnóti Miklós utcában. Hétköznap 6–22, hétvégén 9–16 óráig nyitva. Hívj: +36 20 973 6133.">
+<meta name="theme-color" content="#0F1012">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "Gladiátor Box Club",
+  "telephone": "+36 20 973 6133",
+  "image": "https://gz0.googleusercontent.com/grass-cs/AABkmLeELP8hY-d9D2ncoh7fayKnTDsanLkoLhjv-28nEwb42WVjKxKQK1S0djXmJj1VMGlncJNs6T1K47O9xw6PfWn6-FCzeDcGui5JPJWUuM4DlyeGjgn4a6db_0GRpB6cQ7VOvnMB=w1920-h1080-k-no",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Radnóti Miklós u. 46",
+    "addressLocality": "Győr",
+    "postalCode": "9025",
+    "addressCountry": "HU"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "06:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "16:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "58"
+  },
+  "sameAs": ["https://www.facebook.com/Gladi%C3%A1tor-Box-Club-273830659315590/likes"]
+}
+</script>
+<style>
+:root{
+  --ink:#0F1012;
+  --coal:#18191C;
+  --steel:#24262B;
+  --bone:#EEEAE3;
+  --muted:#B9B4AC;
+  --red:#C8161D;
+  --red-hi:#FF5A5C;
+  --brass:#D9A441;
+  --fail:#2A1517;
+  --head:"Anton", "Arial Narrow", sans-serif;
+  --label:"Barlow Condensed", "Arial Narrow", sans-serif;
+  --body:"Barlow", Arial, sans-serif;
+  --wrap:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ink);color:var(--bone);
+  font-family:var(--body);font-size:1.0625rem;line-height:1.6;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--brass);color:#111;padding:.6rem 1rem;z-index:100;font-weight:600}
+.skip:focus{left:1rem;top:1rem}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--head);font-weight:400;line-height:1.02;letter-spacing:.01em;margin:0;text-transform:uppercase}
+h2{font-size:clamp(2.2rem,7vw,4rem)}
+h3{font-size:1.6rem}
+p{margin:0 0 1rem}
+.kicker{
+  font-family:var(--label);font-weight:600;text-transform:uppercase;
+  letter-spacing:.18em;font-size:.9rem;color:var(--brass);
+  display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1rem;
+}
+.kicker::before{content:"";width:28px;height:3px;background:var(--red)}
+.media{background:var(--steel);overflow:hidden;position:relative}
+.media img{width:100%;height:100%;object-fit:cover}
+.media.noimg{background:linear-gradient(135deg,var(--fail),var(--steel))}
+
+/* Gombok */
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;justify-content:center;
+  font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.08em;
+  font-size:1.1rem;text-decoration:none;padding:.95rem 1.5rem;border:2px solid transparent;
+  transition:background-color .2s,color .2s,border-color .2s,transform .2s;
+}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:#A51016}
+.btn-line{border-color:var(--bone);color:var(--bone)}
+.btn-line:hover{background:var(--bone);color:var(--ink)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* Fejléc */
+.top{
+  position:sticky;top:0;z-index:50;background:rgba(15,16,18,.94);
+  border-bottom:1px solid #2B2D32;backdrop-filter:blur(6px);
+}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;min-width:0}
+.brand img{width:42px;height:42px;object-fit:cover;border:2px solid var(--red)}
+.brand span{font-family:var(--head);font-size:1.3rem;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.brand b{color:var(--red-hi);font-weight:400}
+.menu-btn{
+  background:none;border:2px solid #3A3D44;color:var(--bone);width:46px;height:46px;
+  display:grid;place-items:center;cursor:pointer;flex:none;
+}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{
+  display:block;width:22px;height:2px;background:currentColor;position:relative;transition:transform .2s,opacity .2s;content:"";
+}
+.menu-btn span::before{position:absolute;top:-7px}
+.menu-btn span::after{position:absolute;top:7px}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{transform:translateY(7px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{transform:translateY(-7px) rotate(-45deg)}
+.nav{
+  position:fixed;inset:68px 0 auto 0;background:var(--ink);border-bottom:3px solid var(--red);
+  display:none;padding:1rem 1.25rem 1.5rem;
+}
+.nav.open{display:block}
+.nav ul{list-style:none;margin:0;padding:0}
+.nav li a{
+  display:block;padding:.85rem 0;border-bottom:1px solid #2B2D32;text-decoration:none;
+  font-family:var(--label);font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:1.15rem;
+}
+.nav li a:hover{color:var(--red-hi)}
+.nav .btn{margin-top:1.2rem;width:100%}
+
+/* Hero */
+.hero{position:relative;min-height:calc(100svh - 68px);display:flex;align-items:flex-end;isolation:isolate}
+.hero .media{position:absolute;inset:0;z-index:-2}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(15,16,18,.35) 0%,rgba(15,16,18,.55) 45%,rgba(15,16,18,.96) 100%);
+}
+.hero .wrap{padding-top:5rem;padding-bottom:3rem}
+.hero h1{font-size:clamp(3.2rem,15vw,8.5rem);max-width:12ch}
+.hero h1 em{font-style:normal;color:var(--red-hi);display:block}
+.hero p.lead{font-size:1.15rem;max-width:34ch;margin:1.2rem 0 1.8rem;color:#E4E0D8}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.8rem}
+.rating{
+  margin-top:2rem;display:inline-flex;align-items:center;gap:.8rem;
+  font-family:var(--label);font-weight:500;font-size:1.05rem;letter-spacing:.04em;
+  border-left:3px solid var(--brass);padding-left:.9rem;
+}
+.rating strong{font-family:var(--head);font-weight:400;font-size:1.9rem;color:var(--brass)}
+
+/* Szekciók */
+section{scroll-margin-top:72px}
+.block{padding:4.5rem 0}
+.head-row{margin-bottom:2.5rem;max-width:40rem}
+.head-row p{color:var(--muted);margin-top:1rem}
+
+/* Edzések */
+.svc{display:grid;gap:2.5rem}
+.svc-item{display:grid;gap:1.1rem}
+.svc-item .media{aspect-ratio:4/3;clip-path:polygon(0 0,100% 0,100% 88%,88% 100%,0 100%)}
+.svc-num{font-family:var(--head);color:var(--red-hi);font-size:1.1rem;letter-spacing:.08em}
+.svc-item h3{margin:.3rem 0 .6rem}
+.svc-item p{color:var(--muted)}
+
+/* Rólunk */
+.about{background:var(--coal);border-top:3px solid var(--red)}
+.about-grid{display:grid;gap:2.5rem}
+.about-pics{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.about-pics .media:first-child{grid-column:1 / -1;aspect-ratio:16/10}
+.about-pics .media:last-child{grid-column:2;aspect-ratio:1;margin-top:-3.5rem;border:6px solid var(--coal)}
+.about-text p{color:#D6D1C9}
+.facts{list-style:none;padding:0;margin:1.5rem 0 0;border-top:1px solid #33363C}
+.facts li{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px solid #33363C;font-family:var(--label);font-size:1.1rem;letter-spacing:.03em}
+.facts li span:last-child{color:var(--brass);text-align:right}
+.onepct{margin-top:2rem;padding:1.4rem 1.4rem 1.2rem;background:var(--ink);border-left:4px solid var(--red)}
+.onepct h3{font-size:1.4rem;margin-bottom:.5rem}
+.onepct p{color:var(--muted);margin:0}
+
+/* Vélemények */
+.reviews-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:2.5rem}
+.score{display:flex;align-items:baseline;gap:.8rem}
+.score strong{font-family:var(--head);font-weight:400;font-size:4.5rem;line-height:1;color:var(--brass)}
+.score span{color:var(--muted);font-family:var(--label);font-size:1.1rem}
+.quotes{display:grid;gap:0;border-top:1px solid #2B2D32}
+.quote{margin:0;padding:1.8rem 0;border-bottom:1px solid #2B2D32;display:grid;gap:.6rem}
+.stars{color:var(--brass);letter-spacing:.15em;font-size:1rem}
+.quote blockquote{margin:0;font-size:1.2rem;line-height:1.5}
+.quote figcaption{font-family:var(--label);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-size:.95rem}
+
+/* Galéria */
+.gallery{background:var(--coal)}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.gal .media{aspect-ratio:1}
+.gal .media:first-child{grid-column:1 / -1;aspect-ratio:16/10}
+.gal .media img{transition:transform .5s ease}
+.gal .media:hover img{transform:scale(1.04)}
+
+/* Kapcsolat */
+.contact-grid{display:grid;gap:2.5rem}
+.c-list{list-style:none;margin:0;padding:0;display:grid;gap:1.5rem}
+.c-list h3{font-family:var(--label);font-weight:600;font-size:.95rem;letter-spacing:.18em;color:var(--brass);margin-bottom:.35rem}
+.c-list a{text-decoration-color:var(--red);text-underline-offset:4px}
+.c-list a:hover{color:var(--red-hi)}
+.phone-big{font-family:var(--head);font-size:clamp(1.9rem,8vw,2.6rem);text-decoration:none!important;letter-spacing:.02em}
+.hours{width:100%;border-collapse:collapse;font-family:var(--label);font-size:1.1rem}
+.hours td{padding:.45rem 0;border-bottom:1px solid #2B2D32}
+.hours td:last-child{text-align:right}
+.hours tr.today td{color:var(--brass)}
+.today-note{color:var(--muted);font-size:.95rem;margin-top:.6rem}
+.map{border:0;width:100%;height:360px;filter:grayscale(.35) contrast(1.05);background:var(--steel)}
+
+/* Lábléc */
+footer{border-top:3px solid var(--red);background:#0A0B0C;padding:2.5rem 0 1.5rem;font-size:.98rem;color:var(--muted)}
+footer .f-name{font-family:var(--head);font-size:1.6rem;color:var(--bone);text-transform:uppercase;margin-bottom:.6rem}
+footer p{margin:0 0 .3rem}
+footer a{text-underline-offset:3px}
+.credit{margin-top:2rem;padding-top:1rem;border-top:1px solid #222429;font-size:.82rem;color:#9C978F}
+
+/* Animáció */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .gal .media img,.btn,.menu-btn span,.menu-btn span::before,.menu-btn span::after{transition:none}
+  .gal .media:hover img{transform:none}
+}
+
+/* Tablet */
+@media (min-width:768px){
+  .wrap{padding:0 2rem}
+  .block{padding:6rem 0}
+  .svc{grid-template-columns:repeat(2,1fr);column-gap:2rem}
+  .svc-item:first-child{grid-column:1 / -1;grid-template-columns:1.2fr 1fr;align-items:end;gap:2rem}
+  .quotes{grid-template-columns:1fr 1fr;column-gap:3rem}
+  .gal{grid-template-columns:repeat(3,1fr)}
+  .gal .media:first-child{grid-column:1 / 3;grid-row:1 / 3;aspect-ratio:auto}
+  .gal .media:last-child{grid-column:3}
+  .contact-grid{grid-template-columns:1fr 1fr}
+  .map{height:100%;min-height:440px}
+  .footer-row{display:flex;justify-content:space-between;gap:2rem}
+}
+
+/* Asztali */
+@media (min-width:1024px){
+  .menu-btn{display:none}
+  .nav{position:static;display:flex;align-items:center;background:none;border:0;padding:0;gap:2rem}
+  .nav ul{display:flex;gap:1.8rem}
+  .nav li a{border:0;padding:.3rem 0;font-size:1.05rem;position:relative}
+  .nav li a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--red);transition:width .2s}
+  .nav li a:hover::after{width:100%}
+  .nav .btn{margin:0;width:auto;padding:.65rem 1.1rem;font-size:1rem}
+  .hero .wrap{padding-bottom:5rem}
+  .hero-inner{display:grid;grid-template-columns:1.4fr 1fr;align-items:end;gap:3rem}
+  .rating{justify-self:end;margin:0}
+  .svc{grid-template-columns:repeat(3,1fr)}
+  .svc-item:first-child{grid-column:auto;grid-template-columns:1fr;align-items:start}
+  .svc-item:nth-child(2){margin-top:4rem}
+  .svc-item:nth-child(3){margin-top:8rem}
+  .about-grid{grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+  .quotes{grid-template-columns:repeat(4,1fr);column-gap:2rem;border-top:0}
+  .quote{border-bottom:0;border-top:3px solid var(--red);padding-top:1.4rem}
+  .contact-grid{grid-template-columns:5fr 7fr;gap:4rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#tartalom">Ugrás a tartalomhoz</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#tartalom" aria-label="Gladiátor Box Club – vissza az oldal tetejére">
+      <img src="https://www.facebook.com/photo/?fbid=489023349896402&set=a.489023299896407" alt="Gladiátor Box Club logó" width="42" height="42" onerror="this.style.display='none'">
+      <span>Gladiátor <b>Box</b> Club</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="fomenu" aria-label="Menü megnyitása"><span></span></button>
+    <nav class="nav" id="fomenu" aria-label="Főmenü">
+      <ul>
+        <li><a href="#edzesek">Edzések</a></li>
+        <li><a href="#rolunk">Rólunk</a></li>
+        <li><a href="#velemenyek">Vélemények</a></li>
+        <li><a href="#galeria">Galéria</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+      </ul>
+      <a class="btn btn-red" href="tel:+36209736133">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+        Hívás
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+  <section class="hero" aria-labelledby="hero-cim">
+    <div class="media">
+      <img src="https://gz0.googleusercontent.com/grass-cs/AABkmLeELP8hY-d9D2ncoh7fayKnTDsanLkoLhjv-28nEwb42WVjKxKQK1S0djXmJj1VMGlncJNs6T1K47O9xw6PfWn6-FCzeDcGui5JPJWUuM4DlyeGjgn4a6db_0GRpB6cQ7VOvnMB=w1920-h1080-k-no" alt="A Gladiátor Box Club győri edzőterme belülről" fetchpriority="high" onerror="this.parentElement.classList.add('noimg');this.style.display='none'">
+    </div>
+    <div class="wrap">
+      <div class="hero-inner">
+        <div>
+          <span class="kicker">Ökölvívás és edzőterem · Győr</span>
+          <h1 id="hero-cim">Gladiátor <em>Box Club</em></h1>
+          <p class="lead">Boksz és gépes edzés egy helyen, a Radnóti Miklós utcában. Hétköznap reggel 6-tól este 10-ig várunk.</p>
+          <div class="actions">
+            <a class="btn btn-red" href="tel:+36209736133">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+              Hívj: +36 20 973 6133
+            </a>
+            <a class="btn btn-line" href="#kapcsolat">Nyitvatartás és cím</a>
+          </div>
+        </div>
+        <p class="rating"><strong>4,7</strong> <span>Google-értékelés<br>58 vélemény alapján</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="edzesek" aria-labelledby="edzesek-cim">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <span class="kicker">Edzések</span>
+        <h2 id="edzesek-cim">Amiért hozzánk jössz</h2>
+        <p>Ökölvívó klub és edzőterem egyben. Válaszd a bokszot, a gépeket, vagy edz mindkettővel.</p>
+      </div>
+      <div class="svc">
+        <article class="svc-item reveal">
+          <div class="media">
+            <img src="https://scontent.ftpa1-2.fna.fbcdn.net/v/t39.30808-6/479883835_1158082282990502_7868237029602037781_n.jpg?stp=dst-jpg_tt6&cstp=mx960x720&ctp=s960x720&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=FX6TU4aQlNAQ7kNvwHjCcxn&_nc_oc=AdrC6X1K0KfQXX6sYsQbDlHWPGb1fzyFJN_vTGWQDyhdoNvTTzcg1Tj5vJsEJJ8u9PkX9C0lnWPXLB_Pk3j2tye5&_nc_zt=23&_nc_ht=scontent.ftpa1-2.fna&_nc_gid=DlCCA6ex2abh6JurHo8tSA&_nc_ss=70289&oh=00_AQRUes0cgQjG5QyKbmmpTrfhDgGmPpCSJ6JsbpwGaUxaJA&oe=6AE84AF9" alt="Bokszedzés a Gladiátor Box Clubban" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.style.display='none'">
+          </div>
+          <div>
+            <span class="svc-num">01</span>
+            <h3>Boksz</h3>
+            <p>A klub szíve az ökölvívás. Itt a boksz a mindennapok része. Az edzésidőpontokról érdeklődj telefonon.</p>
+          </div>
+        </article>
+        <article class="svc-item reveal">
+          <div class="media">
+            <img src="https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/855514952_1721328583332533_5629574336806049500_n.jpg?stp=dst-jpg_tt6&cstp=mx960x638&ctp=p180x540&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=r9IxqD3QCOkQ7kNvwFwva0K&_nc_oc=Adq4KpfRa4qp6ZbbeMvC_bxPAS6MpnxXJowA5VxFkwxIKFCmcu0UY5tkTYKS_OYzraj984Oh6mBgw6npLktrj9pj&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=nk0g3hJLq7Io2FUeoHx8JQ&_nc_ss=70180&oh=00_AQTJGKhmbG_cZ3TULPd4hEYntY7Nj9XvvdCw2G9OIQSE7w&oe=6AE84E9B" alt="Edzés a Gladiátor Box Club termében" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.style.display='none'">
+          </div>
+          <div>
+            <span class="svc-num">02</span>
+            <h3>Edzőterem</h3>
+            <p>Jól felszerelt gépes rész, ahol nem kell sorban állni a gépekhez. Ezt nem mi mondjuk, hanem a vendégeink.</p>
+          </div>
+        </article>
+        <article class="svc-item reveal">
+          <div class="media">
+            <img src="https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/657257420_1520929666705760_5946477962827220415_n.jpg?stp=dst-jpg_tt6&cstp=mx800x444&ctp=s800x444&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=fIWr8RtlhUYQ7kNvwGM8F9m&_nc_oc=AdoiKocGmqMk6wXP4Utl3LljK3usnooCj_05qNsvH_BmbdxAxFkmox1dIqumHcoIzW0qfA138pc0FkOdv8CnjPJM&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=nk0g3hJLq7Io2FUeoHx8JQ&_nc_ss=70180&oh=00_AQQzTM62-8gc_h5pdBreeXD0CnZjgUjdzs6DwHhcLXJMnw&oe=6AE83AF7" alt="Pillanat a Gladiátor Box Club klubéletéből" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.style.display='none'">
+          </div>
+          <div>
+            <span class="svc-num">03</span>
+            <h3>A hét minden napján</h3>
+            <p>Hétfőtől péntekig 6:00–22:00, hétvégén 9:00–16:00. Munka előtt, munka után vagy szombat délelőtt is belefér egy edzés.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block about" id="rolunk" aria-labelledby="rolunk-cim">
+    <div class="wrap about-grid">
+      <div class="about-pics reveal">
+        <div class="media">
+          <img src="https://scontent-ord5-2.xx.fbcdn.net/v/t51.82787-15/642509566_18099474859927705_624980198322333300_n.jpg?stp=dst-jpg_tt6&cstp=mx1365x1820&ctp=p526x296&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=jommvzdP96IQ7kNvwH8vEex&_nc_oc=Adpgo8iOdD2cIlRymM1QdeH7ZHV4T8311tr2yZFVEmKmn_wW7H5wtmgBybPnLrxu4ztWxWYDNDqTi4xudczPdbO6&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=Uqo2uZhzJnqJ7-XkJk8mHw&_nc_ss=70180&oh=00_AQSWgL4JnXddkbQC9tS5WTj1ywfexIwWugPuWFB-WRozHA&oe=6AE83A35" alt="A Gladiátor Box Club ökölvívói" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.style.display='none'">
+        </div>
+        <div class="media">
+          <img src="https://scontent-ord5-1.xx.fbcdn.net/v/t39.30808-6/647914887_1499971092134951_717180254096557602_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1536&ctp=p526x296&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=NxVDmlnC434Q7kNvwEkWU1s&_nc_oc=Adou2mI8btVzNMF6vsLYoiYTm9W4QHemnrevGBbbz7ExWe7IHikD0OJ0JIBIcA2s8oN78cyhMKk3VT0slFQFHrD5&_nc_zt=23&_nc_ht=scontent-ord5-1.xx&_nc_gid=Uqo2uZhzJnqJ7-XkJk8mHw&_nc_ss=70180&oh=00_AQQv6VyUWJnp_rVj0ZXxVeU4a1oIrcVv-XhdG1NKgUOCqw&oe=6AE82A58" alt="Bokszoló a klub győri termében" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.style.display='none'">
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <span class="kicker">Rólunk</span>
+        <h2 id="rolunk-cim">Klub, nem csak terem</h2>
+        <p>Győrben, a Radnóti Miklós utcában edzünk. Nálunk egy helyen találod az ökölvívást és a gépes edzőtermet.</p>
+        <p>A vendégeink szerint a hangulat barátságos, a bokszolók rendesek és segítőkészek. Ha most kezdenéd, bátran kérdezz.</p>
+        <p>A klub hírei, a közös edzések és a régió ökölvívó-eseményei a Facebook-oldalunkon jelennek meg.</p>
+        <ul class="facts">
+          <li><span>Hétfő–péntek</span><span>6:00–22:00</span></li>
+          <li><span>Szombat–vasárnap</span><span>9:00–16:00</span></li>
+          <li><span>Google-értékelés</span><span>4,7 / 5 (58)</span></li>
+        </ul>
+        <div class="onepct">
+          <h3>Támogasd a klubot</h3>
+          <p>Adód 1%-ával segítheted a munkánkat. Az Ügyfélkapun belépve 1–2 perc alatt megvan. Az adószámért keress minket telefonon vagy a Facebookon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="velemenyek" aria-labelledby="velemeny-cim">
+    <div class="wrap">
+      <div class="reviews-top reveal">
+        <div>
+          <span class="kicker">Vélemények</span>
+          <h2 id="velemeny-cim">Ezt mondják rólunk</h2>
+        </div>
+        <div class="score" aria-label="Google-értékelés: 4,7 az 5-ből, 58 vélemény alapján">
+          <strong>4,7</strong><span>/ 5 · 58 Google-vélemény</span>
+        </div>
+      </div>
+      <div class="quotes">
+        <figure class="quote reveal">
+          <div class="stars" aria-label="5 csillag">★★★★★</div>
+          <blockquote><p>Az edzőteremben részében voltam. Nagyon jól felszerelt terem.<br>A boxoló srácok is nagyon rendesek és segítőkészek voltak.</p></blockquote>
+          <figcaption>Z. M.</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <div class="stars" aria-label="5 csillag">★★★★★</div>
+          <blockquote><p>Legtöbb ember kedves és mindenhez kényelmesen oda lehet férni,nem kell sorban álni a gépekhez.</p></blockquote>
+          <figcaption>Á. M.</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <div class="stars" aria-label="5 csillag">★★★★★</div>
+          <blockquote><p>Ha lehetne, akkor adnék jobb értékelést, de sajnos ez a maximum.</p></blockquote>
+          <figcaption>R. Z.</figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <div class="stars" aria-label="5 csillag">★★★★★</div>
+          <blockquote><p>Remek hely! De az a sok pofone ne volna!</p></blockquote>
+          <figcaption>Z. V.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block gallery" id="galeria" aria-labelledby="galeria-cim">
+    <div class="wrap">
+      <div class="head-row reveal">
+        <span class="kicker">Galéria</span>
+        <h2 id="galeria-cim">Pillanatok a klubból</h2>
+      </div>
+      <div class="gal reveal">
+        <div class="media">
+          <img src="https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/621921023_1464973908968003_6660592171531146865_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s640x640&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=477z7-wAbfcQ7kNvwGpCm4b&_nc_oc=AdqyAbehvdwalgL3eIsx6BHesp8wbtDmHjRjLrpWLbC5XbpPQ0GwJURQ56Qp_Co0HXeoK4JvO5UZdbI7NqOevbeC&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=Uqo2uZhzJnqJ7-XkJk8mHw&_nc_ss=70180&oh=00_AQTEal4UYWi84EuL9eIGEKq9HKA_8IXjKh5rVG06yBZ3ow&oe=6AE84263" alt="Ökölvívó edzés a Gladiátor Box Clubban" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.style.display='none'">
+        </div>
+        <div class="media">
+          <img src="https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/561082305_1369336448531750_2073478245444112606_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=p526x296&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ouLfOi1JBPwQ7kNvwFSHGZ5&_nc_oc=AdonU4tW5-pr901LZKnPCJrsUADPgsbZpmn18Gg8StctqNhpa_xpeqZjvtXVJ_05Fvw&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=HFOzJfK2-Zm_0SGw1CeNLg&_nc_ss=70180&oh=00_AQQTngVOwAASlFzdzpJBrv09K2sWLhgaYZwSvh8RDNCypg&oe=6AE84878" alt="A Gladiátor Box Club közössége" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.style.display='none'">
+        </div>
+        <div class="media">
+          <img src="https://scontent-mia5-1.xx.fbcdn.net/v/t39.30808-6/495163317_1234058532059543_841000173260834823_n.jpg?stp=dst-jpg_tt6&cstp=mx800x444&ctp=s800x444&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=P6hBs-M6UngQ7kNvwE-QftB&_nc_oc=AdoWkol_aGkqAJ64LxwPOyhn7UbEfVktsxqTOx5348Ij6s-uufuDpwgjvRBVWdLva28&_nc_zt=23&_nc_ht=scontent-mia5-1.xx&_nc_gid=w-noh8bpSpALdMH2PG0iBA&_nc_ss=70180&oh=00_AQSM41MlnqOQ-0Ffw7dFfFgcLIKeZdy0TKhi_enCmF0bDg&oe=6AE85415" alt="Klubesemény a Gladiátor Box Club Facebook-oldaláról" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.style.display='none'">
+        </div>
+        <div class="media">
+          <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/494701057_1226326042832792_6203864236124735509_n.jpg?stp=dst-jpg_tt6&cstp=mx800x444&ctp=s800x444&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=j8aVbFySj4cQ7kNvwEmAWv9&_nc_oc=Adoz-2xhYEe5oQkKKRbbPcHVt3kt_Ct8RohfOTApMIPY618k5yRs4f_OoU0po06hdFg&_nc_zt=23&_nc_ht=scontent-mia3-1.xx&_nc_gid=w-noh8bpSpALdMH2PG0iBA&_nc_ss=70180&oh=00_AQQ8BpP1S_2TK4eJTCCS7ru6qaYNEFeOZOi_gg9I95Svww&oe=6AE844AE" alt="A klub ökölvívói egy közös alkalmon" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.style.display='none'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="kapcsolat" aria-labelledby="kapcsolat-cim">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <span class="kicker">Kapcsolat</span>
+        <h2 id="kapcsolat-cim">Gyere el edzeni</h2>
+        <ul class="c-list" style="margin-top:2rem">
+          <li>
+            <h3>Telefon</h3>
+            <a class="phone-big" href="tel:+36209736133">+36 20 973 6133</a>
+          </li>
+          <li>
+            <h3>Cím</h3>
+            <p style="margin:0">9025 Győr, Radnóti Miklós u. 46.</p>
+          </li>
+          <li>
+            <h3>Nyitvatartás</h3>
+            <table class="hours">
+              <caption class="skip">Nyitvatartási idő</caption>
+              <tbody>
+                <tr data-day="1"><td>Hétfő</td><td>6:00–22:00</td></tr>
+                <tr data-day="2"><td>Kedd</td><td>6:00–22:00</td></tr>
+                <tr data-day="3"><td>Szerda</td><td>6:00–22:00</td></tr>
+                <tr data-day="4"><td>Csütörtök</td><td>6:00–22:00</td></tr>
+                <tr data-day="5"><td>Péntek</td><td>6:00–22:00</td></tr>
+                <tr data-day="6"><td>Szombat</td><td>9:00–16:00</td></tr>
+                <tr data-day="0"><td>Vasárnap</td><td>9:00–16:00</td></tr>
+              </tbody>
+            </table>
+            <p class="today-note" id="ma" aria-live="polite"></p>
+          </li>
+          <li>
+            <h3>Facebook</h3>
+            <a href="https://www.facebook.com/Gladi%C3%A1tor-Box-Club-273830659315590/likes" target="_blank" rel="noopener">Gladiátor Box Club a Facebookon</a>
+          </li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <iframe class="map" title="Gladiátor Box Club helye a térképen: Győr, Radnóti Miklós u. 46." src="https://www.google.com/maps?q=Gy%C5%91r%2C%20Radn%C3%B3ti%20Mikl%C3%B3s%20u.%2046%2C%209025%20Magyarorsz%C3%A1g&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-row">
+      <div>
+        <p class="f-name">Gladiátor Box Club</p>
+        <p>9025 Győr, Radnóti Miklós u. 46.</p>
+        <p><a href="tel:+36209736133">+36 20 973 6133</a></p>
+      </div>
+      <div>
+        <p>Hétfő–péntek: 6:00–22:00</p>
+        <p>Szombat–vasárnap: 9:00–16:00</p>
+        <p><a href="https://www.facebook.com/Gladi%C3%A1tor-Box-Club-273830659315590/likes" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+    </div>
+    <p class="credit">© <span id="ev"></span> Gladiátor Box Club · Készítette: <a href="https://auracode.hu" target="_blank" rel="noopener">AuraCode</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn');
+  var nav=document.getElementById('fomenu');
+  function setMenu(open){
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Menü bezárása':'Menü megnyitása');
+    nav.classList.toggle('open',open);
+  }
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true')});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&nav.classList.contains('open')){setMenu(false);btn.focus()}
+  });
+  window.addEventListener('resize',function(){if(window.innerWidth>=1024)setMenu(false)});
+
+  document.getElementById('ev').textContent=new Date().getFullYear();
+
+  var now=new Date(),d=now.getDay();
+  var row=document.querySelector('.hours tr[data-day="'+d+'"]');
+  if(row)row.classList.add('today');
+  var weekend=(d===0||d===6);
+  var open=weekend?9:6,close=weekend?16:22;
+  var h=now.getHours()+now.getMinutes()/60;
+  var note=document.getElementById('ma');
+  if(note){
+    note.textContent=(h>=open&&h<close)
+      ?'Most nyitva vagyunk, ma '+close+':00-ig várunk.'
+      :'Ma '+open+':00 és '+close+':00 között vagyunk nyitva.';
+  }
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in')});
+  }else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
+      });
+    },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    items.forEach(function(el){io.observe(el)});
+  }
+})();
+</script>
+</body>
+</html>
