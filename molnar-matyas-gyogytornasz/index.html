@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Molnár Mátyás gyógytornász – Nagykanizsa, Király u. 2.</title>
+<meta name="description" content="Molnár Mátyás gyógytornász Nagykanizsán, a Király u. 2. alatt. Gyógytorna és mozgásterápia, időpont-egyeztetés telefonon: +36 20 245 1733.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physiotherapy",
+  "name": "Molnár Mátyás gyógytornász",
+  "telephone": "+36 20 245 1733",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Király u. 2.",
+    "addressLocality": "Nagykanizsa",
+    "postalCode": "8800",
+    "addressCountry": "HU"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#F3F5F4;
+  --surface:#FFFFFF;
+  --ink:#16222A;
+  --muted:#46545C;
+  --primary:#0D4F47;
+  --primary-dark:#083832;
+  --accent:#E3A23B;
+  --line:#D5DDDA;
+  --img-fallback:#B9CBC6;
+  --radius:4px;
+  --maxw:1180px;
+  --head:"Barlow Condensed", "Arial Narrow", sans-serif;
+  --body:"Nunito Sans", system-ui, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--primary)}
+h1,h2,h3{font-family:var(--head);line-height:1.05;margin:0 0 .6em;letter-spacing:.01em}
+h1{font-size:clamp(2.6rem,9vw,5.2rem);font-weight:700;text-transform:uppercase}
+h2{font-size:clamp(2rem,5.5vw,3.2rem);font-weight:700;text-transform:uppercase}
+h3{font-size:1.5rem;font-weight:600}
+p{margin:0 0 1em}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:10px 14px;z-index:100}
+.skip:focus{left:10px;top:10px}
+
+/* Fejléc */
+.header{position:sticky;top:0;z-index:50;background:rgba(243,245,244,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:16px}
+.brand{text-decoration:none;color:var(--ink);display:flex;flex-direction:column;line-height:1}
+.brand strong{font-family:var(--head);font-size:1.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+.brand span{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-top:4px}
+.menu-btn{background:none;border:1px solid var(--ink);border-radius:var(--radius);width:46px;height:46px;display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:20px;height:2px;background:currentColor;position:relative;transition:transform .25s}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg)}
+.nav{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+.nav.open{display:block}
+.nav ul{list-style:none;margin:0;padding:8px 20px 20px}
+.nav a{display:block;padding:12px 0;text-decoration:none;color:var(--ink);font-weight:600;border-bottom:1px solid var(--line)}
+.nav .nav-cta{margin-top:14px;border:0;background:var(--primary);color:#fff;text-align:center;border-radius:var(--radius)}
+
+/* Gombok */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:var(--radius);font-weight:700;text-decoration:none;font-size:1.05rem;transition:background .2s,transform .2s}
+.btn-primary{background:var(--accent);color:#16222A}
+.btn-primary:hover{background:#F0B556}
+.btn-ghost{color:#fff;border:2px solid rgba(255,255,255,.7)}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn svg{width:20px;height:20px}
+
+/* Hero */
+.hero{position:relative;background:var(--primary-dark);color:#fff;overflow:hidden}
+.hero-media{position:absolute;inset:0;background:var(--img-fallback)}
+.hero-media img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/9}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,56,50,.94) 0%,rgba(8,56,50,.82) 55%,rgba(8,56,50,.45) 100%)}
+.hero .wrap{position:relative;padding-top:72px;padding-bottom:80px}
+.eyebrow{display:inline-block;font-size:.85rem;text-transform:uppercase;letter-spacing:.18em;font-weight:700;color:var(--accent);margin-bottom:18px;border-left:3px solid var(--accent);padding-left:10px}
+.hero p.lead{font-size:1.2rem;max-width:34ch;color:#E6EFEC}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-meta{margin-top:40px;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:.95rem;color:#D3E2DE}
+.hero-meta b{color:#fff}
+
+/* Szekciók */
+section{padding:72px 0}
+.sec-label{font-size:.85rem;text-transform:uppercase;letter-spacing:.18em;font-weight:700;color:var(--primary);margin-bottom:10px;display:block}
+.media{background:var(--img-fallback);overflow:hidden;border-radius:var(--radius)}
+.media img{width:100%;height:100%;object-fit:cover}
+.media.failed img{display:none}
+.note{font-size:.8rem;color:var(--muted);margin-top:8px}
+
+/* Szolgáltatások */
+.services{background:var(--surface)}
+.services-grid{display:grid;gap:36px}
+.services .media{aspect-ratio:4/5}
+.svc-list{list-style:none;margin:28px 0 0;padding:0;counter-reset:svc}
+.svc-list li{counter-increment:svc;padding:20px 0 20px 64px;border-top:1px solid var(--line);position:relative}
+.svc-list li:last-child{border-bottom:1px solid var(--line)}
+.svc-list li::before{content:counter(svc,decimal-leading-zero);position:absolute;left:0;top:16px;font-family:var(--head);font-size:2rem;font-weight:700;color:var(--primary)}
+.svc-list h3{margin-bottom:.25em}
+.svc-list p{margin:0;color:var(--muted)}
+
+/* Rólunk */
+.about-grid{display:grid;gap:36px;align-items:center}
+.about .media{aspect-ratio:4/3}
+.about p{color:var(--muted);max-width:60ch}
+.quote-line{font-family:var(--head);font-size:1.7rem;font-weight:600;color:var(--primary);border-left:4px solid var(--accent);padding-left:16px;margin:24px 0;line-height:1.2}
+
+/* Lépések */
+.steps{background:var(--primary);color:#fff}
+.steps .sec-label{color:var(--accent)}
+.steps-grid{display:grid;gap:36px;align-items:start}
+.steps .media{aspect-ratio:3/4;max-width:420px}
+.steps .note{color:#C9DAD5}
+.step{display:grid;grid-template-columns:52px 1fr;gap:14px;padding:22px 0;border-top:1px solid rgba(255,255,255,.22)}
+.step-num{font-family:var(--head);font-size:2.4rem;font-weight:700;color:var(--accent);line-height:1}
+.step p{margin:0;color:#DDE9E6}
+.steps a{color:#fff}
+
+/* Kapcsolat */
+.contact-grid{display:grid;gap:32px}
+.contact dl{margin:0}
+.contact dt{font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;font-weight:700;color:var(--primary);margin-top:22px}
+.contact dd{margin:4px 0 0;font-size:1.15rem}
+.contact dd a{color:var(--ink);font-weight:700}
+.map{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--img-fallback);min-height:320px}
+.map iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+.contact .btn-primary{margin-top:28px}
+
+/* Lábléc */
+footer{background:var(--ink);color:#C8D1D5;padding:44px 0 28px;font-size:.95rem}
+footer strong{color:#fff;font-family:var(--head);font-size:1.4rem;text-transform:uppercase;letter-spacing:.02em}
+footer a{color:#fff}
+.foot-grid{display:grid;gap:16px}
+.credit{margin-top:32px;padding-top:18px;border-top:1px solid #33424B;font-size:.8rem;color:#A9B5BA}
+
+/* Animáció */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn,.menu-btn span{transition:none}
+}
+
+/* 768 px */
+@media (min-width:768px){
+  .wrap{padding:0 36px}
+  section{padding:96px 0}
+  .hero .wrap{padding-top:120px;padding-bottom:130px}
+  .services-grid{grid-template-columns:5fr 7fr;align-items:start}
+  .services .media{position:sticky;top:96px}
+  .about-grid{grid-template-columns:1fr 1fr}
+  .about .media{order:2}
+  .steps-grid{grid-template-columns:5fr 7fr}
+  .contact-grid{grid-template-columns:5fr 7fr}
+  .foot-grid{grid-template-columns:2fr 1fr 1fr}
+}
+/* Asztali menü */
+@media (min-width:960px){
+  .menu-btn{display:none}
+  .nav{position:static;display:block;background:none;border:0}
+  .nav ul{display:flex;align-items:center;gap:28px;padding:0}
+  .nav a{border:0;padding:6px 0}
+  .nav a:not(.nav-cta):hover{color:var(--primary);text-decoration:underline;text-underline-offset:6px}
+  .nav .nav-cta{margin:0;padding:10px 18px}
+}
+/* 1440 px */
+@media (min-width:1280px){
+  .hero .wrap{padding-top:150px;padding-bottom:160px}
+  .hero p.lead{font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#tartalom">Ugrás a tartalomra</a>
+
+<header class="header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Molnár Mátyás gyógytornász – kezdőlap">
+      <strong>Molnár Mátyás</strong>
+      <span>Gyógytornász · Nagykanizsa</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="fomenu" aria-label="Menü megnyitása"><span></span></button>
+    <nav class="nav" id="fomenu" aria-label="Fő navigáció">
+      <ul>
+        <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+        <li><a href="#rolunk">Bemutatkozás</a></li>
+        <li><a href="#kezdes">Hogyan kezdjünk?</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+        <li><a class="nav-cta" href="tel:+36202451733">Hívás: +36 20 245 1733</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+  <section class="hero" id="top" style="padding:0">
+    <div class="hero-media media" style="border-radius:0">
+      <img src="https://media.sume.com/artifacts/artf_tc9USEmVPWuhTJapX1PDXfH7IuVQF_y8/images.jpg" alt="Hangulatkép: gyógytorna kezelés világos, nyugodt térben" width="1600" height="900" fetchpriority="high" onerror="this.parentElement.classList.add('failed')">
+    </div>
+    <div class="wrap">
+      <span class="eyebrow">Gyógytorna Nagykanizsán</span>
+      <h1>Molnár Mátyás<br>gyógytornász</h1>
+      <p class="lead">Mozgásszervi panaszokra, sérülések és műtétek utáni felépüléshez. Személyre szabott gyógytorna a Király utcában.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+36202451733">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Időpontot kérek
+        </a>
+        <a class="btn btn-ghost" href="#szolgaltatasok">Miben segíthet?</a>
+      </div>
+      <div class="hero-meta">
+        <span><b>Cím:</b> 8800 Nagykanizsa, Király u. 2.</span>
+        <span><b>Telefon:</b> +36 20 245 1733</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="szolgaltatasok" aria-labelledby="szolg-cim">
+    <div class="wrap services-grid">
+      <div class="reveal">
+        <div class="media">
+          <img src="https://media.sume.com/artifacts/artf_rWlVcxdgxLY87B8yuCQCBk93NWSm7SRy/images.jpg" alt="Hangulatkép: irányított gyógytorna gyakorlat végzése" width="800" height="1000" loading="lazy" onerror="this.parentElement.classList.add('failed')">
+        </div>
+        <p class="note">Illusztráció</p>
+      </div>
+      <div class="reveal">
+        <span class="sec-label">Szolgáltatások</span>
+        <h2 id="szolg-cim">Miben segíthet a gyógytorna?</h2>
+        <p>A gyógytorna célja, hogy a fájdalom csökkenjen, a mozgás újra szabad és biztonságos legyen. Az alábbi területekről érdeklődjön telefonon.</p>
+        <ul class="svc-list">
+          <li>
+            <h3>Mozgásszervi panaszok</h3>
+            <p>Hát-, derék- és nyakfájdalom, ízületi panaszok kezelése célzott gyakorlatokkal.</p>
+          </li>
+          <li>
+            <h3>Rehabilitáció</h3>
+            <p>Felépülés sérülés vagy műtét után, fokozatosan terhelve.</p>
+          </li>
+          <li>
+            <h3>Tartásjavítás</h3>
+            <p>A rossz testtartásból eredő terhelés csökkentése, izomegyensúly helyreállítása.</p>
+          </li>
+          <li>
+            <h3>Otthoni gyakorlatok</h3>
+            <p>Gyakorlatsor, amelyet a kezelések között otthon is végezhet.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="rolunk" aria-labelledby="rolunk-cim">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <div class="media">
+          <img src="https://media.sume.com/artifacts/artf_OExthGZglE47Ma3DJj0p1itBZLze7ku6/images.jpg" alt="Hangulatkép: gyógytornász és páciens közös munka közben" width="1200" height="900" loading="lazy" onerror="this.parentElement.classList.add('failed')">
+        </div>
+        <p class="note">Illusztráció</p>
+      </div>
+      <div class="reveal">
+        <span class="sec-label">Bemutatkozás</span>
+        <h2 id="rolunk-cim">Gyógytorna Nagykanizsa szívében</h2>
+        <p>Molnár Mátyás gyógytornászként fogad pácienseket Nagykanizsán, a Király u. 2. alatt.</p>
+        <p class="quote-line">A cél nem csak a fájdalom enyhítése, hanem hogy újra magabiztosan mozogjon.</p>
+        <p>A gyógytorna aktív kezelés: a gyakorlatokat Ön végzi, szakember irányításával. Így a javulás nem áll meg a kezelés végén.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps" id="kezdes" aria-labelledby="kezdes-cim">
+    <div class="wrap steps-grid">
+      <div class="reveal">
+        <div class="media">
+          <img src="https://media.sume.com/artifacts/artf_SkqYGoxUSnawhfCoXqRPqDUnI027noEy/images.jpg" alt="Hangulatkép: nyújtó gyakorlat gyógytorna foglalkozáson" width="900" height="1200" loading="lazy" onerror="this.parentElement.classList.add('failed')">
+        </div>
+        <p class="note">Illusztráció</p>
+      </div>
+      <div class="reveal">
+        <span class="sec-label">Hogyan kezdjünk?</span>
+        <h2 id="kezdes-cim">Három lépés az első kezelésig</h2>
+        <div class="step">
+          <span class="step-num">1</span>
+          <div><h3>Hívjon fel</h3><p>Hívja a <a href="tel:+36202451733">+36 20 245 1733</a> számot, és röviden mondja el, milyen panasza van.</p></div>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <div><h3>Egyeztessünk időpontot</h3><p>Közösen megtaláljuk az Önnek megfelelő időpontot.</p></div>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <div><h3>Jöjjön el a Király u. 2.-be</h3><p>Ha van korábbi orvosi lelete, hozza magával. Kényelmes ruha ajánlott.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="kapcsolat" aria-labelledby="kapcs-cim">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <span class="sec-label">Kapcsolat</span>
+        <h2 id="kapcs-cim">Időpont-egyeztetés</h2>
+        <dl>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+36202451733">+36 20 245 1733</a></dd>
+          <dt>Cím</dt>
+          <dd>8800 Nagykanizsa, Király u. 2.</dd>
+          <dt>Nyitvatartás</dt>
+          <dd>Előzetes időpont-egyeztetés alapján, telefonon.</dd>
+        </dl>
+        <a class="btn btn-primary" href="tel:+36202451733">Hívás most</a>
+      </div>
+      <div class="map reveal">
+        <iframe src="https://www.google.com/maps?q=Nagykanizsa%2C%20Kir%C3%A1ly%20u.%202%2C%208800%20Magyarorsz%C3%A1g&output=embed" title="Térkép: Molnár Mátyás gyógytornász, Nagykanizsa, Király u. 2." loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <strong>Molnár Mátyás gyógytornász</strong>
+        <p style="margin-top:8px">Gyógytorna Nagykanizsán</p>
+      </div>
+      <div>
+        <p>8800 Nagykanizsa,<br>Király u. 2.</p>
+      </div>
+      <div>
+        <p><a href="tel:+36202451733">+36 20 245 1733</a></p>
+      </div>
+    </div>
+    <p class="credit">Készítette: <a href="https://auracode.hu" target="_blank" rel="noopener">AuraCode</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn');
+  var nav=document.getElementById('fomenu');
+  function closeMenu(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Menü megnyitása');}
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Menü bezárása':'Menü megnyitása');
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){closeMenu();btn.focus();}});
+
+  var items=document.querySelectorAll('.reveal');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in');});
+  }else{
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.12});
+    items.forEach(function(el){io.observe(el);});
+  }
+})();
+</script>
+</body>
+</html>
