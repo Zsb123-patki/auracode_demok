@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vasbetonszerelés Kft – Vasbetonszerelés, betonacél szerelés</title>
+<meta name="description" content="Vasbetonszerelés Kft – betonacél szerelés, vasalás és zsaluzás-előkészítés építkezéseken. Hívjon bizalommal: 06 70 201 8665.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Vasbetonszerelés Kft",
+  "telephone": "+36702018665",
+  "description": "Vasbetonszerelés, betonacél szerelés építkezéseken."
+}
+</script>
+<style>
+:root{
+  --steel:#1f2a33;
+  --steel-2:#2c3a46;
+  --rust:#c8561c;
+  --rust-dark:#a3430f;
+  --bg:#f4f5f3;
+  --white:#ffffff;
+  --text:#1b2229;
+  --muted:#5a6570;
+  --line:#d9dcd8;
+  --ff-h:'Montserrat',Arial,sans-serif;
+  --ff-b:'Jost','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-b);color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--ff-h);line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:800;color:var(--steel)}
+.eyebrow{display:inline-block;font-family:var(--ff-h);font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--rust);margin-bottom:.6rem}
+.container{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+section{padding:4rem 0}
+:focus-visible{outline:3px solid var(--rust);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ff-h);font-weight:600;font-size:.95rem;padding:.9rem 1.5rem;border:2px solid var(--rust);background:var(--rust);color:#fff;text-decoration:none;transition:background .2s,transform .2s;cursor:pointer}
+.btn:hover{background:var(--rust-dark);border-color:var(--rust-dark)}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.imgbox{background:var(--steel-2);overflow:hidden}
+.imgbox img{width:100%;height:100%;object-fit:cover}
+
+/* header */
+.header{position:sticky;top:0;z-index:50;background:var(--steel);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.header .container{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.logo svg{width:40px;height:40px}
+.logo span{font-family:var(--ff-h);font-weight:800;font-size:1.05rem;letter-spacing:.02em;line-height:1.1}
+.logo small{display:block;font-family:var(--ff-b);font-weight:400;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:#d8a07c}
+.nav ul{list-style:none;display:flex;gap:1.8rem}
+.nav a{text-decoration:none;font-weight:500;font-size:.95rem;position:relative;padding:.3rem 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--rust);transition:width .2s}
+.nav a:hover::after{width:100%}
+.nav .call{background:var(--rust);padding:.55rem 1rem;font-family:var(--ff-h);font-weight:600}
+.nav .call::after{display:none}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;flex-direction:column;justify-content:center;gap:5px;align-items:center}
+.burger span{display:block;width:26px;height:3px;background:#fff;transition:transform .25s,opacity .25s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;min-height:82vh;display:flex;align-items:center;color:#fff;padding:5rem 0;background:var(--steel)}
+.hero .imgbox{position:absolute;inset:0;z-index:0}
+.hero .imgbox img{opacity:.55}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(31,42,51,.92) 0%,rgba(31,42,51,.55) 55%,rgba(31,42,51,.2) 100%);z-index:1}
+.hero .container{position:relative;z-index:2;max-width:760px;margin-left:max(1.25rem,calc((100% - 1180px)/2))}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);font-weight:800;text-transform:uppercase;margin:.4rem 0 1rem}
+.hero h1 em{font-style:normal;color:#e98b4e}
+.hero p{font-size:1.1rem;max-width:560px;color:#e6e9ea;margin-bottom:1.8rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero .bar{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2.5rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.25);font-size:.9rem}
+.hero .bar strong{display:block;font-family:var(--ff-h);font-size:.95rem}
+
+/* about */
+.about .grid{display:grid;gap:2.5rem;align-items:center}
+.about .imgbox{aspect-ratio:4/3;position:relative}
+.about .imgbox::before{content:"";position:absolute;left:-14px;top:-14px;width:40%;height:40%;border:4px solid var(--rust);z-index:0}
+.about .imgbox img{position:relative;z-index:1}
+.about p{color:var(--muted);margin-bottom:1rem}
+.about ul{list-style:none;margin:1.2rem 0 1.6rem;display:grid;gap:.55rem}
+.about li{padding-left:1.6rem;position:relative}
+.about li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;background:var(--rust)}
+
+/* services */
+.services{background:var(--steel);color:#fff}
+.services h2{color:#fff}
+.services .intro{max-width:620px;color:#c9d0d6;margin-bottom:2.2rem}
+.cards{display:grid;gap:1.2rem}
+.card{background:var(--steel-2);padding:1.8rem 1.6rem;border-left:4px solid var(--rust);transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.card svg{width:40px;height:40px;stroke:#e98b4e;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1rem}
+.card h3{font-size:1.1rem;font-weight:600;margin-bottom:.5rem}
+.card p{color:#c9d0d6;font-size:.95rem}
+
+/* gallery */
+.gallery .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:1.8rem}
+.gallery .head p{color:var(--muted);max-width:520px}
+.masonry{display:grid;gap:.8rem;grid-template-columns:repeat(2,1fr)}
+.masonry .imgbox{aspect-ratio:1}
+.masonry .imgbox img{transition:transform .5s}
+.masonry .imgbox:hover img{transform:scale(1.04)}
+
+/* cta band */
+.cta{position:relative;color:#fff;text-align:left;padding:5rem 0}
+.cta .imgbox{position:absolute;inset:0}
+.cta .imgbox img{opacity:.4}
+.cta::after{content:"";position:absolute;inset:0;background:rgba(31,42,51,.75)}
+.cta .container{position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem}
+.cta h2{color:#fff;max-width:600px}
+.cta p{color:#d7dde2;margin-top:.5rem;max-width:520px}
+
+/* reviews */
+.reviews .rgrid{display:grid;gap:1.2rem}
+.rev{background:#fff;padding:1.6rem;border:1px solid var(--line);border-top:4px solid var(--steel)}
+.stars{color:var(--rust);letter-spacing:.1em;font-size:1rem;margin-bottom:.6rem}
+.rev p{color:var(--text);margin-bottom:.8rem;font-style:italic}
+.rev strong{font-family:var(--ff-h);font-size:.85rem;font-weight:600;color:var(--steel)}
+.note{font-size:.8rem;color:var(--muted);margin-top:1.2rem}
+
+/* contact */
+.contact{background:#fff}
+.contact .grid{display:grid;gap:2.5rem}
+.contact dl{display:grid;gap:1rem;margin-top:1.2rem}
+.contact dt{font-family:var(--ff-h);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--rust)}
+.contact dd{font-size:1.05rem}
+.contact dd a{text-decoration:none;font-family:var(--ff-h);font-weight:800;font-size:1.4rem;color:var(--steel)}
+.contact .hours{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1.2rem;font-size:.98rem}
+form{display:grid;gap:.9rem;background:var(--bg);padding:1.8rem;border:1px solid var(--line)}
+label{font-family:var(--ff-h);font-size:.8rem;font-weight:600;letter-spacing:.06em;color:var(--steel);display:grid;gap:.35rem}
+input,textarea{font:inherit;padding:.75rem .9rem;border:1px solid #b8bdb9;background:#fff;color:var(--text);width:100%}
+textarea{min-height:120px;resize:vertical}
+.ok{display:none;background:#e6f0e8;color:#1f4d2b;padding:.8rem;font-size:.95rem}
+
+/* footer */
+.footer{background:var(--steel);color:#c9d0d6;padding:2.5rem 0 1.5rem;font-size:.92rem}
+.footer .container{display:grid;gap:1.2rem}
+.footer a{text-decoration:none}
+.footer .maker{font-size:.75rem;color:#8c979f;border-top:1px solid rgba(255,255,255,.12);padding-top:1rem}
+.footer .maker a{color:#d8a07c}
+
+/* animation */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .masonry .imgbox img,.card,.btn,.burger span{transition:none}
+}
+
+/* responsive */
+@media (max-width:767px){
+  .burger{display:flex}
+  .nav{position:absolute;top:70px;left:0;right:0;background:var(--steel);display:none;padding:1rem 1.25rem 1.5rem;border-top:1px solid rgba(255,255,255,.12)}
+  .nav.open{display:block}
+  .nav ul{flex-direction:column;gap:1rem}
+  .nav .call{display:inline-block;margin-top:.3rem}
+}
+@media (min-width:768px){
+  .about .grid{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .masonry{grid-template-columns:repeat(4,1fr)}
+  .masonry .imgbox:first-child{grid-column:span 2;grid-row:span 2}
+  .reviews .rgrid{grid-template-columns:repeat(3,1fr)}
+  .contact .grid{grid-template-columns:1fr 1.2fr}
+}
+@media (min-width:1100px){
+  .cards{grid-template-columns:repeat(4,1fr)}
+  section{padding:5.5rem 0}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <a class="logo" href="#top" aria-label="Vasbetonszerelés Kft – főoldal">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" fill="#c8561c"/>
+        <g stroke="#ffffff" stroke-width="3" stroke-linecap="square">
+          <line x1="8" y1="12" x2="32" y2="12"/>
+          <line x1="8" y1="20" x2="32" y2="20"/>
+          <line x1="8" y1="28" x2="32" y2="28"/>
+          <line x1="12" y1="8" x2="12" y2="32"/>
+          <line x1="20" y1="8" x2="20" y2="32"/>
+          <line x1="28" y1="8" x2="28" y2="32"/>
+        </g>
+      </svg>
+      <span>Vasbetonszerelés Kft<small>betonacél szerelés</small></span>
+    </a>
+    <button class="burger" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Fő navigáció">
+      <ul>
+        <li><a href="#rolunk">Rólunk</a></li>
+        <li><a href="#szolgaltatasok">Amit kínálunk</a></li>
+        <li><a href="#munkaink">Munkáink</a></li>
+        <li><a href="#velemenyek">Vélemények</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+        <li><a class="call" href="tel:+36702018665">06 70 201 8665</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-cim">
+  <div class="imgbox">
+    <img src="https://images.pexels.com/photos/10932215/pexels-photo-10932215.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Betonacél vasalás szerelés közben egy építkezésen (illusztráció)" fetchpriority="high" onerror="this.parentNode.style.background='#2c3a46';this.remove()">
+  </div>
+  <div class="container">
+    <span class="eyebrow">Vasbetonszerelés</span>
+    <h1 id="hero-cim">Vasbeton<em>szerelés</em> Kft</h1>
+    <p>Betonacél szerelés és vasalás építkezéseken – alapoktól a födémekig. Pontos, tervek szerinti kivitelezés, egyeztetett határidőre.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+36702018665">Hívjon most: 06 70 201 8665</a>
+      <a class="btn ghost" href="#kapcsolat">Ajánlatkérés</a>
+    </div>
+    <div class="bar">
+      <div><strong>Vasalási tervek szerint</strong>Szabványos kivitelezés</div>
+      <div><strong>Alapok, falak, födémek</strong>Teljes körű vasszerelés</div>
+      <div><strong>Közvetlen elérhetőség</strong>Telefonon egyeztethető</div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="rolunk" aria-labelledby="rolunk-cim">
+  <div class="container grid">
+    <div class="imgbox reveal">
+      <img src="https://images.pexels.com/photos/19408681/pexels-photo-19408681.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Összekötözött betonacél vasalás közelről (illusztráció)" loading="lazy" onerror="this.parentNode.style.background='#2c3a46';this.remove()">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Rólunk</span>
+      <h2 id="rolunk-cim">Vasbetonszerelés, ahogy a terv előírja</h2>
+      <p>A Vasbetonszerelés Kft vasbetonszereléssel foglalkozik: a betonacél szerelését végezzük építkezéseken, a statikus terveknek megfelelően.</p>
+      <p>A vasalás a szerkezet teherbírásának alapja. Ezért a munka során az átmérőkre, az osztásokra, a toldásokra és a betontakarásra egyaránt figyelünk, hogy a betonozás előtt minden a helyén legyen.</p>
+      <ul>
+        <li>Alapok, lábazatok és pillérek vasalása</li>
+        <li>Falak, koszorúk és áthidalók betonacél szerelése</li>
+        <li>Födémek és lépcsők vasalása</li>
+        <li>Előregyártott vasalási elemek beépítése</li>
+      </ul>
+      <a class="btn" href="tel:+36702018665">Egyeztessünk telefonon</a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="szolgaltatasok" aria-labelledby="szolg-cim">
+  <div class="container">
+    <span class="eyebrow">Amit kínálunk</span>
+    <h2 id="szolg-cim">Vasszerelési munkák egy kézből</h2>
+    <p class="intro">Családi házaktól a nagyobb szerkezetekig: a vasbeton szerkezetek betonacél szerelését vállaljuk a kiviteli tervek alapján.</p>
+    <div class="cards">
+      <article class="card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11"/><path d="M9 20v-6h6v6"/></svg>
+        <h3>Alapok vasalása</h3>
+        <p>Sáv- és lemezalapok, lábazatok betonacél szerelése a kijelölt méretekkel és osztásokkal.</p>
+      </article>
+      <article class="card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M4 10h16M4 16h16M10 4v16M16 4v16"/></svg>
+        <h3>Falak és pillérek</h3>
+        <p>Függőleges szerkezetek, koszorúk és áthidalók vasalása, kengyelezéssel és megfelelő toldásokkal.</p>
+      </article>
+      <article class="card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h18M3 12h18M3 16h18"/><path d="M6 5v14M12 5v14M18 5v14"/></svg>
+        <h3>Födémek vasalása</h3>
+        <p>Monolit vasbeton födémek alsó és felső vasalása, távtartókkal a pontos betontakarásért.</p>
+      </article>
+      <article class="card reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20L20 4"/><path d="M4 12l8 8M12 4l8 8"/><path d="M4 4l16 16"/></svg>
+        <h3>Betonacél előkészítés</h3>
+        <p>Betonacél szabása, hajlítása és helyszíni szerelése a vasalási terv kimutatása alapján.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="munkaink" aria-labelledby="munka-cim">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">Jelenlegi munkánk</span>
+        <h2 id="munka-cim">Vasszerelés a gyakorlatban</h2>
+      </div>
+      <p>Néhány hangulatkép arról, milyen munkával foglalkozunk nap mint nap: betonacél, kötözés, zsaluzatra kész vasalás.</p>
+    </div>
+    <div class="masonry">
+      <div class="imgbox reveal"><img src="https://images.pexels.com/photos/40716383/pexels-photo-40716383.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Vasbeton szerkezet vasalása építkezésen (illusztráció)" loading="lazy" onerror="this.parentNode.style.background='#2c3a46';this.remove()"></div>
+      <div class="imgbox reveal"><img src="https://images.pexels.com/photos/40242407/pexels-photo-40242407.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Betonacél rudak és vasalási háló (illusztráció)" loading="lazy" onerror="this.parentNode.style.background='#2c3a46';this.remove()"></div>
+      <div class="imgbox reveal"><img src="https://images.pexels.com/photos/36282751/pexels-photo-36282751.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Szerelt vasalás betonozás előtt (illusztráció)" loading="lazy" onerror="this.parentNode.style.background='#2c3a46';this.remove()"></div>
+      <div class="imgbox reveal"><img src="https://images.pexels.com/photos/15109999/pexels-photo-15109999.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Építkezés vasbeton szerkezettel (illusztráció)" loading="lazy" onerror="this.parentNode.style.background='#2c3a46';this.remove()"></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-cim">
+  <div class="imgbox">
+    <img src="https://media.sume.com/artifacts/artf_qJQcoseozCn589GoM0F93ZAffRmplBVl/images.jpg" alt="Vasbeton építkezés hangulatkép" loading="lazy" onerror="this.parentNode.style.background='#2c3a46';this.remove()">
+  </div>
+  <div class="container">
+    <div>
+      <span class="eyebrow">Ajánlatkérés</span>
+      <h2 id="cta-cim">Vasszerelőt keres a következő építkezéséhez?</h2>
+      <p>Hívjon, és egyeztessük a terveket, a mennyiséget és az időpontot. Az ajánlat a vasalási terv alapján készül.</p>
+    </div>
+    <a class="btn" href="tel:+36702018665">06 70 201 8665</a>
+  </div>
+</section>
+
+<section class="reviews" id="velemenyek" aria-labelledby="vel-cim">
+  <div class="container">
+    <span class="eyebrow">Vélemények</span>
+    <h2 id="vel-cim">Amit ügyfeleink mondanak</h2>
+    <div class="rgrid" style="margin-top:1.8rem">
+      <article class="rev reveal">
+        <div class="stars" aria-label="5 csillag">★★★★★</div>
+        <p>„Pontosan a terv szerint készült el a vasalás, a betonozás előtt nem kellett semmit javítani.”</p>
+        <strong>K. L.</strong>
+      </article>
+      <article class="rev reveal">
+        <div class="stars" aria-label="5 csillag">★★★★★</div>
+        <p>„Megbízható csapat, a vállalt időpontra végeztek az alapozás vasszerelésével.”</p>
+        <strong>T. G.</strong>
+      </article>
+      <article class="rev reveal">
+        <div class="stars" aria-label="5 csillag">★★★★★</div>
+        <p>„Rendezett munkaterület, tiszta kötözés. Máskor is őket hívjuk.”</p>
+        <strong>B. A.</strong>
+      </article>
+    </div>
+    <p class="note">A fenti vélemények mintaszövegek a bemutató oldalhoz – ide az Ön valódi ügyfélvisszajelzései kerülnek.</p>
+  </div>
+</section>
+
+<section class="contact" id="kapcsolat" aria-labelledby="kapcs-cim">
+  <div class="container grid">
+    <div class="reveal">
+      <span class="eyebrow">Kapcsolat</span>
+      <h2 id="kapcs-cim">Hívjon, egyeztessünk</h2>
+      <dl>
+        <div>
+          <dt>Cégnév</dt>
+          <dd>Vasbetonszerelés Kft</dd>
+        </div>
+        <div>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+36702018665">06 70 201 8665</a></dd>
+        </div>
+        <div>
+          <dt>Nyitvatartás</dt>
+          <dd>
+            <div class="hours">
+              <span>Hétfő–Péntek</span><span>7:00 – 17:00</span>
+              <span>Szombat</span><span>egyeztetés szerint</span>
+              <span>Vasárnap</span><span>zárva</span>
+            </div>
+            <p class="note">Mintanyitvatartás – a tényleges időpontokat Önnel egyeztetve állítjuk be.</p>
+          </dd>
+        </div>
+        <div>
+          <dt>Munkaterület</dt>
+          <dd>Építkezések helyszínén, előzetes egyeztetés alapján.</dd>
+        </div>
+      </dl>
+    </div>
+    <form class="reveal" id="ajanlat" novalidate>
+      <label>Név <input type="text" name="nev" autocomplete="name" required></label>
+      <label>Telefonszám <input type="tel" name="telefon" autocomplete="tel" required></label>
+      <label>Mire kér ajánlatot? <textarea name="uzenet" placeholder="Pl. családi ház alapozás és födém vasalása, kb. mennyiség, helyszín, időpont"></textarea></label>
+      <button class="btn" type="submit">Ajánlatkérés küldése</button>
+      <p class="ok" role="status">Köszönjük! A bemutató oldalon az űrlap nem továbbít üzenetet – kérjük, hívjon a 06 70 201 8665 számon.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>
+      <strong style="color:#fff;font-family:var(--ff-h)">Vasbetonszerelés Kft</strong><br>
+      Vasbetonszerelés, betonacél szerelés<br>
+      Telefon: <a href="tel:+36702018665">06 70 201 8665</a>
+    </div>
+    <div class="maker">Készítette: <a href="https://auracode.hu" rel="noopener">AuraCode</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var burger=document.querySelector('.burger'),nav=document.getElementById('nav');
+  burger.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Menü bezárása':'Menü megnyitása');
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');burger.setAttribute('aria-expanded','false');});});
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in');});}
+  else{
+    var io=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:.12});
+    items.forEach(function(e){io.observe(e);});
+  }
+
+  document.getElementById('ajanlat').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    this.querySelector('.ok').style.display='block';
+  });
+})();
+</script>
+</body>
+</html>
