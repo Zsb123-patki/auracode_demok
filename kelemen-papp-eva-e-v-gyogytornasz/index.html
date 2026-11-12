@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gyógytorna Nyíregyháza | Kelemen-Papp Éva e.v. gyógytornász</title>
+<meta name="description" content="Kelemen-Papp Éva e.v. gyógytornász – fizioterápia és gyógytorna Nyíregyházán, a Kincs u. 17/A alatt. Időpont-egyeztetés telefonon: +36 30 789 7703.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kelemen-Papp Éva e.v. gyógytornász",
+  "telephone": "+36 30 789 7703",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kincs u. 17/A",
+    "addressLocality": "Nyíregyháza",
+    "postalCode": "4432",
+    "addressCountry": "HU"
+  }
+}
+</script>
+<style>
+:root{
+  --teal:#1f6f6b;
+  --teal-dark:#154f4c;
+  --teal-light:#e4f1ef;
+  --sand:#f6f3ee;
+  --ink:#1e2a2a;
+  --muted:#4d5a5a;
+  --line:#d9e2e0;
+  --white:#ffffff;
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--teal-dark)}
+h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.15;color:var(--ink)}
+h1{font-size:2rem}
+h2{font-size:1.7rem;margin-bottom:.75rem}
+h3{font-size:1.2rem;margin-bottom:.4rem}
+p{margin-bottom:1rem}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.lead{color:var(--muted);max-width:640px}
+.eyebrow{display:inline-block;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);font-weight:700;margin-bottom:.6rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:4px;font-weight:700;text-decoration:none;transition:background .2s,transform .2s;border:2px solid transparent}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-primary:hover{background:var(--teal-dark)}
+.btn-outline{background:transparent;color:var(--teal-dark);border-color:var(--teal)}
+.btn-outline:hover{background:var(--teal-light)}
+a:focus-visible,button:focus-visible{outline:3px solid #f0b429;outline-offset:3px}
+.img-wrap{position:relative;overflow:hidden;background:var(--teal-light)}
+.img-wrap img{width:100%;height:100%;object-fit:cover}
+.img-wrap.img-fallback img{display:none}
+.img-wrap.img-fallback{background:linear-gradient(135deg,var(--teal-light),#cfe3df)}
+.note{font-size:.85rem;color:var(--muted)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:'DM Serif Display',serif;font-size:1.15rem;text-decoration:none;color:var(--teal-dark);line-height:1.1}
+.brand small{display:block;font-family:'Nunito Sans',sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.menu{display:none;list-style:none;gap:1.6rem}
+.menu a{text-decoration:none;font-weight:600;color:var(--ink)}
+.menu a:hover{color:var(--teal)}
+.nav .btn{display:none}
+.burger{background:none;border:0;width:44px;height:44px;cursor:pointer;display:grid;place-items:center}
+.burger span{display:block;width:24px;height:2px;background:var(--ink);margin:3px 0;transition:transform .2s}
+.mobile-menu{display:none;background:var(--white);border-top:1px solid var(--line)}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:.9rem 20px;text-decoration:none;color:var(--ink);font-weight:600;border-bottom:1px solid var(--line)}
+
+/* hero */
+.hero{padding:0;background:var(--sand)}
+.hero-grid{display:grid;gap:0}
+.hero-text{padding:48px 20px 40px}
+.hero-text h1{margin-bottom:1rem}
+.hero-text .btn{margin-top:.5rem}
+.hero-img{aspect-ratio:16/9}
+.hero-points{list-style:none;display:grid;gap:12px;margin-top:1.8rem}
+.hero-points li{display:flex;gap:.6rem;align-items:flex-start;font-weight:600;color:var(--teal-dark)}
+.hero-points li::before{content:"";flex:0 0 10px;width:10px;height:10px;margin-top:.55em;border-radius:50%;background:var(--teal)}
+
+/* why */
+.cards{display:grid;gap:18px;margin-top:1.5rem}
+.card{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--teal);padding:22px}
+.card p{margin:0;color:var(--muted)}
+
+/* about */
+.about{background:var(--white)}
+.split{display:grid;gap:28px;align-items:center}
+.split .img-wrap{aspect-ratio:4/5;border-radius:var(--radius)}
+.pair{display:grid;gap:14px;margin:1.2rem 0}
+.pair div{background:var(--teal-light);padding:14px 16px;border-radius:4px;font-size:.95rem}
+
+/* band */
+.band{background:var(--teal-dark);color:#fff;padding:40px 0}
+.band-grid{display:grid;gap:18px}
+.band-item{border-top:1px solid rgba(255,255,255,.25);padding-top:12px}
+.band-item strong{display:block;font-family:'DM Serif Display',serif;font-size:1.15rem;margin-bottom:.2rem}
+.band-item span{color:#d6e7e5;font-size:.95rem}
+
+/* steps */
+.steps{background:var(--sand)}
+.steps-grid{display:grid;gap:18px;margin-top:1.5rem}
+.step{background:var(--white);padding:22px;border-top:3px solid var(--teal)}
+.step .num{font-family:'DM Serif Display',serif;color:var(--teal);font-size:1.6rem;line-height:1}
+.step p{margin:0;color:var(--muted)}
+
+/* reviews */
+.reviews{background:var(--white)}
+.review-grid{display:grid;gap:18px;margin-top:1.5rem}
+.review{background:var(--sand);padding:22px;border-radius:var(--radius);position:relative}
+.review .stars{color:#e0a100;letter-spacing:2px;margin-bottom:.5rem}
+.review blockquote{font-style:italic;color:var(--ink);margin-bottom:.8rem}
+.review cite{font-style:normal;font-weight:700;color:var(--teal-dark)}
+.review .tag{position:absolute;top:12px;right:12px;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;background:#fff;border:1px solid var(--line);padding:2px 8px;border-radius:99px;color:var(--muted)}
+
+/* moments */
+.moments{background:var(--teal-light)}
+.moment-grid{display:grid;gap:22px;margin-top:1.5rem}
+.moment .img-wrap{aspect-ratio:4/3;border-radius:var(--radius);margin-bottom:.9rem}
+.moment p{color:var(--muted);margin-bottom:.4rem}
+
+/* complaints */
+.complaints .cards{grid-template-columns:1fr}
+
+/* treatments */
+.treat{background:var(--sand)}
+.treat-grid{display:grid;gap:14px;margin-top:1.5rem}
+.treat-item{background:#fff;padding:18px 20px;border:1px solid var(--line)}
+.treat-item h3{font-size:1.1rem}
+.treat-item p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* gallery */
+.gallery-grid{display:grid;gap:14px;margin-top:1.5rem}
+.gallery-grid .img-wrap{aspect-ratio:1/1;border-radius:6px}
+
+/* faq */
+.faq{background:var(--white)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item button{width:100%;text-align:left;background:none;border:0;padding:16px 0;font:inherit;font-weight:700;font-size:1.02rem;color:var(--ink);display:flex;justify-content:space-between;gap:1rem;cursor:pointer}
+.faq-item button::after{content:"+";font-size:1.4rem;color:var(--teal);line-height:1}
+.faq-item.open button::after{content:"–"}
+.faq-item .answer{display:none;padding-bottom:16px;color:var(--muted)}
+.faq-item.open .answer{display:block}
+
+/* contact */
+.contact{background:var(--sand)}
+.contact-grid{display:grid;gap:28px}
+.contact-list{list-style:none;display:grid;gap:14px;margin:1rem 0 1.5rem}
+.contact-list li strong{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--teal)}
+.contact-list a{text-decoration:none;font-weight:600}
+.map{border:0;width:100%;height:320px;border-radius:var(--radius);display:block}
+
+/* footer */
+footer{background:var(--teal-dark);color:#d6e7e5;padding:36px 0 24px;font-size:.95rem}
+footer strong{color:#fff;font-family:'DM Serif Display',serif;font-size:1.1rem}
+footer a{color:#fff}
+footer .credit{margin-top:1.5rem;font-size:.78rem;color:#a9c7c3}
+footer .credit a{color:#a9c7c3}
+
+/* animation */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+
+@media (min-width:768px){
+  h1{font-size:2.6rem}
+  h2{font-size:2.1rem}
+  section{padding:72px 0}
+  .menu{display:flex}
+  .burger{display:none}
+  .nav .btn{display:inline-flex;padding:.6rem 1.1rem}
+  .hero-grid{grid-template-columns:1.05fr 1fr;align-items:stretch}
+  .hero-text{padding:64px 40px 64px 20px;display:flex;flex-direction:column;justify-content:center}
+  .hero-img{aspect-ratio:auto;min-height:100%}
+  .hero-points{grid-template-columns:repeat(3,1fr)}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .split{grid-template-columns:5fr 7fr;gap:48px}
+  .pair{grid-template-columns:1fr 1fr}
+  .band-grid{grid-template-columns:repeat(4,1fr)}
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .review-grid{grid-template-columns:repeat(3,1fr)}
+  .moment-grid{grid-template-columns:1fr 1fr}
+  .complaints .cards{grid-template-columns:repeat(3,1fr)}
+  .treat-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  .contact-grid{grid-template-columns:5fr 7fr;align-items:start}
+  .map{height:420px}
+}
+@media (min-width:1200px){
+  .steps-grid{grid-template-columns:repeat(4,1fr)}
+  .treat-grid{grid-template-columns:repeat(4,1fr)}
+  .hero-text{padding-left:calc((100vw - 1180px)/2 + 20px)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">Kelemen-Papp Éva<small>e.v. gyógytornász · Nyíregyháza</small></a>
+    <ul class="menu">
+      <li><a href="#miert">Miért érdemes?</a></li>
+      <li><a href="#rolam">Bemutatkozás</a></li>
+      <li><a href="#kezelesek">Kezelések</a></li>
+      <li><a href="#gyik">Gyakori kérdések</a></li>
+      <li><a href="#kapcsolat">Kapcsolat</a></li>
+    </ul>
+    <a class="btn btn-primary" href="tel:+36307897703">Hívás: +36 30 789 7703</a>
+    <button class="burger" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobil menü">
+    <a href="#miert">Miért érdemes?</a>
+    <a href="#rolam">Bemutatkozás</a>
+    <a href="#kezelesek">Kezelések</a>
+    <a href="#gyik">Gyakori kérdések</a>
+    <a href="#kapcsolat">Kapcsolat</a>
+    <a href="tel:+36307897703">Hívás: +36 30 789 7703</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- 1. HERO -->
+<section class="hero" aria-labelledby="hero-cim">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <span class="eyebrow">Fizioterápia · Nyíregyháza</span>
+      <h1 id="hero-cim">Gyógytorna Nyíregyházán, személyes odafigyeléssel</h1>
+      <p class="lead">Kelemen-Papp Éva egyéni vállalkozó gyógytornász a Kincs utca 17/A alatt várja Önt. Időpontot telefonon tud egyeztetni.</p>
+      <a class="btn btn-primary" href="tel:+36307897703">Időpontkérés: +36 30 789 7703</a>
+      <ul class="hero-points">
+        <li>Egyéni gyógytorna</li>
+        <li>Mozgásszervi panaszok kezelése</li>
+        <li>Nyíregyháza, Kincs u. 17/A</li>
+      </ul>
+    </div>
+    <div class="img-wrap hero-img">
+      <img src="https://media.sume.com/artifacts/artf_B75V4bzxF0F3U_Xx_G9-5wv1LjxFfpXM/images.jpg" alt="Hangulatkép: gyógytorna, mozgásterápiás kezelés" width="1440" height="810" onerror="this.parentElement.classList.add('img-fallback')">
+    </div>
+  </div>
+</section>
+
+<!-- 2. MIÉRT -->
+<section id="miert" aria-labelledby="miert-cim">
+  <div class="container">
+    <span class="eyebrow">Miért érdemes?</span>
+    <h2 id="miert-cim">Gyógytorna, ami az Ön panaszához igazodik</h2>
+    <p class="lead">A gyógytorna célja a fájdalom csökkentése, a mozgás helyreállítása és a mindennapi terhelhetőség javítása – szakember vezetésével.</p>
+    <div class="cards">
+      <article class="card reveal">
+        <h3>Egyéni foglalkozás</h3>
+        <p>A kezelés az Ön állapotára és panaszára épül, nem általános gyakorlatsorra.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Szakmai háttér</h3>
+        <p>Fizioterapeuta végzettségű gyógytornász vezeti a kezeléseket.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Könnyű elérhetőség</h3>
+        <p>Nyíregyházán, a Kincs utca 17/A alatt. Időpont egyszerűen, egy telefonhívással.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. BEMUTATKOZÁS -->
+<section id="rolam" class="about" aria-labelledby="rolam-cim">
+  <div class="container split">
+    <div class="img-wrap reveal">
+      <img src="https://images.pexels.com/photos/20860616/pexels-photo-20860616.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: gyógytornász kezelés közben" loading="lazy" width="1440" height="1800" onerror="this.parentElement.classList.add('img-fallback')">
+      <p class="note" style="position:absolute;bottom:0;left:0;right:0;margin:0;padding:6px 10px;background:rgba(255,255,255,.85)">Illusztráció (stock fotó)</p>
+    </div>
+    <div>
+      <span class="eyebrow">Bemutatkozás</span>
+      <h2 id="rolam-cim">Kelemen-Papp Éva – gyógytornász, egyéni vállalkozó</h2>
+      <p>Gyógytornászként egyéni vállalkozás keretében dolgozom Nyíregyházán. Célom, hogy páciensem a kezelések során ne csak tüneti enyhülést kapjon, hanem megértse, mi áll a panaszai hátterében, és otthon is tudjon tenni a javulásért.</p>
+      <p>A gyógytorna türelmet és együttműködést kíván: a kezelések egymásra épülnek, az előrehaladást közösen követjük nyomon. Ha mozgásszervi panasza van, kérem, keressen bizalommal.</p>
+      <p class="note">Ez a bemutatkozó szöveg minta, a végleges változatot Önnel egyeztetve véglegesítjük.</p>
+      <div class="pair">
+        <div><strong>Hol?</strong><br>Nyíregyháza, Kincs u. 17/A</div>
+        <div><strong>Hogyan?</strong><br>Telefonos időpont-egyeztetéssel</div>
+      </div>
+      <a class="btn btn-outline" href="tel:+36307897703">Hívjon: +36 30 789 7703</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SÁV -->
+<section class="band" aria-label="Alapelvek">
+  <div class="container band-grid">
+    <div class="band-item"><strong>Felmérés</strong><span>A kezelés mindig az állapot felmérésével kezdődik.</span></div>
+    <div class="band-item"><strong>Terv</strong><span>A gyakorlatok a felmérés alapján épülnek fel.</span></div>
+    <div class="band-item"><strong>Gyakorlás</strong><span>Vezetett gyakorlatok és otthoni feladatok.</span></div>
+    <div class="band-item"><strong>Követés</strong><span>Az előrehaladást folyamatosan ellenőrizzük.</span></div>
+  </div>
+</section>
+
+<!-- 6. ELSŐ ALKALOM -->
+<section class="steps" aria-labelledby="steps-cim">
+  <div class="container">
+    <span class="eyebrow">Mire számíthat?</span>
+    <h2 id="steps-cim">Hogyan zajlik az első alkalom?</h2>
+    <div class="steps-grid">
+      <article class="step reveal"><div class="num">01.</div><h3>Beszélgetés</h3><p>Átbeszéljük a panaszát, annak kezdetét és a korábbi kezeléseket, leleteket.</p></article>
+      <article class="step reveal"><div class="num">02.</div><h3>Állapotfelmérés</h3><p>Megnézzük a mozgásterjedelmet, a tartást és az érintett terület működését.</p></article>
+      <article class="step reveal"><div class="num">03.</div><h3>Kezelési terv</h3><p>A felmérés alapján személyre szabott gyakorlatokat állítunk össze.</p></article>
+      <article class="step reveal"><div class="num">04.</div><h3>Otthoni feladatok</h3><p>Olyan gyakorlatokat kap, amelyeket otthon, önállóan is biztonságosan végezhet.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 7. VÉLEMÉNYEK (MINTA) -->
+<section class="reviews" aria-labelledby="velemeny-cim">
+  <div class="container">
+    <span class="eyebrow">Vélemények</span>
+    <h2 id="velemeny-cim">Páciensek visszajelzései</h2>
+    <p class="lead">Az alábbi vélemények <strong>minták</strong>: a végleges oldalon a valódi páciensek Google-értékelései jelennek meg itt.</p>
+    <div class="review-grid">
+      <article class="review reveal">
+        <span class="tag">Minta</span>
+        <div class="stars" aria-label="5 csillag">★★★★★</div>
+        <blockquote>„Ide kerül egy valódi páciens véleménye a kezelésről és a tapasztalatairól.”</blockquote>
+        <cite>Mintavélemény</cite>
+      </article>
+      <article class="review reveal">
+        <span class="tag">Minta</span>
+        <div class="stars" aria-label="5 csillag">★★★★★</div>
+        <blockquote>„Ide kerül egy valódi páciens véleménye a gyógytornász hozzáállásáról.”</blockquote>
+        <cite>Mintavélemény</cite>
+      </article>
+      <article class="review reveal">
+        <span class="tag">Minta</span>
+        <div class="stars" aria-label="5 csillag">★★★★★</div>
+        <blockquote>„Ide kerül egy valódi páciens véleménye az elért eredményről.”</blockquote>
+        <cite>Mintavélemény</cite>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 8. PILLANATOK -->
+<section class="moments" aria-labelledby="moment-cim">
+  <div class="container">
+    <span class="eyebrow">Hangulat</span>
+    <h2 id="moment-cim">Részletekben rejlik a gyógyulás</h2>
+    <p class="lead">Az alábbi képek illusztrációk (stock fotók), a gyógytorna világát mutatják be.</p>
+    <div class="moment-grid">
+      <article class="moment reveal">
+        <div class="img-wrap"><img src="https://images.pexels.com/photos/5793950/pexels-photo-5793950.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: ízületi mozgatás gyógytornász vezetésével" loading="lazy" width="1440" height="1080" onerror="this.parentElement.classList.add('img-fallback')"></div>
+        <h3>1. Vezetett mozgás</h3>
+        <p>A gyógytornász irányításával végzett gyakorlatok segítik a helyes kivitelezést.</p>
+      </article>
+      <article class="moment reveal">
+        <div class="img-wrap"><img src="https://images.pexels.com/photos/5793910/pexels-photo-5793910.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: mozgásszervi vizsgálat kezelés közben" loading="lazy" width="1440" height="1080" onerror="this.parentElement.classList.add('img-fallback')"></div>
+        <h3>2. Felmérés és követés</h3>
+        <p>A rendszeres visszamérés mutatja meg, merre halad a gyógyulás.</p>
+      </article>
+    </div>
+    <p style="margin-top:1.5rem"><a class="btn btn-primary" href="tel:+36307897703">Időpontkérés telefonon</a></p>
+  </div>
+</section>
+
+<!-- 9. PANASZOK -->
+<section class="complaints" aria-labelledby="panasz-cim">
+  <div class="container">
+    <span class="eyebrow">Panaszok</span>
+    <h2 id="panasz-cim">Milyen panaszokkal fordulhat gyógytornászhoz?</h2>
+    <p class="lead">A gyógytorna jellemzően mozgásszervi panaszok esetén nyújt segítséget. Konkrét kérdésével keressen telefonon.</p>
+    <div class="cards">
+      <article class="card reveal"><h3>Gerinc panaszok</h3><p>Nyaki, háti és deréktáji fájdalmak, tartási problémák.</p></article>
+      <article class="card reveal"><h3>Ízületi panaszok</h3><p>Váll, csípő, térd és egyéb ízületek mozgásbeszűkülése, fájdalma.</p></article>
+      <article class="card reveal"><h3>Sérülés és műtét után</h3><p>A mozgás és a terhelhetőség fokozatos visszaépítése.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 10. KEZELÉSEK -->
+<section id="kezelesek" class="treat" aria-labelledby="kezeles-cim">
+  <div class="container">
+    <span class="eyebrow">Szolgáltatás</span>
+    <h2 id="kezeles-cim">Kezelések</h2>
+    <div class="treat-grid">
+      <article class="treat-item reveal"><h3>Egyéni gyógytorna</h3><p>Személyre szabott gyakorlatsor, szakmai vezetéssel.</p></article>
+      <article class="treat-item reveal"><h3>Állapotfelmérés</h3><p>A mozgás és a tartás vizsgálata, a kezelési terv alapja.</p></article>
+      <article class="treat-item reveal"><h3>Rehabilitációs torna</h3><p>Sérülés vagy műtét után a funkció helyreállítása.</p></article>
+      <article class="treat-item reveal"><h3>Otthoni gyakorlatok</h3><p>Egyszerű, biztonságos feladatok a kezelések közötti időre.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 11. GALÉRIA -->
+<section aria-labelledby="galeria-cim">
+  <div class="container">
+    <span class="eyebrow">Galéria</span>
+    <h2 id="galeria-cim">A gyógytorna világa képekben</h2>
+    <p class="lead">Illusztrációs stock fotók – a végleges oldalra a rendelő saját képei kerülhetnek.</p>
+    <div class="gallery-grid">
+      <div class="img-wrap reveal"><img src="https://images.pexels.com/photos/5473223/pexels-photo-5473223.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: nyújtógyakorlat gyógytornán" loading="lazy" width="1440" height="1440" onerror="this.parentElement.classList.add('img-fallback')"></div>
+      <div class="img-wrap reveal"><img src="https://images.pexels.com/photos/19440815/pexels-photo-19440815.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: mozgásterápiás gyakorlat" loading="lazy" width="1440" height="1440" onerror="this.parentElement.classList.add('img-fallback')"></div>
+      <div class="img-wrap reveal"><img src="https://images.pexels.com/photos/13538710/pexels-photo-13538710.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: erősítő gyakorlat szakember segítségével" loading="lazy" width="1440" height="1440" onerror="this.parentElement.classList.add('img-fallback')"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. GYIK -->
+<section id="gyik" class="faq" aria-labelledby="gyik-cim">
+  <div class="container">
+    <span class="eyebrow">GYIK</span>
+    <h2 id="gyik-cim">Gyakori kérdések</h2>
+    <div class="faq-item"><h3><button aria-expanded="false">Hol található a rendelő?</button></h3><div class="answer">Nyíregyházán, a Kincs u. 17/A alatt (4432). A pontos helyet a Kapcsolat szekcióban lévő térképen találja.</div></div>
+    <div class="faq-item"><h3><button aria-expanded="false">Hogyan kérhetek időpontot?</button></h3><div class="answer">Telefonon, a +36 30 789 7703 számon.</div></div>
+    <div class="faq-item"><h3><button aria-expanded="false">Milyen panasszal érdemes jönni?</button></h3><div class="answer">Mozgásszervi panaszokkal: gerinc- és ízületi fájdalmakkal, sérülés vagy műtét utáni rehabilitáció céljából. Ha bizonytalan, telefonon szívesen egyeztetünk.</div></div>
+    <div class="faq-item"><h3><button aria-expanded="false">Mit hozzak magammal az első alkalomra?</button></h3><div class="answer">Kényelmes, mozgást nem gátló ruhát, valamint – ha van – a panaszához kapcsolódó orvosi leleteket.</div></div>
+    <div class="faq-item"><h3><button aria-expanded="false">Mennyi idő egy kezelés és mennyibe kerül?</button></h3><div class="answer">Az időtartam és a díjazás a kezelés jellegétől függ; kérjük, telefonon érdeklődjön.</div></div>
+  </div>
+</section>
+
+<!-- 13. KAPCSOLAT -->
+<section id="kapcsolat" class="contact" aria-labelledby="kapcsolat-cim">
+  <div class="container contact-grid">
+    <div>
+      <span class="eyebrow">Kapcsolat</span>
+      <h2 id="kapcsolat-cim">Kérdése van? Hívjon bizalommal.</h2>
+      <ul class="contact-list">
+        <li><strong>Cím</strong>Nyíregyháza, Kincs u. 17/A, 4432</li>
+        <li><strong>Telefon</strong><a href="tel:+36307897703">+36 30 789 7703</a></li>
+        <li><strong>Nyitvatartás</strong>Időpont-egyeztetés alapján – kérjük, telefonon érdeklődjön.</li>
+      </ul>
+      <a class="btn btn-primary" href="tel:+36307897703">Hívás most</a>
+    </div>
+    <iframe class="map" src="https://www.google.com/maps?q=Ny%C3%ADregyh%C3%A1za%2C%20Kincs%20u.%2017%2FA%2C%204432%20Magyarorsz%C3%A1g&output=embed" title="Térkép: Nyíregyháza, Kincs u. 17/A" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <strong>Kelemen-Papp Éva e.v. gyógytornász</strong>
+    <p style="margin:.4rem 0 0">Nyíregyháza, Kincs u. 17/A, 4432 · <a href="tel:+36307897703">+36 30 789 7703</a></p>
+    <p class="credit">Készítette: <a href="https://auracode.hu" rel="noopener">AuraCode</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var burger=document.querySelector('.burger'),menu=document.getElementById('mobile-menu');
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+    burger.setAttribute('aria-label',open?'Menü bezárása':'Menü megnyitása');
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');});});
+
+  document.querySelectorAll('.faq-item button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var item=b.closest('.faq-item'),open=item.classList.toggle('open');
+      b.setAttribute('aria-expanded',open?'true':'false');
+    });
+  });
+
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+  },{threshold:.15});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+</body>
+</html>
