@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lúdtalp Stúdió | A láb egészsége a megelőzéssel kezdődik</title>
+<meta name="description" content="Lúdtalp Stúdió: kérdése van a lúdtalppal, a talpboltozattal kapcsolatban? Hívjon minket a +36 20 381 3116 telefonszámon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Lúdtalp Stúdió",
+  "telephone": "+36203813116"
+}
+</script>
+<script>
+  function imgFail(img){
+    var p = img.parentElement;
+    if(p){ p.classList.add('img-fallback'); }
+    img.style.visibility = 'hidden';
+  }
+</script>
+<style>
+  :root{
+    --green-900:#163d37;
+    --green-700:#1f5a50;
+    --green-500:#2f7a6b;
+    --lime:#cfe6a6;
+    --lime-soft:#e9f3d6;
+    --bg:#f5f6f2;
+    --paper:#ffffff;
+    --ink:#1b2422;
+    --muted:#4a5753;
+    --line:#d9ded6;
+    --radius-s:4px;
+    --radius-l:18px;
+    --maxw:1200px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:"Manrope",system-ui,sans-serif;
+    font-size:1.0625rem;
+    line-height:1.65;
+    color:var(--ink);
+    background:var(--bg);
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block}
+  a{color:var(--green-700)}
+  h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;line-height:1.12;margin:0 0 .6em;color:var(--green-900)}
+  h1{font-size:clamp(2.4rem,7vw,4.6rem)}
+  h2{font-size:clamp(1.9rem,4.4vw,3rem)}
+  h3{font-size:1.45rem}
+  p{margin:0 0 1em}
+  .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  :focus-visible{outline:3px solid var(--green-500);outline-offset:3px;border-radius:2px}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--green-900);color:#fff;padding:10px 16px;z-index:100}
+  .skip:focus{left:10px;top:10px}
+  .img-fallback{background:linear-gradient(135deg,var(--lime-soft),#c6d9c9)}
+
+  /* Header */
+  header.site-header{position:sticky;top:0;z-index:50;background:rgba(245,246,242,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:"DM Serif Display",serif;font-size:1.5rem;color:var(--green-900);text-decoration:none;letter-spacing:.2px}
+  .brand span{font-style:italic;color:var(--green-500)}
+  .menu-btn{background:none;border:1px solid var(--line);border-radius:var(--radius-s);width:46px;height:42px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer}
+  .menu-btn span{display:block;width:22px;height:2px;background:var(--green-900);transition:transform .25s,opacity .25s}
+  .menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  nav.main-nav{position:absolute;left:0;right:0;top:68px;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+  nav.main-nav.open{display:block}
+  nav.main-nav ul{list-style:none;margin:0;padding:10px 20px 20px}
+  nav.main-nav li a{display:block;padding:12px 0;color:var(--ink);text-decoration:none;font-weight:600;border-bottom:1px solid var(--line)}
+  nav.main-nav li:last-child a{border-bottom:0}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;font-weight:700;text-decoration:none;border-radius:var(--radius-s);transition:background .2s,color .2s,transform .2s}
+  .btn-primary{background:var(--green-700);color:#fff}
+  .btn-primary:hover{background:var(--green-900)}
+  .btn-lime{background:var(--lime);color:var(--green-900)}
+  .btn-lime:hover{background:#fff}
+  .btn-outline{border:2px solid var(--green-700);color:var(--green-700)}
+  .btn-outline:hover{background:var(--green-700);color:#fff}
+  nav .nav-cta{margin-top:12px;background:var(--green-700);color:#fff !important;text-align:center;border-radius:var(--radius-s);border-bottom:0 !important}
+  .ico{width:18px;height:18px;flex:none}
+
+  /* Hero */
+  .hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--green-900)}
+  .hero-media{position:absolute;inset:0}
+  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center bottom}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,61,55,.15) 0%,rgba(22,61,55,.55) 45%,rgba(16,40,36,.92) 100%)}
+  .hero-inner{position:relative;z-index:2;padding:120px 20px 56px}
+  .eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);margin-bottom:18px}
+  .hero h1{color:#fff;max-width:14ch}
+  .hero p.lead{font-size:1.15rem;max-width:40ch;color:#eef3ec;margin-bottom:28px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+  .hero .btn-outline{border-color:#fff;color:#fff}
+  .hero .btn-outline:hover{background:#fff;color:var(--green-900)}
+
+  /* Intro */
+  section{padding:72px 0}
+  .intro-grid{display:grid;gap:36px}
+  .intro-text .kicker{font-weight:700;color:var(--green-500);letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;margin-bottom:12px;display:block}
+  .intro-text p{color:var(--muted);max-width:56ch}
+  .intro-figure{border-radius:var(--radius-l) var(--radius-s) var(--radius-l) var(--radius-s);overflow:hidden;aspect-ratio:4/5;background:var(--lime-soft)}
+  .intro-figure img{width:100%;height:100%;object-fit:cover;object-position:center 75%}
+
+  /* Facts grid */
+  .facts{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .facts-head{display:grid;gap:12px;margin-bottom:40px}
+  .facts-head p{color:var(--muted);max-width:60ch}
+  .facts-grid{display:grid;gap:0;border-top:1px solid var(--line)}
+  .fact{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:52px 1fr;gap:16px}
+  .fact .num{font-family:"DM Serif Display",serif;font-size:1.8rem;color:var(--green-500);line-height:1}
+  .fact h3{margin-bottom:.35em}
+  .fact p{color:var(--muted);margin:0}
+  .note{font-size:.88rem;color:var(--muted);margin-top:28px;font-style:italic}
+
+  /* Split */
+  .split{display:grid;gap:36px;align-items:center}
+  .split-figure{border-radius:var(--radius-s);overflow:hidden;aspect-ratio:3/2;background:var(--lime-soft)}
+  .split-figure img{width:100%;height:100%;object-fit:cover;object-position:center 80%}
+  .checklist{list-style:none;margin:20px 0 28px;padding:0}
+  .checklist li{position:relative;padding-left:30px;margin-bottom:12px;color:var(--muted)}
+  .checklist li::before{content:"";position:absolute;left:0;top:.5em;width:14px;height:8px;border-left:2px solid var(--green-500);border-bottom:2px solid var(--green-500);transform:rotate(-45deg)}
+
+  /* Gallery */
+  .gallery-section{padding-top:0}
+  .gallery-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:28px}
+  .gallery-head p{color:var(--muted);margin:0;max-width:42ch;font-size:.95rem}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .gallery figure{margin:0;overflow:hidden;background:var(--lime-soft);aspect-ratio:1/1}
+  .gallery figure:nth-child(1){border-radius:var(--radius-l) 0 0 0}
+  .gallery figure:nth-child(4){border-radius:0 0 var(--radius-l) 0}
+  .gallery img{width:100%;height:100%;object-fit:cover;object-position:center 80%;transition:transform .6s ease}
+  .gallery figure:hover img{transform:scale(1.04)}
+
+  /* CTA band (newsletter-section analog) */
+  .cta-band{background:var(--green-900);color:#eef3ec}
+  .cta-grid{display:grid;gap:24px;align-items:center}
+  .cta-band h2{color:#fff;margin-bottom:.3em}
+  .cta-band p{color:#d6e2d9;margin:0;max-width:52ch}
+  .cta-actions{display:flex;flex-wrap:wrap;gap:12px}
+  .cta-band .btn-outline{border-color:var(--lime);color:var(--lime)}
+  .cta-band .btn-outline:hover{background:var(--lime);color:var(--green-900)}
+
+  /* Contact */
+  .contact-grid{display:grid;gap:24px}
+  .contact-card{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--green-500);padding:28px}
+  .contact-card dt{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green-500);margin-top:18px}
+  .contact-card dt:first-child{margin-top:0}
+  .contact-card dd{margin:4px 0 0;font-size:1.1rem}
+  .contact-card dd a{font-weight:700;text-decoration:none;color:var(--green-900)}
+  .contact-card dd a:hover{text-decoration:underline}
+  .contact-side p{color:var(--muted);max-width:52ch}
+
+  /* Footer */
+  footer{background:#0f2a26;color:#cfdad4;padding:48px 0 28px;font-size:.95rem}
+  footer .f-brand{font-family:"DM Serif Display",serif;font-size:1.5rem;color:#fff;margin-bottom:6px}
+  footer a{color:var(--lime)}
+  .f-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;padding-top:18px;font-size:.8rem;color:#a9bab3;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (min-width:768px){
+    .container{padding:0 32px}
+    section{padding:96px 0}
+    .hero-inner{padding:160px 32px 80px}
+    .intro-grid{grid-template-columns:1.1fr .9fr;align-items:center;gap:56px}
+    .facts-head{grid-template-columns:1fr 1fr;align-items:end;gap:40px}
+    .facts-grid{grid-template-columns:1fr 1fr;column-gap:48px}
+    .split{grid-template-columns:1fr 1fr;gap:56px}
+    .gallery{grid-template-columns:repeat(4,1fr)}
+    .gallery figure:nth-child(1){border-radius:var(--radius-l) 0 0 var(--radius-l)}
+    .gallery figure:nth-child(4){border-radius:0 var(--radius-l) var(--radius-l) 0}
+    .gallery figure{aspect-ratio:3/4}
+    .cta-grid{grid-template-columns:1.4fr 1fr}
+    .cta-actions{justify-content:flex-end}
+    .contact-grid{grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  }
+  @media (min-width:1024px){
+    .menu-btn{display:none}
+    nav.main-nav{display:block !important;position:static;background:none;border:0}
+    nav.main-nav ul{display:flex;align-items:center;gap:28px;padding:0}
+    nav.main-nav li a{border:0;padding:6px 0;font-size:.95rem}
+    nav.main-nav li a:not(.nav-cta):hover{color:var(--green-500)}
+    nav .nav-cta{margin:0;padding:10px 18px !important}
+    .facts-grid{grid-template-columns:repeat(3,1fr)}
+    .hero{min-height:86vh}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .gallery img,.btn,.menu-btn span{transition:none}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#tartalom">Ugrás a tartalomra</a>
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="#" class="brand">Lúdtalp <span>Stúdió</span></a>
+    <button class="menu-btn" aria-label="Menü megnyitása" aria-expanded="false" aria-controls="fomenu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="fomenu" aria-label="Főmenü">
+      <ul>
+        <li><a href="#rolunk">Rólunk</a></li>
+        <li><a href="#ludtalp">A lúdtalpról</a></li>
+        <li><a href="#galeria">Galéria</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+        <li><a class="nav-cta" href="tel:+36203813116">+36 20 381 3116</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+  <section class="hero" aria-labelledby="hero-cim">
+    <div class="hero-media">
+      <img src="https://media.sume.com/artifacts/artf_g0iHVIRYcPK41nff9hMYHIj-pRl0z3Ib/images.jpg" alt="Hangulatkép a láb és a talp egészségéről" width="1600" height="900" fetchpriority="high" onerror="imgFail(this)">
+    </div>
+    <div class="container hero-inner">
+      <span class="eyebrow">Lúdtalp Stúdió</span>
+      <h1 id="hero-cim">A láb egészsége a megelőzéssel kezdődik</h1>
+      <p class="lead">Kérdése van a lúdtalppal vagy a talpboltozattal kapcsolatban? Hívjon minket, és beszéljük meg.</p>
+      <div class="hero-actions">
+        <a class="btn btn-lime" href="tel:+36203813116">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>
+          Hívás most
+        </a>
+        <a class="btn btn-outline" href="#ludtalp">Tudjon meg többet</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="rolunk" aria-labelledby="rolunk-cim">
+    <div class="container intro-grid">
+      <div class="intro-text reveal">
+        <span class="kicker">Rólunk</span>
+        <h2 id="rolunk-cim">Lépjen tudatosan. Ma kezdje el, ne holnap.</h2>
+        <p>A Lúdtalp Stúdió neve magáért beszél: nálunk a láb és a talpboltozat áll a középpontban.</p>
+        <p>Hisszük, hogy az energikus mindennapok alapja a jó közérzet, és ez gyakran a lábunknál kezdődik. Minden nap rajta állunk, mégis ritkán figyelünk rá.</p>
+        <p>Ha szeretné megtudni, miben segíthetünk Önnek vagy gyermekének, hívjon minket telefonon.</p>
+        <a class="btn btn-primary" href="tel:+36203813116">+36 20 381 3116</a>
+      </div>
+      <figure class="intro-figure reveal" style="margin:0">
+        <img src="https://images.pexels.com/photos/36273684/pexels-photo-36273684.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: a láb és a mozgás témája" loading="lazy" width="900" height="1125" onerror="imgFail(this)">
+      </figure>
+    </div>
+  </section>
+
+  <section id="ludtalp" class="facts" aria-labelledby="ludtalp-cim">
+    <div class="container">
+      <div class="facts-head reveal">
+        <h2 id="ludtalp-cim">Jó tudni a lúdtalpról</h2>
+        <p>Néhány általános tudnivaló, amely segít jobban megérteni, mi történik a talpával, és mikor érdemes odafigyelni rá.</p>
+      </div>
+      <div class="facts-grid">
+        <article class="fact reveal">
+          <span class="num">01</span>
+          <div><h3>Mi a lúdtalp?</h3><p>A talp boltozata lesüllyed, így a talp a szokásosnál nagyobb felületen ér a talajhoz.</p></div>
+        </article>
+        <article class="fact reveal">
+          <span class="num">02</span>
+          <div><h3>Gyermekkorban</h3><p>Kisgyermekeknél a lapos talp gyakran a fejlődés része. A boltozat évek alatt alakul ki.</p></div>
+        </article>
+        <article class="fact reveal">
+          <span class="num">03</span>
+          <div><h3>Jelzések</h3><p>Fáradó, fájó talp, esetenként boka-, térd- vagy derékpanasz is jelezheti, hogy érdemes figyelni.</p></div>
+        </article>
+        <article class="fact reveal">
+          <span class="num">04</span>
+          <div><h3>Mozgás</h3><p>A talp izmai is dolgoznak minden lépésnél. A tudatos, rendszeres mozgás a lábnak is jót tesz.</p></div>
+        </article>
+        <article class="fact reveal">
+          <span class="num">05</span>
+          <div><h3>Lábbeli</h3><p>A jól illeszkedő, kényelmes cipő sokat számít a láb mindennapi komfortjában.</p></div>
+        </article>
+        <article class="fact reveal">
+          <span class="num">06</span>
+          <div><h3>Időben</h3><p>Tartós panasz esetén ne várjon. Minél előbb foglalkozik vele, annál könnyebb.</p></div>
+        </article>
+      </div>
+      <p class="note">A fenti tájékoztató általános jellegű, nem helyettesíti a személyes szakmai véleményt.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="miert-cim">
+    <div class="container split">
+      <figure class="split-figure reveal" style="margin:0">
+        <img src="https://images.pexels.com/photos/4538267/pexels-photo-4538267.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: talp és lábápolás" loading="lazy" width="1200" height="800" onerror="imgFail(this)">
+      </figure>
+      <div class="reveal">
+        <h2 id="miert-cim">Miért érdemes időben foglalkozni vele?</h2>
+        <p style="color:var(--muted)">A láb tartja az egész testet. Ha a talp nem jól terhel, azt sokszor máshol érezzük.</p>
+        <ul class="checklist">
+          <li>A lábunk minden lépésnél terhelést visel.</li>
+          <li>A gyermekek talpa még fejlődik, ilyenkor különösen fontos a figyelem.</li>
+          <li>A megelőzés egyszerűbb, mint a kialakult panasz kezelése.</li>
+        </ul>
+        <a class="btn btn-outline" href="#kapcsolat">Kapcsolatfelvétel</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="gallery-section" aria-labelledby="galeria-cim">
+    <div class="container">
+      <div class="gallery-head reveal">
+        <h2 id="galeria-cim" style="margin:0">Hangulatképek</h2>
+        <p>Illusztrációk a láb egészségének témájához.</p>
+      </div>
+      <div class="gallery">
+        <figure class="reveal"><img src="https://images.pexels.com/photos/34996523/pexels-photo-34996523.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: láb és talp közelről" loading="lazy" width="600" height="800" onerror="imgFail(this)"></figure>
+        <figure class="reveal"><img src="https://images.pexels.com/photos/5490171/pexels-photo-5490171.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: lábápolás hangulata" loading="lazy" width="600" height="800" onerror="imgFail(this)"></figure>
+        <figure class="reveal"><img src="https://images.pexels.com/photos/4538277/pexels-photo-4538277.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: talp vizsgálata" loading="lazy" width="600" height="800" onerror="imgFail(this)"></figure>
+        <figure class="reveal"><img src="https://images.pexels.com/photos/4538278/pexels-photo-4538278.jpeg?auto=compress&cs=tinysrgb&w=1440" alt="Illusztráció: láb és boka közelről" loading="lazy" width="600" height="800" onerror="imgFail(this)"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="cta-cim">
+    <div class="container cta-grid reveal">
+      <div>
+        <h2 id="cta-cim">Kérdése van? Hívjon minket!</h2>
+        <p>Egy rövid beszélgetés sokat tisztázhat. Telefonon szívesen válaszolunk.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-lime" href="tel:+36203813116">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>
+          +36 20 381 3116
+        </a>
+        <a class="btn btn-outline" href="#kapcsolat">Elérhetőség</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="kapcsolat" aria-labelledby="kapcsolat-cim">
+    <div class="container contact-grid">
+      <div class="contact-side reveal">
+        <h2 id="kapcsolat-cim">Kapcsolat</h2>
+        <p>A leggyorsabban telefonon érhet el minket. Címünkről és nyitvatartásunkról is szívesen tájékoztatjuk hívás során.</p>
+      </div>
+      <dl class="contact-card reveal">
+        <dt>Telefon</dt>
+        <dd><a href="tel:+36203813116">+36 20 381 3116</a></dd>
+        <dt>Cím és nyitvatartás</dt>
+        <dd>Érdeklődjön telefonon.</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="f-brand">Lúdtalp Stúdió</div>
+    <div>Telefon: <a href="tel:+36203813116">+36 20 381 3116</a></div>
+    <div class="f-bottom">
+      <span>© <span id="ev"></span> Lúdtalp Stúdió · A képek illusztrációk.</span>
+      <span>Készítette: <a href="https://auracode.hu" target="_blank" rel="noopener">AuraCode</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    document.getElementById('ev').textContent = new Date().getFullYear();
+    var btn = document.querySelector('.menu-btn');
+    var nav = document.getElementById('fomenu');
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      btn.setAttribute('aria-label', open ? 'Menü megnyitása' : 'Menü bezárása');
+      nav.classList.toggle('open', !open);
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        btn.setAttribute('aria-label','Menü megnyitása');
+      });
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && nav.classList.contains('open')){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        btn.focus();
+      }
+    });
+    var items = document.querySelectorAll('.reveal');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce || !('IntersectionObserver' in window)){
+      items.forEach(function(el){ el.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:0.12});
+    items.forEach(function(el){ io.observe(el); });
+  })();
+</script>
+</body>
+</html>
