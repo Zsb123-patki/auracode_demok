@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="hu"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Kalinowski Jerzy Állatorvos – Állatorvosi Rendelő és Műtő, Szentdénes</title>
+<meta name="description" content="Állatorvosi rendelő és műtő Szentdénesen. Dr. Kalinowski Jerzy állatorvos. Nyitva hétfőtől péntekig 9:00–20:00. Telefon: +36 30 986 1105.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Állatorvosi Rendelő és Műtő - Dr. Kalinowski Jerzy Állatorvos",
+  "telephone": "+36 30 986 1105",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Petőfi u. 100",
+    "addressLocality": "Szentdénes",
+    "postalCode": "7913",
+    "addressCountry": "HU"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "20:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "114"
+  }
+}
+</script>
+<style>
+:root{
+  --green:#1f4d3a;
+  --green-dark:#163829;
+  --accent:#c9a227;
+  --bg:#f6f7f4;
+  --surface:#ffffff;
+  --text:#1c2420;
+  --muted:#4a5650;
+  --line:#dde2dc;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Work Sans",system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;font-size:1.0625rem;overflow-x:hidden}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;line-height:1.2;color:var(--green-dark)}
+a{color:var(--green)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{width:100%;max-width:1100px;margin:0 auto;padding:0 1.25rem}
+.skip{position:absolute;left:-9999px;top:0;background:var(--green);color:#fff;padding:.5rem 1rem;z-index:100}
+.skip:focus{left:1rem;top:1rem}
+
+/* Fejléc */
+header{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:1rem}
+.brand{font-family:"Source Serif 4",serif;font-weight:700;font-size:1.05rem;color:var(--green-dark);text-decoration:none;line-height:1.2}
+.brand small{display:block;font-family:"Work Sans",sans-serif;font-weight:500;font-size:.78rem;color:var(--muted)}
+.menu-btn{background:none;border:1px solid var(--line);padding:.5rem .7rem;cursor:pointer;font:inherit;font-size:.9rem;color:var(--text);border-radius:4px}
+nav ul{list-style:none;display:none;position:absolute;left:0;right:0;top:64px;background:var(--surface);border-bottom:1px solid var(--line);padding:.5rem 1.25rem 1rem}
+nav ul.open{display:block}
+nav li a{display:block;padding:.6rem 0;text-decoration:none;color:var(--text);font-weight:500}
+nav li a:hover{color:var(--green)}
+
+/* Hero */
+.hero{padding:3rem 0 2.5rem;border-bottom:1px solid var(--line);background:var(--surface)}
+.hero-grid{display:grid;gap:2rem}
+.eyebrow{font-size:.85rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.hero h1{font-size:clamp(1.9rem,6vw,3rem);margin:.5rem 0 1rem}
+.hero p{color:var(--muted);max-width:36rem}
+.rating{margin-top:1rem;font-weight:600;color:var(--text)}
+.rating span{color:#8a6d00}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.btn{display:inline-block;padding:.85rem 1.4rem;font-weight:600;text-decoration:none;border-radius:4px;border:2px solid var(--green)}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-dark)}
+.btn-ghost{color:var(--green);background:transparent}
+.hero-img{background:var(--green);aspect-ratio:3/2;overflow:hidden;border-radius:4px}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+
+section{padding:3.5rem 0}
+section h2{font-size:clamp(1.5rem,4vw,2.1rem);margin-bottom:1.5rem}
+
+/* Szolgáltatások */
+.list{list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+.list li{padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.list h3{font-size:1.15rem;margin-bottom:.25rem}
+.list p{color:var(--muted)}
+
+/* Rólunk */
+.about{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about p{max-width:42rem;color:var(--muted);margin-bottom:1rem}
+
+/* Vélemények */
+.reviews{display:grid;gap:1.25rem}
+blockquote{background:var(--surface);border-left:4px solid var(--green);padding:1.25rem 1.25rem 1rem}
+blockquote p{margin-bottom:.75rem}
+blockquote footer{font-size:.9rem;color:var(--muted);font-weight:600}
+.stars{color:#8a6d00;letter-spacing:.1em}
+
+/* Kapcsolat */
+.contact{background:var(--surface);border-top:1px solid var(--line)}
+.contact-grid{display:grid;gap:2rem}
+.contact dl{display:grid;gap:1.25rem}
+.contact dt{font-weight:600;color:var(--green-dark)}
+.contact dd{color:var(--muted)}
+.hours{border-collapse:collapse;width:100%;max-width:22rem}
+.hours td{padding:.2rem 0;color:var(--muted)}
+.hours td:last-child{text-align:right}
+.map{width:100%;height:320px;border:1px solid var(--line);display:block}
+
+/* Lábléc */
+.site-footer{background:var(--green-dark);color:#e8efe9;padding:2rem 0;font-size:.95rem}
+.site-footer a{color:#fff}
+.site-footer .credit{margin-top:1rem;font-size:.8rem;color:#c3d1c7}
+
+/* Animáció */
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+@media (min-width:768px){
+  .menu-btn{display:none}
+  nav ul{display:flex;position:static;padding:0;border:0;gap:1.5rem;background:none}
+  nav li a{padding:.25rem 0}
+  .reviews{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr 1.3fr}
+  .list{grid-template-columns:1fr 1fr;column-gap:2.5rem}
+}
+@media (min-width:1024px){
+  .hero{padding:5rem 0 4rem}
+  .hero-grid{grid-template-columns:1.1fr 1fr;align-items:center}
+  .map{height:400px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#tartalom">Ugrás a tartalomra</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">Dr. Kalinowski Jerzy<small>Állatorvosi Rendelő és Műtő</small></a>
+    <nav aria-label="Fő menü">
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menü</button>
+      <ul id="menu">
+        <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+        <li><a href="#rolunk">Rólunk</a></li>
+        <li><a href="#velemenyek">Vélemények</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Állatorvos · Szentdénes</p>
+        <h1>Állatorvosi rendelő és műtő Szentdénesen</h1>
+        <p>Dr. Kalinowski Jerzy állatorvos várja Önt és kedvencét hétfőtől péntekig, 9:00 és 20:00 között.</p>
+        <p class="rating"><span aria-hidden="true">★</span> 4,9 / 5 · 114 Google-értékelés alapján</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="tel:+36309861105">Hívás: +36 30 986 1105</a>
+          <a class="btn btn-ghost" href="#kapcsolat">Útvonal és nyitvatartás</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=6nALFlxWbdIX3Oy5XjL2ag&amp;cb_client=lu.gallery.gps&amp;w=1920&amp;h=1272&amp;yaw=274.54425&amp;pitch=0&amp;thumbfov=100" alt="Dr. Kalinowski Jerzy állatorvosi rendelője Szentdénesen" width="1920" height="1080" onerror="this.remove()">
+      </div>
+    </div>
+  </section>
+
+  <section id="szolgaltatasok" class="reveal">
+    <div class="wrap">
+      <h2>Miben segíthetünk?</h2>
+      <ul class="list">
+        <li>
+          <h3>Állatorvosi rendelés</h3>
+          <p>Vizsgálat és kezelés kedvence egészségi panaszaira.</p>
+        </li>
+        <li>
+          <h3>Műtétek</h3>
+          <p>A rendelő műtővel rendelkezik. Az időpontot telefonon egyeztetheti.</p>
+        </li>
+        <li>
+          <h3>Telefonos tanácsadás</h3>
+          <p>Kérdése van kedvencével kapcsolatban? Hívja a rendelőt.</p>
+        </li>
+        <li>
+          <h3>Időpont-egyeztetés</h3>
+          <p>Hívja a +36 30 986 1105-ös számot, és egyeztessünk időpontot.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="rolunk" class="about reveal">
+    <div class="wrap">
+      <h2>Rólunk</h2>
+      <p>A szentdénesi állatorvosi rendelőt és műtőt Dr. Kalinowski Jerzy állatorvos vezeti.</p>
+      <p>Gazdái 114 Google-értékelés alapján 4,9-es átlaggal értékelik a rendelőt. Kis és nagy kutyákkal, cicákkal egyaránt fordulhat hozzánk.</p>
+    </div>
+  </section>
+
+  <section id="velemenyek" class="reveal">
+    <div class="wrap">
+      <h2>Mit mondanak a gazdik?</h2>
+      <div class="reviews">
+        <blockquote>
+          <p class="stars" aria-label="5 csillagból 5">★★★★★</p>
+          <p>Nagyon barátságos, kedves, segítőkész és nagyon jó szakember. Nekünk már sokszor segített és minden alkalommal maximálisan meg voltam elégedve. Csak ajánlani tudom.</p>
+          <footer>A. M.</footer>
+        </blockquote>
+        <blockquote>
+          <p class="stars" aria-label="5 csillagból 5">★★★★★</p>
+          <p>Kb 15 éve hozzá járunk, kis kutya, nagy kutya.<br>Precíz pontos, odaadó  az állatokkal.<br>Bármikor elérhető, meg ha csak valami apró kérdés merül fel, kielégítő magasszintű, szakmai tanáccsal illetve diagnózissal szolgál  Mindenkinek ajánlom.</p>
+          <footer>P. L.</footer>
+        </blockquote>
+        <blockquote>
+          <p class="stars" aria-label="5 csillagból 5">★★★★★</p>
+          <p>Nagyon kedves volt a doktor úr (és a kutyusai is 😁) Telefonon egyeztettünk időpontot, megműtötte a kutyust majd amikor kész volt, telefonált, hogy lehet menni érte. Nagyon cuki kutyamintás műtét utáni ruhát kapott... Sokkal barátságosabb megoldás mint a gallér. Mollyval mi szívből ajánljuk a doktor urat. 🙂🐾🐶</p>
+          <footer>Á. C.</footer>
+        </blockquote>
+        <blockquote>
+          <p class="stars" aria-label="5 csillagból 5">★★★★★</p>
+          <p>Mindíg nagyon lelkiismeretesen dolgozik. Bármikor volt szükségünk a segítségére, soha nem volt elutasító, pedig sajnos volt, hogy ünnepnapon kerestük fel. Soha nem volt olyan jó állatorvosunk, mint amilyen ő, csak ajánlani tudom!</p>
+          <footer>S. K.</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="kapcsolat" class="contact">
+    <div class="wrap">
+      <h2>Kapcsolat</h2>
+      <div class="contact-grid">
+        <dl>
+          <div>
+            <dt>Cím</dt>
+            <dd>7913 Szentdénes, Petőfi u. 100.</dd>
+          </div>
+          <div>
+            <dt>Telefon</dt>
+            <dd><a href="tel:+36309861105">+36 30 986 1105</a></dd>
+          </div>
+          <div>
+            <dt>Nyitvatartás</dt>
+            <dd>
+              <table class="hours">
+                <tbody><tr><td>Hétfő</td><td>9:00–20:00</td></tr>
+                <tr><td>Kedd</td><td>9:00–20:00</td></tr>
+                <tr><td>Szerda</td><td>9:00–20:00</td></tr>
+                <tr><td>Csütörtök</td><td>9:00–20:00</td></tr>
+                <tr><td>Péntek</td><td>9:00–20:00</td></tr>
+                <tr><td>Szombat</td><td>Zárva</td></tr>
+                <tr><td>Vasárnap</td><td>Zárva</td></tr>
+              </tbody></table>
+            </dd>
+          </div>
+        </dl>
+        <iframe class="map" title="A rendelő helye a térképen: Szentdénes, Petőfi u. 100." src="https://www.google.com/maps?q=Szentd%C3%A9nes%2C%20Pet%C5%91fi%20u.%20100%2C%207913%20Magyarorsz%C3%A1g&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Állatorvosi Rendelő és Műtő – Dr. Kalinowski Jerzy Állatorvos</strong></p>
+    <p>7913 Szentdénes, Petőfi u. 100. · <a href="tel:+36309861105">+36 30 986 1105</a></p>
+    <p>Hétfő–péntek: 9:00–20:00</p>
+    <p class="credit">Készítette: <a href="https://auracode.hu">AuraCode</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),menu=document.getElementById('menu');
+  btn.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+  });
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.1});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+})();
+</script>
+
+</body></html>
