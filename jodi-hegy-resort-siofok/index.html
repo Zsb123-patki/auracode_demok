@@ -162,6 +162,12 @@ p{margin:0 0 1em}
 .tile:hover img.tile-bg{transform:scale(1.2)}
 .tile img.tile-fit{object-fit:contain;object-position:center}
 .tile:hover img.tile-fit{transform:scale(1.015)}
+/* Két kép egymás alatt, fele-fele arányban kitöltve a csempét */
+.tile-stack{position:absolute;inset:0;display:grid;grid-template-rows:1fr 1fr}
+.tile-half{position:relative;overflow:hidden;background:var(--pine-2);min-height:0}
+.tile-half+.tile-half{border-top:2px solid rgba(255,255,255,.15)}
+.tile-half img{object-position:center}
+.tile-half.sauna img{object-position:center 60%}
 .tile-body{position:relative;z-index:2;padding:2rem 1.5rem 2.25rem;max-width:32rem}
 .tile-kicker{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:.6rem}
 .tile h2{font-size:clamp(2rem,6vw,3rem)}
@@ -420,7 +426,14 @@ p{margin:0 0 1em}
       </div>
     </article>
     <article class="tile">
-      <img src="kepek/sajat-04.svg" alt="Wellness a Jódi-Hegy Resortban" loading="lazy" onerror="this.onerror=function(){this.parentNode.classList.add('noimg');this.remove()};this.alt='Wellness hangulatkép';this.src='https://media.sume.com/artifacts/artf_guiiH7y4mseNlU6H6LGKAoyAH6ssHS5I/images.jpg'">
+      <div class="tile-stack">
+        <div class="tile-half jacuzzi">
+          <img src="kepek/sajat-08.svg" alt="Fedett teraszon álló, türkizkék vizű privát jakuzzi a vendégház kertjében, műfüves udvarral és levendulás ágyásokkal" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+        </div>
+        <div class="tile-half sauna">
+          <img src="kepek/sajat-09.svg" alt="Kilátás a finn szaunából: a kályha kövei mögött az üvegajtón át a napsütötte kert és az őszi szőlőhegy látszik" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+        </div>
+      </div>
       <div class="tile-body reveal">
         <p class="tile-kicker">Wellness</p>
         <h2>Jakuzzi &amp; szauna</h2>
