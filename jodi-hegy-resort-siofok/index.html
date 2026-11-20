@@ -16,6 +16,7 @@
   "description": "Vendégházunk a Jódi-hegyen, lenyűgöző balatoni panorámával, ideális választás mindazoknak, akik nyugodt kikapcsolódásra vágynak.",
   "telephone": "+36202142726",
   "email": "jodihegyresort@gmail.com",
+  "logo": "kepek/sajat-06.svg",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Siófok",
@@ -49,6 +50,7 @@
   --ink:#1b2425;
   --muted:#4a5758;
   --line:#d9d6cc;
+  --cream:#f6f0e1;
   --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
   --sans:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --wrap:1200px;
@@ -83,11 +85,11 @@ p{margin:0 0 1em}
 .site-header{position:fixed;inset:0 0 auto 0;z-index:100;color:#fff;background:linear-gradient(180deg,rgba(10,30,31,.78) 0%,rgba(10,30,31,.35) 70%,rgba(10,30,31,0) 100%);transition:background .3s,box-shadow .3s}
 .site-header.solid{background:var(--pine);box-shadow:0 2px 18px rgba(0,0,0,.18)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);gap:1rem}
-.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;min-width:0}
-.brand-logo{width:46px;height:46px;flex:none;color:var(--gold-light)}
-.brand-text{display:flex;flex-direction:column;line-height:1}
-.brand-text strong{font-family:var(--serif);font-size:1.35rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
-.brand-text span{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-light);margin-top:.3rem;white-space:nowrap}
+.brand{display:flex;align-items:center;text-decoration:none;min-width:0}
+.brand-badge{position:relative;display:block;width:108px;height:60px;flex:none;overflow:hidden;background:var(--cream);border-radius:4px;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.brand-badge img{width:100%;height:100%;object-fit:cover;object-position:50% 49.5%;transform:scale(1.8);transform-origin:50% 49.5%}
+.brand-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;font-family:var(--serif);font-weight:700;font-size:1rem;line-height:1.05;letter-spacing:.06em;text-transform:uppercase;color:var(--pine);padding:.3rem}
+.brand-badge.logo-fail .brand-fallback{display:flex}
 .nav-toggle{background:none;border:1px solid rgba(255,255,255,.5);color:#fff;width:46px;height:46px;display:grid;place-items:center;cursor:pointer;flex:none}
 .nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{display:block;width:20px;height:2px;background:currentColor;position:relative;transition:transform .25s,background .25s}
 .nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0}
@@ -262,7 +264,7 @@ p{margin:0 0 1em}
 @media (min-width:1024px){
   :root{--header-h:88px}
   .nav-toggle{display:none}
-  .brand-logo{width:52px;height:52px}
+  .brand-badge{width:130px;height:72px}
   .main-nav{position:static;display:flex !important;align-items:center;background:none;padding:0;border:0;gap:1.75rem}
   .main-nav ul{display:flex;gap:1.6rem}
   .main-nav li a{border:0;padding:.4rem 0;font-size:.8rem;letter-spacing:.16em;position:relative}
@@ -296,18 +298,10 @@ p{margin:0 0 1em}
 <header class="site-header" id="fejlec">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Jódi-Hegy Resort Siófok – vissza az oldal tetejére">
-      <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
-        <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
-        <circle cx="32" cy="32" r="26.5" fill="none" stroke="currentColor" stroke-width=".7" opacity=".55"></circle>
-        <circle cx="44" cy="19" r="3.6" fill="currentColor"></circle>
-        <path d="M22 31 L32 22 L42 31" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M26 29 V37 H38 V29" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"></path>
-        <path d="M30.5 37 V33 H33.5 V37" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round"></path>
-        <path d="M9 42 C18 35 26 37 32 38 C40 39 46 36 55 41" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
-        <path d="M16 47.5 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-        <path d="M21 52.5 q2.75 -2.2 5.5 0 t5.5 0 t5.5 0 t5.5 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".6"></path>
-      </svg>
-      <span class="brand-text"><strong>Jódi-Hegy</strong><span>Resort · Siófok</span></span>
+      <span class="brand-badge">
+        <img src="kepek/sajat-06.svg" alt="A Jódi-Hegy Resort logója: zöld dombon fák és fenyők, felettük levélkoszorú, alatta a Jódi Hegy Resort felirat" width="1452" height="813" onerror="this.parentNode.classList.add('logo-fail');this.remove()">
+        <span class="brand-fallback" aria-hidden="true">Jódi-Hegy<br>Resort</span>
+      </span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="fomenu" aria-label="Menü megnyitása"><span></span></button>
     <nav class="main-nav" id="fomenu" aria-label="Főmenü">
