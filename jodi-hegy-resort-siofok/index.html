@@ -70,6 +70,7 @@ p{margin:0 0 1em}
 .eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--pine-2);margin-bottom:1rem}
 .eyebrow::before{content:"";width:2.2rem;height:1px;background:currentColor}
 .noimg{background:var(--pine-2) !important}
+.svg-defs{position:absolute;width:0;height:0;overflow:hidden}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:var(--sans);font-weight:600;font-size:.92rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:.95rem 1.5rem;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s;border-radius:0}
@@ -86,9 +87,9 @@ p{margin:0 0 1em}
 .site-header.solid{background:var(--pine);box-shadow:0 2px 18px rgba(0,0,0,.18)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);gap:1rem}
 .brand{display:flex;align-items:center;text-decoration:none;min-width:0}
-.brand-badge{position:relative;display:block;width:108px;height:60px;flex:none;overflow:hidden;background:var(--cream);border-radius:4px;box-shadow:0 2px 10px rgba(0,0,0,.18)}
-.brand-badge img{width:100%;height:100%;object-fit:cover;object-position:50% 49.5%;transform:scale(1.8);transform-origin:50% 49.5%}
-.brand-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;font-family:var(--serif);font-weight:700;font-size:1rem;line-height:1.05;letter-spacing:.06em;text-transform:uppercase;color:var(--pine);padding:.3rem}
+.brand-badge{position:relative;display:block;width:116px;height:64px;flex:none;overflow:hidden;background:none;border-radius:0;box-shadow:none}
+.brand-badge img{width:100%;height:100%;object-fit:cover;object-position:50% 49.5%;transform:scale(1.8);transform-origin:50% 49.5%;filter:url(#logo-hatter-nelkul) drop-shadow(0 0 1px rgba(255,255,255,.9)) drop-shadow(0 0 6px rgba(255,255,255,.35))}
+.brand-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;font-family:var(--serif);font-weight:700;font-size:1rem;line-height:1.05;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding:.3rem}
 .brand-badge.logo-fail .brand-fallback{display:flex}
 .nav-toggle{background:none;border:1px solid rgba(255,255,255,.5);color:#fff;width:46px;height:46px;display:grid;place-items:center;cursor:pointer;flex:none}
 .nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{display:block;width:20px;height:2px;background:currentColor;position:relative;transition:transform .25s,background .25s}
@@ -264,7 +265,7 @@ p{margin:0 0 1em}
 @media (min-width:1024px){
   :root{--header-h:88px}
   .nav-toggle{display:none}
-  .brand-badge{width:130px;height:72px}
+  .brand-badge{width:142px;height:80px}
   .main-nav{position:static;display:flex !important;align-items:center;background:none;padding:0;border:0;gap:1.75rem}
   .main-nav ul{display:flex;gap:1.6rem}
   .main-nav li a{border:0;padding:.4rem 0;font-size:.8rem;letter-spacing:.16em;position:relative}
@@ -293,6 +294,13 @@ p{margin:0 0 1em}
 </style>
 </head>
 <body>
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="logo-hatter-nelkul" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1.2 -1.2 -1.2 0 3.3"></feColorMatrix>
+    </filter>
+  </defs>
+</svg>
 <a class="skip" href="#tartalom">Ugrás a tartalomra</a>
 
 <header class="site-header" id="fejlec">
