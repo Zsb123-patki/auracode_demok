@@ -118,7 +118,8 @@ p{margin:0 0 1em}
 .preloader{display:none}
 .js .preloader{display:grid;place-items:center;position:fixed;inset:0;z-index:1000;background:var(--pine);perspective:1000px;transition:background-color .7s ease}
 .preloader.fade{background-color:rgba(18,57,59,0);pointer-events:none}
-.pl-logo{width:min(280px,62vw);height:auto;transform-style:preserve-3d;backface-visibility:visible;filter:url(#logo-kivag) drop-shadow(0 6px 18px rgba(0,0,0,.35));animation:plSpin 1.8s linear infinite;will-change:transform}
+.pl-mark{width:min(280px,62vw);border-top:1.5px solid #f6f0e1;border-bottom:1.5px solid #f6f0e1;transform-origin:center;transform-style:preserve-3d;backface-visibility:visible;animation:plSpin 1.8s linear infinite;will-change:transform}
+.pl-logo{display:block;width:100%;height:auto;transform-style:preserve-3d;backface-visibility:visible;filter:url(#logo-kivag) drop-shadow(0 6px 18px rgba(0,0,0,.35))}
 @keyframes plSpin{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
 .js body.loading{overflow:hidden}
 .js body.loading .brand-badge img{opacity:0}
@@ -396,7 +397,7 @@ p{margin:0 0 1em}
 </svg>
 
 <div class="preloader" id="preloader" aria-hidden="true">
-  <img class="pl-logo" src="kepek/sajat-07.svg" alt="" width="643" height="296">
+  <div class="pl-mark"><img class="pl-logo" src="kepek/sajat-07.svg" alt="" width="643" height="296"></div>
 </div>
 <script>document.body.classList.add('loading');</script>
 
@@ -759,23 +760,23 @@ p{margin:0 0 1em}
   (function(){
     var pl=document.getElementById('preloader');
     if(!pl)return;
-    var logo=pl.querySelector('.pl-logo');
+    var logo=pl.querySelector('.pl-logo'),mark=pl.querySelector('.pl-mark');
     var start=Date.now(),doneOnce=false;
     function cleanup(){document.body.classList.remove('loading');if(pl.parentNode)pl.parentNode.removeChild(pl);}
     function fly(){
       var target=document.querySelector('.brand-badge img');
-      if(!target||!logo.animate){pl.classList.add('fade');setTimeout(cleanup,700);return;}
-      var l=logo.getBoundingClientRect(),t=target.getBoundingClientRect();
+      if(!target||!mark.animate){pl.classList.add('fade');setTimeout(cleanup,700);return;}
+      var l=mark.getBoundingClientRect(),t=target.getBoundingClientRect();
       var s=Math.min(t.width/l.width,t.height/l.height);
       var dx=(t.left+t.width/2)-(l.left+l.width/2),dy=(t.top+t.height/2)-(l.top+l.height/2);
       pl.classList.add('fade');
-      var a=logo.animate([{transform:'none'},{transform:'translate('+dx+'px,'+dy+'px) scale('+s+')'}],{duration:900,easing:'cubic-bezier(.65,0,.25,1)',fill:'forwards'});
+      var a=mark.animate([{transform:'none'},{transform:'translate('+dx+'px,'+dy+'px) scale('+s+')'}],{duration:900,easing:'cubic-bezier(.65,0,.25,1)',fill:'forwards'});
       a.onfinish=cleanup;
     }
     function finish(){
       if(doneOnce)return;doneOnce=true;
       var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var spin=logo.getAnimations?logo.getAnimations()[0]:null;
+      var spin=mark.getAnimations?mark.getAnimations()[0]:null;
       if(reduce){pl.classList.add('fade');setTimeout(cleanup,400);return;}
       if(!spin){fly();return;}
       /* a megkezdett fordulatot gyorsítva befejezi, hogy szemből álljon meg */
