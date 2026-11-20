@@ -155,6 +155,11 @@ p{margin:0 0 1em}
 .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,31,0) 25%,rgba(10,30,31,.85) 100%)}
 .tile:hover img{transform:scale(1.04)}
+/* Teljes kép megjelenítése (nincs belevágás): elmosott háttér + teljes kép elöl */
+.tile img.tile-bg{object-fit:cover;filter:blur(28px) brightness(.6) saturate(1.1);transform:scale(1.2)}
+.tile:hover img.tile-bg{transform:scale(1.2)}
+.tile img.tile-fit{object-fit:contain;object-position:center}
+.tile:hover img.tile-fit{transform:scale(1.015)}
 .tile-body{position:relative;z-index:2;padding:2rem 1.5rem 2.25rem;max-width:32rem}
 .tile-kicker{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:.6rem}
 .tile h2{font-size:clamp(2rem,6vw,3rem)}
@@ -397,7 +402,8 @@ p{margin:0 0 1em}
 
   <section class="duo" id="wellness" aria-label="Szállás és wellness">
     <article class="tile">
-      <img src="kepek/sajat-03.svg" alt="A vendégház és környezete a Jódi-hegyen" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+      <img class="tile-bg" src="kepek/sajat-03.svg" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()">
+      <img class="tile-fit" src="kepek/sajat-03.svg" alt="A vendégház és környezete a Jódi-hegyen" loading="lazy" onerror="var b=this.parentNode.querySelector('.tile-bg');if(b)b.remove();this.parentNode.classList.add('noimg');this.remove()">
       <div class="tile-body reveal">
         <p class="tile-kicker">Szállás</p>
         <h2>Vendégház</h2>
