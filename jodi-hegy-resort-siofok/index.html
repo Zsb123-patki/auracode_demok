@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="hu"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jódi-Hegy Resort Siófok – vendégház balatoni panorámával, jakuzzival és szaunával</title>
+<meta name="description" content="Vendégház a siófoki Jódi-hegyen, balatoni panorámával. Privát jakuzzi, kültéri finn szauna, nyugodt kikapcsolódás pároknak. Foglalás: +36 20 214 2726.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2312393b'/%3E%3Ccircle cx='42' cy='22' r='6' fill='%23d4ad66'/%3E%3Cpath d='M8 42 C18 28 26 24 34 32 C40 38 46 34 56 40 L56 46 L8 46Z' fill='%23f3f2ee'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Figtree:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Jódi-Hegy Resort Siófok",
+  "description": "Vendégházunk a Jódi-hegyen, lenyűgöző balatoni panorámával, ideális választás mindazoknak, akik nyugodt kikapcsolódásra vágynak.",
+  "telephone": "+36202142726",
+  "email": "jodihegyresort@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Siófok",
+    "addressCountry": "HU"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Privát jakuzzi", "value": true},
+    {"@type": "LocationFeatureSpecification", "name": "Finn szauna", "value": true}
+  ],
+  "sameAs": [
+    "https://www.facebook.com/share/1A51vdbCoA/?mibextid=wwXIfr",
+    "https://www.instagram.com/jodihegyresort_vendeghazhun"
+  ]
+}
+</script>
+<style>
+:root{
+  --pine:#12393b;
+  --pine-2:#1d5154;
+  --pine-3:#2c6a6c;
+  --gold:#b58a3e;
+  --gold-light:#d4ad66;
+  --bg:#f3f2ee;
+  --paper:#ffffff;
+  --ink:#1b2425;
+  --muted:#4a5758;
+  --line:#d9d6cc;
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--sans);font-size:1rem;line-height:1.65;color:var(--ink);background:var(--bg);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0 0 .6em;letter-spacing:.005em}
+p{margin:0 0 1em}
+:focus-visible{outline:3px solid var(--gold-light);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--gold-light);color:var(--pine);padding:.6rem 1rem;z-index:200;font-weight:600}
+.skip:focus{left:1rem;top:1rem}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 1.25rem}
+.eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--pine-2);margin-bottom:1rem}
+.eyebrow::before{content:"";width:2.2rem;height:1px;background:currentColor}
+.noimg{background:var(--pine-2) !important}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:var(--sans);font-weight:600;font-size:.92rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:.95rem 1.5rem;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s;border-radius:0}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-gold{background:var(--gold-light);color:var(--pine)}
+.btn-gold:hover{background:#e2c088}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--pine)}
+.btn-pine{background:var(--pine);color:#fff}
+.btn-pine:hover{background:var(--pine-2)}
+
+/* Header */
+.site-header{position:fixed;inset:0 0 auto 0;z-index:100;color:#fff;transition:background .3s,box-shadow .3s}
+.site-header.solid{background:var(--pine);box-shadow:0 2px 18px rgba(0,0,0,.18)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}
+.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;min-width:0}
+.brand-photo{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.5);background:var(--pine-2);flex:none}
+.brand-mark{width:34px;height:34px;flex:none;color:var(--gold-light)}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.brand-text strong{font-family:var(--serif);font-size:1.3rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.brand-text span{font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;opacity:.85;margin-top:.25rem;white-space:nowrap}
+.nav-toggle{background:none;border:1px solid rgba(255,255,255,.5);color:#fff;width:46px;height:46px;display:grid;place-items:center;cursor:pointer;flex:none}
+.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{display:block;width:20px;height:2px;background:currentColor;position:relative;transition:transform .25s,background .25s}
+.nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0}
+.nav-toggle span::before{top:-6px}
+.nav-toggle span::after{top:6px}
+.nav-open .nav-toggle span{background:transparent}
+.nav-open .nav-toggle span::before{transform:translateY(6px) rotate(45deg)}
+.nav-open .nav-toggle span::after{transform:translateY(-6px) rotate(-45deg)}
+.main-nav{position:fixed;top:72px;left:0;right:0;background:var(--pine);padding:1rem 1.25rem 1.75rem;display:none;border-top:1px solid rgba(255,255,255,.12)}
+.nav-open .main-nav{display:block}
+.main-nav ul{list-style:none;margin:0;padding:0}
+.main-nav li a{display:block;padding:.85rem 0;text-decoration:none;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.1)}
+.main-nav .nav-call{margin-top:1.2rem;width:100%}
+
+/* Hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero-media{position:absolute;inset:0;background:var(--pine)}
+.hero-media img{width:100%;height:100%;object-fit:cover;animation:heroZoom 18s ease-out both}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,31,.55) 0%,rgba(10,30,31,.15) 35%,rgba(10,30,31,.78) 100%)}
+.hero-content{position:relative;z-index:2;padding-top:120px;padding-bottom:4.5rem}
+.hero .eyebrow{color:var(--gold-light)}
+.hero h1{font-size:clamp(2.9rem,11vw,6.4rem);font-weight:600;margin-bottom:.25em;max-width:12ch}
+.hero-lines{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;font-family:var(--serif);font-size:clamp(1.35rem,4.4vw,2rem);font-style:italic;font-weight:500;margin-bottom:1.6rem}
+.hero-lines span+span::before{content:"|";font-style:normal;color:var(--gold-light);margin-right:1.2rem}
+.hero-lead{max-width:34rem;font-size:1.05rem;opacity:.95;margin-bottom:2rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+@keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+
+/* Booking bar */
+.booking{position:relative;z-index:5;background:var(--pine);color:#fff;padding:2.5rem 0}
+.booking-inner{display:grid;gap:1.5rem}
+.booking h2{font-size:clamp(1.8rem,5vw,2.4rem);margin-bottom:.2em}
+.booking-note{font-size:.88rem;color:#d7e2e1;margin:0}
+.booking-form{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.field{display:flex;flex-direction:column;gap:.35rem;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);font-weight:600}
+.field input{font:inherit;color:var(--ink);background:#fff;border:1px solid transparent;padding:.8rem .85rem;width:100%;min-width:0;border-radius:0}
+.field input:focus-visible{outline:3px solid var(--gold-light);outline-offset:0}
+.booking-form .btn{grid-column:1/-1}
+.form-msg{grid-column:1/-1;font-size:.88rem;color:#ffd9a3;min-height:1.2em;margin:0}
+
+/* Intro */
+.section{padding:5rem 0}
+.intro-grid{display:grid;gap:2.75rem;align-items:center}
+.intro-media{position:relative;aspect-ratio:4/5;background:var(--pine-2)}
+.intro-media::before{content:"";position:absolute;inset:1.1rem -1.1rem -1.1rem 1.1rem;border:1px solid var(--gold);z-index:0}
+.intro-media img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover}
+.intro-text h2{font-size:clamp(2.2rem,6vw,3.4rem);color:var(--pine)}
+.intro-text .lead{font-size:1.15rem;color:var(--ink)}
+.intro-text p{color:var(--muted)}
+.slogan{font-family:var(--serif);font-style:italic;font-size:1.55rem;line-height:1.3;color:var(--pine-2);border-left:2px solid var(--gold);padding-left:1.1rem;margin:1.8rem 0}
+.award{display:flex;gap:1rem;align-items:flex-start;padding-top:1.4rem;border-top:1px solid var(--line);margin-top:1.6rem}
+.award-score{font-family:var(--serif);font-size:3rem;font-weight:700;line-height:.9;color:var(--pine)}
+.award p{margin:0;font-size:.95rem;color:var(--muted)}
+.award strong{color:var(--ink)}
+
+/* Duo tiles */
+.duo{display:grid}
+.tile{position:relative;min-height:440px;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--pine-2)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,31,0) 25%,rgba(10,30,31,.85) 100%)}
+.tile:hover img{transform:scale(1.04)}
+.tile-body{position:relative;z-index:2;padding:2rem 1.5rem 2.25rem;max-width:32rem}
+.tile-kicker{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:.6rem}
+.tile h2{font-size:clamp(2rem,6vw,3rem)}
+.tile p{color:#eef3f2}
+.tile a.more{display:inline-flex;gap:.5rem;align-items:center;text-decoration:none;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-bottom:1px solid var(--gold-light);padding-bottom:.25rem}
+
+/* Features */
+.features{background:var(--paper)}
+.features-head{display:grid;gap:1rem;margin-bottom:2.75rem}
+.features-head h2{font-size:clamp(2.2rem,6vw,3.4rem);color:var(--pine);margin:0}
+.features-head p{color:var(--muted);max-width:32rem;margin:0}
+.feature-grid{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.feature{padding:1.8rem 1.5rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .3s}
+.feature:hover{background:var(--bg)}
+.feature-num{font-family:var(--serif);font-size:1.1rem;color:var(--gold);font-weight:700;letter-spacing:.1em;display:block;margin-bottom:.8rem}
+.feature h3{font-size:1.55rem;color:var(--pine);margin-bottom:.35em}
+.feature p{margin:0;color:var(--muted);font-size:.96rem}
+
+/* Banner */
+.banner{position:relative;color:#fff;overflow:hidden;background:var(--pine)}
+.banner-media{position:absolute;inset:0;background:var(--pine)}
+.banner-media img{width:100%;height:100%;object-fit:cover}
+.banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,57,59,.92) 0%,rgba(18,57,59,.75) 55%,rgba(18,57,59,.45) 100%)}
+.banner-inner{position:relative;z-index:2;padding:5.5rem 1.25rem}
+.banner blockquote{margin:0 0 1.6rem;max-width:40rem}
+.banner blockquote p{font-family:var(--serif);font-size:clamp(1.6rem,4.8vw,2.5rem);font-style:italic;line-height:1.25;margin:0 0 1rem}
+.banner cite{font-style:normal;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light)}
+
+/* Gallery */
+.gallery-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:1rem;margin-bottom:2.25rem}
+.gallery-head h2{font-size:clamp(2.2rem,6vw,3.4rem);color:var(--pine);margin:0}
+.gallery-head a{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--pine);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:.2rem}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;gap:.6rem}
+.gallery figure{margin:0;overflow:hidden;background:var(--pine-2)}
+.gallery figure:first-child{grid-column:span 2;grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.gallery figure:hover img{transform:scale(1.05)}
+
+/* Contact */
+.contact{background:var(--paper)}
+.contact-grid{display:grid;gap:2.5rem}
+.contact h2{font-size:clamp(2.2rem,6vw,3.4rem);color:var(--pine)}
+.contact-list{margin:0 0 2rem;display:grid;gap:1.1rem}
+.contact-list div{display:grid;grid-template-columns:7.5rem 1fr;gap:.75rem;padding-bottom:1.1rem;border-bottom:1px solid var(--line)}
+.contact-list dt{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--pine-2);padding-top:.2rem}
+.contact-list dd{margin:0;color:var(--ink);overflow-wrap:anywhere}
+.contact-list a{color:var(--pine);font-weight:600}
+.contact-actions{display:flex;flex-wrap:wrap;gap:.8rem}
+.map{min-height:360px;border:1px solid var(--line);background:#e4e2db}
+.map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+
+/* Footer */
+.site-footer{background:var(--pine);color:#dce6e5;padding:3.5rem 0 1.6rem;font-size:.95rem}
+.footer-grid{display:grid;gap:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.14)}
+.footer-logo{display:flex;align-items:center;gap:.9rem;color:#fff}
+.footer-logo svg{width:64px;height:64px;color:var(--gold-light);flex:none}
+.footer-logo strong{font-family:var(--serif);font-size:1.7rem;letter-spacing:.06em;text-transform:uppercase;display:block;line-height:1}
+.footer-logo span{font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;opacity:.85}
+.site-footer h3{font-family:var(--sans);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:.8rem}
+.site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.site-footer a{color:#fff;text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.credit{padding-top:1.4rem;font-size:.78rem;color:#b9cac9;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
+.credit a{color:#fff}
+
+/* Scroll to top */
+.to-top{position:fixed;right:1rem;bottom:1rem;z-index:90;width:48px;height:48px;display:grid;place-items:center;background:var(--gold-light);color:var(--pine);border:0;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s,transform .3s,visibility .3s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top svg{width:20px;height:20px}
+
+/* Popup */
+.popup{position:fixed;inset:0;z-index:150;display:none;align-items:center;justify-content:center;padding:1rem;background:rgba(8,24,25,.6)}
+.popup.open{display:flex;animation:fadeIn .35s ease both}
+.popup-card{position:relative;background:var(--paper);width:100%;max-width:760px;max-height:calc(100svh - 2rem);overflow:auto;display:grid}
+.popup-media{aspect-ratio:16/10;background:var(--pine-2)}
+.popup-media img{width:100%;height:100%;object-fit:cover}
+.popup-body{padding:1.75rem 1.5rem 2rem}
+.popup-body h2{font-size:2rem;color:var(--pine)}
+.popup-body p{color:var(--muted)}
+.popup-close{position:absolute;top:.6rem;right:.6rem;width:42px;height:42px;border:0;background:var(--pine);color:#fff;cursor:pointer;display:grid;place-items:center;z-index:2}
+.popup-close svg{width:18px;height:18px}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* Reveal */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* Tablet */
+@media (min-width:768px){
+  .wrap{padding:0 2rem}
+  .booking-form{grid-template-columns:repeat(4,1fr)}
+  .field.full{grid-column:span 2}
+  .duo{grid-template-columns:1fr 1fr}
+  .tile{min-height:560px}
+  .tile-body{padding:2.5rem}
+  .feature-grid{grid-template-columns:repeat(3,1fr)}
+  .features-head{grid-template-columns:1fr 1fr;align-items:end}
+  .gallery{grid-template-columns:repeat(4,1fr);grid-auto-rows:200px}
+  .gallery figure:nth-child(6),.gallery figure:nth-child(7){grid-column:span 2}
+  .contact-grid{grid-template-columns:1fr 1.15fr;align-items:stretch}
+  .map,.map iframe{min-height:100%}
+  .footer-grid{grid-template-columns:1.4fr 1fr 1fr}
+  .popup-card{grid-template-columns:1fr 1fr}
+  .popup-media{aspect-ratio:auto;min-height:100%}
+  .banner-inner{padding:7rem 2rem}
+}
+
+/* Desktop */
+@media (min-width:1024px){
+  .nav-toggle{display:none}
+  .main-nav{position:static;display:flex !important;align-items:center;background:none;padding:0;border:0;gap:1.75rem}
+  .main-nav ul{display:flex;gap:1.6rem}
+  .main-nav li a{border:0;padding:.4rem 0;font-size:.8rem;letter-spacing:.16em;position:relative}
+  .main-nav li a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-light);transition:width .3s}
+  .main-nav li a:hover::after{width:100%}
+  .main-nav .nav-call{margin:0;width:auto;padding:.7rem 1.1rem;font-size:.78rem}
+  .header-inner{height:88px}
+  .hero-content{padding-bottom:9rem}
+  .booking{margin:-4.5rem auto 0;max-width:calc(var(--wrap) - 4rem);padding:2.25rem 0;box-shadow:0 20px 50px rgba(0,0,0,.2)}
+  .booking-inner{grid-template-columns:.85fr 2fr;align-items:center;gap:2.5rem}
+  .section{padding:7.5rem 0}
+  .intro-grid{grid-template-columns:1fr 1fr;gap:5.5rem}
+  .tile{min-height:680px}
+  .tile-body{padding:3.5rem}
+  .gallery{grid-auto-rows:240px}
+}
+@media (min-width:1440px){
+  .hero h1{font-size:7rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#tartalom">Ugrás a tartalomra</a>
+
+<header class="site-header" id="fejlec">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Jódi-Hegy Resort Siófok – vissza az oldal tetejére">
+      <img class="brand-photo" src="https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-1/903330797_1072723095826718_371056027049577686_n.avif?stp=dst-jpg_tt6&amp;cstp=mx495x500&amp;ctp=p200x200&amp;_nc_cat=100&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=f907e8&amp;_nc_ohc=CHRIh_lohNwQ7kNvwH1um3z&amp;_nc_oc=Adrt434YTgUNtyJUhky7e36OGdfchJUDTcKJ44FHmFGA30132YVxDcnMTthKV2f_ULp-U1RZEvFeVXLdyvjVZCxo&amp;_nc_zt=24&amp;_nc_ht=scontent-phl2-1.xx&amp;_nc_gid=JoYRmRta9g3AFaLl0eke0Q&amp;_nc_ss=70289&amp;oh=00_AQSLEsGArUyvq9GS0Ggw9wC1wTD7AaiOl8ZlJJZwrI1rKQ&amp;oe=6B06423B" alt="A Jódi-Hegy Resort Siófok logója" width="42" height="42" onerror="this.remove()">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="2"></circle>
+        <circle cx="41" cy="22" r="5.5" fill="currentColor"></circle>
+        <path d="M9 41 C17 29 25 25 33 32 C39 37 45 33 55 39" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
+        <path d="M16 47 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      </svg>
+      <span class="brand-text"><strong>Jódi-Hegy</strong><span>Resort · Siófok</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="fomenu" aria-label="Menü megnyitása"><span></span></button>
+    <nav class="main-nav" id="fomenu" aria-label="Főmenü">
+      <ul>
+        <li><a href="#rolunk">Rólunk</a></li>
+        <li><a href="#wellness">Wellness</a></li>
+        <li><a href="#elmenyek">Élmények</a></li>
+        <li><a href="#galeria">Galéria</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+      </ul>
+      <a class="btn btn-gold nav-call" href="tel:+36202142726">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+        +36 20 214 2726
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+  <section class="hero" id="top" aria-labelledby="hero-cim">
+    <div class="hero-media">
+      <img src="kepek/sajat-01.svg" alt="A Jódi-Hegy Resort vendégháza Siófokon, a Jódi-hegyen" fetchpriority="high" onerror="this.parentNode.classList.add('noimg');this.remove()">
+    </div>
+    <div class="wrap hero-content">
+      <span class="eyebrow">Siófok · Jódi-hegy</span>
+      <h1 id="hero-cim">Jódi-Hegy Resort</h1>
+      <p class="hero-lines"><span>Vendégház</span><span>Balatoni panoráma</span></p>
+      <p class="hero-lead">Privát jakuzzi, finn szauna és nyugalom a hegyoldalon. Ahol a pihenés nem opció, hanem alapcsomag.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="tel:+36202142726">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+          Hívj most
+        </a>
+        <a class="btn btn-ghost" href="#foglalas">Szabad időpontok</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking" id="foglalas" aria-labelledby="foglalas-cim">
+    <div class="wrap booking-inner">
+      <div>
+        <h2 id="foglalas-cim">Foglald le a szállásod!</h2>
+        <p class="booking-note">Add meg a dátumokat, és az e-mail programod megnyílik egy kész ajánlatkéréssel. Gyorsabb? Hívj: <a href="tel:+36202142726">+36 20 214 2726</a></p>
+      </div>
+      <form class="booking-form" id="foglalasForm" novalidate="">
+        <div class="field">
+          <label for="erkezes">Érkezés</label>
+          <input type="date" id="erkezes" name="erkezes" required="">
+        </div>
+        <div class="field">
+          <label for="tavozas">Távozás</label>
+          <input type="date" id="tavozas" name="tavozas" required="">
+        </div>
+        <div class="field">
+          <label for="vendegek">Vendégek</label>
+          <input type="number" id="vendegek" name="vendegek" min="1" value="2" inputmode="numeric">
+        </div>
+        <div class="field">
+          <label for="nev">Neved</label>
+          <input type="text" id="nev" name="nev" autocomplete="name">
+        </div>
+        <button class="btn btn-gold" type="submit">Ajánlatot kérek</button>
+        <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="rolunk" aria-labelledby="rolunk-cim">
+    <div class="wrap intro-grid">
+      <div class="intro-media reveal">
+        <img src="kepek/sajat-02.svg" alt="Részlet a Jódi-Hegy Resort vendégházából" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+      </div>
+      <div class="intro-text reveal">
+        <span class="eyebrow">Rólunk</span>
+        <h2 id="rolunk-cim">Nyugalom a Jódi-hegyen</h2>
+        <p class="lead">Vendégházunk a Jódi-hegyen áll, lenyűgöző balatoni panorámával.</p>
+        <p>Ideális választás mindenkinek, aki nyugodt kikapcsolódásra vágyik. Kettesben töltött napokra, meghitt hétvégékre, téli feltöltődésre.</p>
+        <p class="slogan">„Ahol a pihenés nem opció, hanem alapcsomag.”</p>
+        <div class="award">
+          <span class="award-score" aria-hidden="true">10</span>
+          <p><strong>Traveller Review Awards</strong><br>Elismerés a lehető legmagasabb, 10-es pontszámmal, a vendégek értékelései alapján.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="duo" id="wellness" aria-label="Szállás és wellness">
+    <article class="tile">
+      <img src="kepek/sajat-03.svg" alt="A vendégház és környezete a Jódi-hegyen" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+      <div class="tile-body reveal">
+        <p class="tile-kicker">Szállás</p>
+        <h2>Vendégház</h2>
+        <p>Csend, kilátás a Balatonra, és egy hely, ahol tényleg kiengedhetsz. Siófokon, mégis a hegyoldal nyugalmában.</p>
+        <a class="more" href="#foglalas">Időpontot kérek <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+    <article class="tile">
+      <img src="kepek/sajat-04.svg" alt="Wellness a Jódi-Hegy Resortban" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+      <div class="tile-body reveal">
+        <p class="tile-kicker">Wellness</p>
+        <h2>Jakuzzi &amp; szauna</h2>
+        <p>Privát jakuzzi és kültéri finn szauna, korlátlanul. Télen a hideg elől a meleg wellnessbe menekülhetsz.</p>
+        <a class="more" href="tel:+36202142726">Hívj most <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+  </section>
+
+  <section class="section features" id="elmenyek" aria-labelledby="elmenyek-cim">
+    <div class="wrap">
+      <div class="features-head reveal">
+        <div>
+          <span class="eyebrow">Élmények</span>
+          <h2 id="elmenyek-cim">Ami nálunk vár</h2>
+        </div>
+        <p>Testi-lelki megújulás, forró buborékok és balatoni kilátás. Minden, ami egy igazi kikapcsolódáshoz kell.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature reveal"><span class="feature-num">01</span><h3>Balatoni panoráma</h3><p>Lenyűgöző kilátás a tóra, egyenesen a Jódi-hegyről.</p></div>
+        <div class="feature reveal"><span class="feature-num">02</span><h3>Privát jakuzzi</h3><p>Korlátlan kényeztetés a forró buborékokban, csak nektek.</p></div>
+        <div class="feature reveal"><span class="feature-num">03</span><h3>Kültéri finn szauna</h3><p>Testi-lelki megújulás a szabad ég alatt.</p></div>
+        <div class="feature reveal"><span class="feature-num">04</span><h3>Pároknak</h3><p>Meghitt, exkluzív vendégház a kettesben töltött napokhoz.</p></div>
+        <div class="feature reveal"><span class="feature-num">05</span><h3>Nyugodt környezet</h3><p>Igazi kikapcsolódás a hegyoldal csendjében.</p></div>
+        <div class="feature reveal"><span class="feature-num">06</span><h3>Télen is</h3><p>Téli feltöltődés jakuzzival és szaunával, amikor kint hideg van.</p></div>
+        <div class="feature reveal"><span class="feature-num">07</span><h3>10-es értékelés</h3><p>Traveller Review Awards elismerés a legmagasabb pontszámmal.</p></div>
+        <div class="feature reveal"><span class="feature-num">08</span><h3>Élmény ajándékba</h3><p>Lepj meg valakit egy jakuzzis-szaunás kikapcsolódással.</p></div>
+        <div class="feature reveal"><span class="feature-num">09</span><h3>Regisztrált szállás</h3><p>Hivatalos szálláshely. NTAK: MA23060928</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="banner" aria-labelledby="banner-cim">
+    <div class="banner-media">
+      <img src="kepek/sajat-05.svg" alt="Hangulatkép a Jódi-Hegy Resortból" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+    </div>
+    <div class="wrap banner-inner reveal">
+      <span class="eyebrow" style="color:var(--gold-light)">Elismerés</span>
+      <h2 id="banner-cim" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">A házigazda üzenete</h2>
+      <blockquote>
+        <p>„Hatalmas megtiszteltetés és öröm számomra, hogy idén elnyertem a Traveller Review Awards elismerését, ráadásul a lehető legmagasabb, 10-es pontszámmal.”</p>
+        <cite>A házigazda, a Facebook-oldalunkon</cite>
+      </blockquote>
+      <a class="btn btn-gold" href="tel:+36202142726">Foglalj most: +36 20 214 2726</a>
+    </div>
+  </section>
+
+  <section class="section" id="galeria" aria-labelledby="galeria-cim">
+    <div class="wrap">
+      <div class="gallery-head reveal">
+        <div>
+          <span class="eyebrow">Galéria</span>
+          <h2 id="galeria-cim">Pillanatok a Jódi-hegyről</h2>
+        </div>
+        <a href="https://www.instagram.com/jodihegyresort_vendeghazhun" target="_blank" rel="noopener">Még több az Instagramon</a>
+      </div>
+      <div class="gallery">
+        <figure class="reveal"><img src="https://media.sume.com/artifacts/artf_VdxPqHJW5LOcbtbg7V8X0rGRlsLLQufB/images.jpg" alt="Fotó a Jódi-Hegy Resortról, Siófok" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></figure>
+        <figure class="reveal"><img src="https://scontent-msp1-1.xx.fbcdn.net/v/t39.30808-6/887604921_1064015163364178_8858937876601612346_n.avif?stp=dst-jpg_tt6&amp;cstp=mx2955x1419&amp;ctp=s1080x2048&amp;_nc_cat=104&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=86c6b0&amp;_nc_ohc=h9GgJn6CcZQQ7kNvwHtadas&amp;_nc_oc=Adq5sPZrVtEigGzHtFZaHcfop_6xTU2-YCafMcL7iXg-5ElOiJY-qDkgNoDUZdKYDgk&amp;_nc_zt=23&amp;_nc_ht=scontent-msp1-1.xx&amp;_nc_gid=hVPDBgoh4oQJJ2f02qxa2A&amp;_nc_ss=70180&amp;oh=00_AQQMm10rRFT-cGquH6iG3qiMVBTqGuM36HHrU1KUZ30fxg&amp;oe=6B065724" alt="Pillanatkép a vendégházból a Jódi-hegyen" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></figure>
+        <figure class="reveal"><img src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/887323261_1064293893336305_1948192185585656233_n.avif?stp=dst-jpg_tt6&amp;cstp=mx1080x1350&amp;ctp=s640x640&amp;_nc_cat=101&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=127cfc&amp;_nc_ohc=CnbjYTwxh1QQ7kNvwGssOjs&amp;_nc_oc=AdqZOUuqImvfVoD9TSVItterbmfgYpF9__MNw3-8YtT7nFU6xk0mOCeAbLNDcFqlUTo7ZZdPf9fJ8DTo9ZwPASpr&amp;_nc_zt=23&amp;_nc_ht=scontent-atl3-1.xx&amp;_nc_gid=xOTj9EI0k0gRpXVO9vh-uw&amp;_nc_ss=70180&amp;oh=00_AQQhhhUVKM7rTFI6V-rhlWtMOqkbBjJRsP6bH_Q3nGq4kg&amp;oe=6B0631C7" alt="Részlet a Jódi-Hegy Resort szállásáról" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></figure>
+        <figure class="reveal"><img src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/884397313_1064388483326846_8393252344255246661_n.avif?stp=dst-jpg_tt6&amp;cstp=mx940x788&amp;ctp=s600x600&amp;_nc_cat=100&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=127cfc&amp;_nc_ohc=cDFR_DJG4mIQ7kNvwEzSAW-&amp;_nc_oc=AdqV_psb9TCr2SGBww-un_wmpAs4h4dbmy5DlD79Tn-TxgE9lXt_CQWh8cB8CjMcXgWVN81bhpp86zG3wIO958-n&amp;_nc_zt=23&amp;_nc_ht=scontent-atl3-1.xx&amp;_nc_gid=xOTj9EI0k0gRpXVO9vh-uw&amp;_nc_ss=70180&amp;oh=00_AQTBSVdnIcPejDHOHKCLSCBsNFOALFYoZp4edQHuHFm1gw&amp;oe=6B06306D" alt="Hangulatkép a siófoki vendégházból" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></figure>
+        <figure class="reveal"><img src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/588317810_776660652099632_7377705734295093433_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1600x896&amp;ctp=s960x960&amp;_nc_cat=111&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=86c6b0&amp;_nc_ohc=XUmllF2WvpcQ7kNvwGZm3OR&amp;_nc_oc=Ado_v3HpJix92TPnDjXgZyersHoFwn0aU43yySajfg8OUp9Aqe030RPYFKgZ43AtVUuqGWejIewzIYX-3Q5UWQXz&amp;_nc_zt=23&amp;_nc_ht=scontent-atl3-2.xx&amp;_nc_gid=xOTj9EI0k0gRpXVO9vh-uw&amp;_nc_ss=70180&amp;oh=00_AQQh_feJ1QtmSvpGZKKF8ukk0SsxS5GwMlt7oOOSd3nXiw&amp;oe=6B06627A" alt="A Jódi-Hegy Resort a Balaton közelében" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></figure>
+        <figure class="reveal"><img src="https://scontent.flaf1-1.fna.fbcdn.net/v/t39.30808-6/888131952_1064569333308761_8668465248193389904_n.avif?stp=dst-jpg_tt6&amp;cstp=mx1365x2048&amp;ctp=p526x296&amp;_nc_cat=103&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=127cfc&amp;_nc_ohc=eur3ZgZMYIEQ7kNvwED_rJD&amp;_nc_oc=Adp8ljUOvg-a4UP3q0ZpYbum_V3Zf3cUDl2liT2SdD8BZl2W5wQLBG5wYj1UQYzMDv4&amp;_nc_zt=23&amp;_nc_ht=scontent.flaf1-1.fna&amp;_nc_gid=sWDYr7LfgFs42H8MQ1-mpQ&amp;_nc_ss=70180&amp;oh=00_AQTqwnKpFEn9v9244NlTHgucwUuAmTvfI5aCXasqpUr16Q&amp;oe=6B063550" alt="Kikapcsolódás a Jódi-Hegy Resortban" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></figure>
+        <figure class="reveal"><img src="https://scontent.flaf1-1.fna.fbcdn.net/v/t39.30808-6/887011344_1064688339963527_7901504417020310476_n.avif?stp=dst-jpg_tt6&amp;cstp=mx1315x688&amp;ctp=s960x960&amp;_nc_cat=102&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=hP3mMsNPZbsQ7kNvwERRB45&amp;_nc_oc=AdrEeNePyhSAm8_timYNOME8gLOXGJdrrFeWm1R5ivH4Gmhmkhyu6pflVf_KWyaMZ_k&amp;_nc_zt=23&amp;_nc_ht=scontent.flaf1-1.fna&amp;_nc_gid=sWDYr7LfgFs42H8MQ1-mpQ&amp;_nc_ss=70180&amp;oh=00_AQS65aDWYijC0IlYhL9ymImXq22Dlfbuf1kkrNIok0PjmQ&amp;oe=6B065FD1" alt="Fotó a vendégházról és környezetéről Siófokon" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="kapcsolat" aria-labelledby="kapcsolat-cim">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Kapcsolat</span>
+        <h2 id="kapcsolat-cim">Gyere el hozzánk!</h2>
+        <dl class="contact-list">
+          <div><dt>Cím</dt><dd>Jódi-hegy, Siófok</dd></div>
+          <div><dt>Telefon</dt><dd><a href="tel:+36202142726">+36 20 214 2726</a></dd></div>
+          <div><dt>E-mail</dt><dd><a href="mailto:jodihegyresort@gmail.com">jodihegyresort@gmail.com</a></dd></div>
+          <div><dt>Nyitvatartás</dt><dd>Mindig nyitva</dd></div>
+          <div><dt>Közösségi</dt><dd><a href="https://www.facebook.com/share/1A51vdbCoA/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/jodihegyresort_vendeghazhun" target="_blank" rel="noopener">Instagram</a></dd></div>
+          <div><dt>NTAK</dt><dd>MA23060928</dd></div>
+        </dl>
+        <div class="contact-actions">
+          <a class="btn btn-pine" href="tel:+36202142726">Hívás most</a>
+          <a class="btn btn-gold" href="mailto:jodihegyresort@gmail.com">E-mail küldése</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe src="https://www.google.com/maps?q=J%C3%B3di-hegy%2C%20Si%C3%B3fok&amp;output=embed" title="Jódi-Hegy Resort elhelyezkedése a térképen – Jódi-hegy, Siófok" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+            <circle cx="41" cy="22" r="5.5" fill="currentColor"></circle>
+            <path d="M9 41 C17 29 25 25 33 32 C39 37 45 33 55 39" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M16 47 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+          </svg>
+          <div><strong>Jódi-Hegy</strong><span>Resort · Siófok</span></div>
+        </div>
+        <p style="margin-top:1.2rem;max-width:22rem">Vendégház a Jódi-hegyen, balatoni panorámával.</p>
+      </div>
+      <div>
+        <h3>Elérhetőség</h3>
+        <ul>
+          <li>Jódi-hegy, Siófok</li>
+          <li><a href="tel:+36202142726">+36 20 214 2726</a></li>
+          <li><a href="mailto:jodihegyresort@gmail.com">jodihegyresort@gmail.com</a></li>
+          <li>Mindig nyitva</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kövess minket</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/share/1A51vdbCoA/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/jodihegyresort_vendeghazhun" target="_blank" rel="noopener">Instagram</a></li>
+          <li>NTAK: MA23060928</li>
+        </ul>
+      </div>
+    </div>
+    <div class="credit">
+      <span>© <span id="ev"></span> Jódi-Hegy Resort Siófok</span>
+      <span>Készítette: <a href="https://auracode.hu" target="_blank" rel="noopener">AuraCode</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Vissza az oldal tetejére">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+</button>
+
+<div class="popup" id="popup" role="dialog" aria-modal="true" aria-labelledby="popup-cim" hidden="">
+  <div class="popup-card">
+    <button class="popup-close" id="popupClose" type="button" aria-label="Ablak bezárása">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </button>
+    <div class="popup-media">
+      <img src="https://scontent.ftol1-1.fna.fbcdn.net/v/t39.30808-6/846221302_1062443260188035_1799557484396539695_n.avif?stp=dst-jpg_tt6&amp;cstp=mx960x708&amp;ctp=s720x720&amp;_nc_cat=102&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=ze7r1fabngEQ7kNvwH5HpM9&amp;_nc_oc=AdoGKq2gumt60W7bZVpyO9Dt-ZS8Dg656NN8thffdIA06pbbL04yBnFd3VpveGYuBq4&amp;_nc_zt=23&amp;_nc_ht=scontent.ftol1-1.fna&amp;_nc_gid=UTmV1u6ct1-kPiH-vNEGCA&amp;_nc_ss=70180&amp;oh=00_AQT2obMPdZOMLWxnH0FYZb9fAkx60G3Pc50wuTx-j3btQw&amp;oe=6B063903" alt="Wellnessélmény a Jódi-Hegy Resortban" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+    </div>
+    <div class="popup-body">
+      <span class="eyebrow">Ajándékötlet</span>
+      <h2 id="popup-cim">Ajándékozz élményt!</h2>
+      <p>Privát jakuzzi és finn szauna: testi-lelki megújulás, meghitt kikapcsolódás. Lepd meg vele azt, akit szeretsz.</p>
+      <a class="btn btn-pine" href="tel:+36202142726">Érdeklődöm</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var header=document.getElementById('fejlec');
+  var toggle=document.querySelector('.nav-toggle');
+  var toTop=document.getElementById('toTop');
+  document.getElementById('ev').textContent=new Date().getFullYear();
+
+  function closeNav(){document.body.classList.remove('nav-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Menü megnyitása');}
+  toggle.addEventListener('click',function(){
+    var open=document.body.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+    toggle.setAttribute('aria-label',open?'Menü bezárása':'Menü megnyitása');
+    if(open)header.classList.add('solid');else onScroll();
+  });
+  document.querySelectorAll('.main-nav a').forEach(function(a){a.addEventListener('click',closeNav);});
+
+  function onScroll(){
+    var y=window.scrollY;
+    if(y>40||document.body.classList.contains('nav-open'))header.classList.add('solid');else header.classList.remove('solid');
+    if(y>600)toTop.classList.add('show');else toTop.classList.remove('show');
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  toTop.addEventListener('click',function(){
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    document.querySelector('.brand').focus({preventScroll:true});
+  });
+
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+
+  var form=document.getElementById('foglalasForm');
+  var msg=document.getElementById('formMsg');
+  var erk=document.getElementById('erkezes'),tav=document.getElementById('tavozas');
+  var today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());
+  var iso=today.toISOString().slice(0,10);
+  erk.min=iso;tav.min=iso;
+  erk.addEventListener('change',function(){if(erk.value)tav.min=erk.value;});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!erk.value||!tav.value){msg.textContent='Add meg az érkezés és a távozás dátumát.';(erk.value?tav:erk).focus();return;}
+    if(tav.value<=erk.value){msg.textContent='A távozás legyen későbbi, mint az érkezés.';tav.focus();return;}
+    var v=document.getElementById('vendegek').value||'';
+    var n=document.getElementById('nev').value||'';
+    var body='Szia!\n\nSzállás iránt érdeklődnék a Jódi-Hegy Resortban.\n\nÉrkezés: '+erk.value+'\nTávozás: '+tav.value+'\nVendégek száma: '+v+(n?'\nNév: '+n:'')+'\n\nKöszönöm!';
+    msg.textContent='Megnyílik az e-mail programod a kész üzenettel.';
+    window.location.href='mailto:jodihegyresort@gmail.com?subject='+encodeURIComponent('Szállásfoglalás – '+erk.value+' / '+tav.value)+'&body='+encodeURIComponent(body);
+  });
+
+  var popup=document.getElementById('popup');
+  var closeBtn=document.getElementById('popupClose');
+  var lastFocus=null,shown=false;
+  function seen(){try{return sessionStorage.getItem('jodiPopup')==='1';}catch(err){return false;}}
+  function openPopup(){
+    if(shown||seen())return;shown=true;
+    try{sessionStorage.setItem('jodiPopup','1');}catch(err){}
+    lastFocus=document.activeElement;
+    popup.hidden=false;popup.classList.add('open');
+    closeBtn.focus();
+  }
+  function closePopup(){
+    popup.classList.remove('open');popup.hidden=true;
+    if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  }
+  closeBtn.addEventListener('click',closePopup);
+  popup.addEventListener('click',function(e){if(e.target===popup)closePopup();});
+  popup.querySelector('.btn').addEventListener('click',function(){setTimeout(closePopup,50);});
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){if(!popup.hidden)closePopup();else if(document.body.classList.contains('nav-open')){closeNav();toggle.focus();}}
+    if(e.key==='Tab'&&!popup.hidden){
+      var f=popup.querySelectorAll('a[href],button');
+      var first=f[0],last=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    }
+  });
+  setTimeout(function(){
+    var gal=document.getElementById('galeria');
+    if(gal&&gal.getBoundingClientRect().top<window.innerHeight*2)openPopup();
+  },12000);
+  window.addEventListener('scroll',function trig(){
+    var gal=document.getElementById('galeria');
+    if(gal&&gal.getBoundingClientRect().top<window.innerHeight*.6){openPopup();window.removeEventListener('scroll',trig);}
+  },{passive:true});
+})();
+</script>
+
+</body></html>
