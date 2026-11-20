@@ -52,6 +52,7 @@
   --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
   --sans:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --wrap:1200px;
+  --header-h:72px;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -81,7 +82,7 @@ p{margin:0 0 1em}
 /* Header */
 .site-header{position:fixed;inset:0 0 auto 0;z-index:100;color:#fff;transition:background .3s,box-shadow .3s}
 .site-header.solid{background:var(--pine);box-shadow:0 2px 18px rgba(0,0,0,.18)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);gap:1rem}
 .brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;min-width:0}
 .brand-photo{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.5);background:var(--pine-2);flex:none}
 .brand-mark{width:34px;height:34px;flex:none;color:var(--gold-light)}
@@ -96,18 +97,18 @@ p{margin:0 0 1em}
 .nav-open .nav-toggle span{background:transparent}
 .nav-open .nav-toggle span::before{transform:translateY(6px) rotate(45deg)}
 .nav-open .nav-toggle span::after{transform:translateY(-6px) rotate(-45deg)}
-.main-nav{position:fixed;top:72px;left:0;right:0;background:var(--pine);padding:1rem 1.25rem 1.75rem;display:none;border-top:1px solid rgba(255,255,255,.12)}
+.main-nav{position:fixed;top:var(--header-h);left:0;right:0;background:var(--pine);padding:1rem 1.25rem 1.75rem;display:none;border-top:1px solid rgba(255,255,255,.12)}
 .nav-open .main-nav{display:block}
 .main-nav ul{list-style:none;margin:0;padding:0}
 .main-nav li a{display:block;padding:.85rem 0;text-decoration:none;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.1)}
 .main-nav .nav-call{margin-top:1.2rem;width:100%}
 
 /* Hero */
-.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding-top:calc(var(--header-h) + 2rem)}
 .hero-media{position:absolute;inset:0;background:var(--pine)}
 .hero-media img{width:100%;height:100%;object-fit:cover;animation:heroZoom 18s ease-out both}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,31,.55) 0%,rgba(10,30,31,.15) 35%,rgba(10,30,31,.78) 100%)}
-.hero-content{position:relative;z-index:2;padding-top:120px;padding-bottom:4.5rem}
+.wrap.hero-content{position:relative;z-index:2;padding-top:1.5rem;padding-bottom:4.5rem}
 .hero .eyebrow{color:var(--gold-light)}
 .hero h1{font-size:clamp(2.9rem,11vw,6.4rem);font-weight:600;margin-bottom:.25em;max-width:12ch}
 .hero-lines{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;font-family:var(--serif);font-size:clamp(1.35rem,4.4vw,2rem);font-style:italic;font-weight:500;margin-bottom:1.6rem}
@@ -241,6 +242,7 @@ p{margin:0 0 1em}
 /* Tablet */
 @media (min-width:768px){
   .wrap{padding:0 2rem}
+  .hero{padding-top:calc(var(--header-h) + 2.5rem)}
   .booking-form{grid-template-columns:repeat(4,1fr)}
   .field.full{grid-column:span 2}
   .duo{grid-template-columns:1fr 1fr}
@@ -260,6 +262,7 @@ p{margin:0 0 1em}
 
 /* Desktop */
 @media (min-width:1024px){
+  :root{--header-h:88px}
   .nav-toggle{display:none}
   .main-nav{position:static;display:flex !important;align-items:center;background:none;padding:0;border:0;gap:1.75rem}
   .main-nav ul{display:flex;gap:1.6rem}
@@ -267,8 +270,8 @@ p{margin:0 0 1em}
   .main-nav li a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-light);transition:width .3s}
   .main-nav li a:hover::after{width:100%}
   .main-nav .nav-call{margin:0;width:auto;padding:.7rem 1.1rem;font-size:.78rem}
-  .header-inner{height:88px}
-  .hero-content{padding-bottom:9rem}
+  .hero{padding-top:calc(var(--header-h) + 3rem)}
+  .wrap.hero-content{padding-bottom:9rem}
   .booking{margin:-4.5rem auto 0;max-width:calc(var(--wrap) - 4rem);padding:2.25rem 0;box-shadow:0 20px 50px rgba(0,0,0,.2)}
   .booking-inner{grid-template-columns:.85fr 2fr;align-items:center;gap:2.5rem}
   .section{padding:7.5rem 0}
@@ -313,7 +316,7 @@ p{margin:0 0 1em}
         <li><a href="#kapcsolat">Kapcsolat</a></li>
       </ul>
       <a class="btn btn-gold nav-call" href="tel:+36202142726">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.700.7a2 2 0 0 1 1.7 2z"></path></svg>
         +36 20 214 2726
       </a>
     </nav>
