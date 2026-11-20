@@ -17,7 +17,7 @@
   "description": "Vendégházunk a Jódi-hegyen, lenyűgöző balatoni panorámával, ideális választás mindazoknak, akik nyugodt kikapcsolódásra vágynak.",
   "telephone": "+36202142726",
   "email": "jodihegyresort@gmail.com",
-  "logo": "kepek/sajat-06.svg",
+  "logo": "kepek/sajat-07.svg",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Siófok",
@@ -71,7 +71,6 @@ p{margin:0 0 1em}
 .eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--pine-2);margin-bottom:1rem}
 .eyebrow::before{content:"";width:2.2rem;height:1px;background:currentColor}
 .noimg{background:var(--pine-2) !important}
-.svg-defs{position:absolute;width:0;height:0;overflow:hidden}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:var(--sans);font-weight:600;font-size:.92rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:.95rem 1.5rem;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s;border-radius:0}
@@ -87,14 +86,13 @@ p{margin:0 0 1em}
 .site-header{position:fixed;inset:0 0 auto 0;z-index:100;color:#fff;background:linear-gradient(180deg,rgba(10,30,31,.78) 0%,rgba(10,30,31,.35) 70%,rgba(10,30,31,0) 100%);transition:background .3s,box-shadow .3s}
 .site-header.solid{background:var(--pine);box-shadow:0 2px 18px rgba(0,0,0,.18)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);gap:1rem}
-.brand{display:flex;align-items:center;text-decoration:none;min-width:0}
-.brand-badge{position:relative;display:block;width:116px;height:64px;flex:none;overflow:hidden;background:transparent;border-radius:0;box-shadow:none}
-.brand-badge img{width:100%;height:100%;object-fit:contain;object-position:left center;background:transparent;filter:drop-shadow(0 0 1px rgba(255,255,255,.75))}
-.js .brand-badge img{opacity:0;transition:opacity .35s ease}
-.js .brand-badge.kesz img{opacity:1}
-.brand-badge.nyers img{object-fit:cover;object-position:50% 49.5%;transform:scale(1.8);transform-origin:50% 49.5%;filter:url(#logo-hatter-nelkul) drop-shadow(0 0 1px rgba(255,255,255,.9))}
-.brand-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;font-family:var(--serif);font-weight:700;font-size:1rem;line-height:1.05;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding:.3rem}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;min-width:0}
+.brand-badge{position:relative;display:block;width:108px;height:52px;flex:none;overflow:hidden;background:var(--cream);border-radius:6px;padding:3px 6px;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+.brand-badge img{width:100%;height:100%;object-fit:contain;object-position:center}
+.brand-fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;text-align:center;font-family:var(--serif);font-weight:700;font-size:.95rem;line-height:1.05;letter-spacing:.06em;text-transform:uppercase;color:var(--pine);padding:.3rem}
 .brand-badge.logo-fail .brand-fallback{display:flex}
+.brand-name{font-family:var(--serif);font-weight:600;font-size:clamp(1.1rem,4.2vw,1.55rem);line-height:1.1;letter-spacing:.02em;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;opacity:0;visibility:hidden;transform:translateX(-8px);transition:opacity .35s ease,transform .35s ease,visibility .35s}
+.site-header.show-name .brand-name{opacity:1;visibility:visible;transform:none}
 .nav-toggle{background:none;border:1px solid rgba(255,255,255,.5);color:#fff;width:46px;height:46px;display:grid;place-items:center;cursor:pointer;flex:none}
 .nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{display:block;width:20px;height:2px;background:currentColor;position:relative;transition:transform .25s,background .25s}
 .nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0}
@@ -211,10 +209,13 @@ p{margin:0 0 1em}
 /* Footer */
 .site-footer{background:var(--pine);color:#dce6e5;padding:3.5rem 0 1.6rem;font-size:.95rem}
 .footer-grid{display:grid;gap:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.14)}
-.footer-logo{display:flex;align-items:center;gap:.9rem;color:#fff}
-.footer-logo svg{width:64px;height:64px;color:var(--gold-light);flex:none}
+.footer-logo{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;color:#fff}
+.footer-badge{position:relative;display:block;width:150px;height:70px;flex:none;background:var(--cream);border-radius:6px;padding:4px 8px;overflow:hidden}
+.footer-badge img{width:100%;height:100%;object-fit:contain}
+.footer-badge .brand-fallback{font-size:1rem}
+.footer-badge.logo-fail .brand-fallback{display:flex}
 .footer-logo strong{font-family:var(--serif);font-size:1.7rem;letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
-.footer-logo span{font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-light)}
+.footer-logo span.footer-sub{font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-light)}
 .site-footer h3{font-family:var(--sans);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:.8rem}
 .site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
 .site-footer a{color:#fff;text-decoration:none}
@@ -269,7 +270,8 @@ p{margin:0 0 1em}
 @media (min-width:1024px){
   :root{--header-h:88px}
   .nav-toggle{display:none}
-  .brand-badge{width:142px;height:80px}
+  .brand-badge{width:140px;height:66px;padding:4px 8px}
+  .brand-name{font-size:1.6rem}
   .main-nav{position:static;display:flex !important;align-items:center;background:none;padding:0;border:0;gap:1.75rem}
   .main-nav ul{display:flex;gap:1.6rem}
   .main-nav li a{border:0;padding:.4rem 0;font-size:.8rem;letter-spacing:.16em;position:relative}
@@ -298,22 +300,16 @@ p{margin:0 0 1em}
 </style>
 </head>
 <body>
-<svg class="svg-defs" aria-hidden="true" focusable="false">
-  <defs>
-    <filter id="logo-hatter-nelkul" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
-      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  -1.2 -1.2 -1.2 0 3.3"></feColorMatrix>
-    </filter>
-  </defs>
-</svg>
 <a class="skip" href="#tartalom">Ugrás a tartalomra</a>
 
 <header class="site-header" id="fejlec">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Jódi-Hegy Resort Siófok – vissza az oldal tetejére">
       <span class="brand-badge">
-        <img src="kepek/sajat-06.svg" alt="A Jódi-Hegy Resort logója: zöld dombon fák és fenyők, felettük levélkoszorú, alatta a Jódi Hegy Resort felirat" width="1452" height="813" onerror="this.parentNode.classList.add('logo-fail');this.remove()">
+        <img src="kepek/sajat-07.svg" alt="A Jódi-Hegy Resort logója: zöld dombon két fa és halvány fenyők, felettük levélkoszorú és egy nagy, áttetsző 8-as" width="643" height="296" onerror="this.parentNode.classList.add('logo-fail');this.remove()">
         <span class="brand-fallback" aria-hidden="true">Jódi-Hegy<br>Resort</span>
       </span>
+      <span class="brand-name" aria-hidden="true">Jódi-Hegy Resort</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="fomenu" aria-label="Menü megnyitása"><span></span></button>
     <nav class="main-nav" id="fomenu" aria-label="Főmenü">
@@ -509,18 +505,11 @@ p{margin:0 0 1em}
     <div class="footer-grid">
       <div>
         <div class="footer-logo">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
-            <circle cx="32" cy="32" r="26.5" fill="none" stroke="currentColor" stroke-width=".6" opacity=".55"></circle>
-            <circle cx="44" cy="19" r="3.6" fill="currentColor"></circle>
-            <path d="M22 31 L32 22 L42 31" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M26 29 V37 H38 V29" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"></path>
-            <path d="M30.5 37 V33 H33.5 V37" fill="none" stroke="#ffffff" stroke-width="1.4" stroke-linejoin="round"></path>
-            <path d="M9 42 C18 35 26 37 32 38 C40 39 46 36 55 41" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"></path>
-            <path d="M16 47.5 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-            <path d="M21 52.5 q2.75 -2.2 5.5 0 t5.5 0 t5.5 0 t5.5 0" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".6"></path>
-          </svg>
-          <div><strong>Jódi-Hegy</strong><span>Resort · Siófok</span></div>
+          <span class="footer-badge">
+            <img src="kepek/sajat-07.svg" alt="A Jódi-Hegy Resort logója: zöld domb két fával és fenyőkkel, levélkoszorúval és 8-as számmal" width="643" height="296" loading="lazy" onerror="this.parentNode.classList.add('logo-fail');this.remove()">
+            <span class="brand-fallback" aria-hidden="true">Jódi-Hegy<br>Resort</span>
+          </span>
+          <div><strong>Jódi-Hegy</strong><span class="footer-sub">Resort · Siófok</span></div>
         </div>
         <p style="margin-top:1.2rem;max-width:22rem">Vendégház a Jódi-hegyen, balatoni panorámával.</p>
       </div>
@@ -574,78 +563,10 @@ p{margin:0 0 1em}
 (function(){
   document.documentElement.classList.add('js');
 
-  /* Logó háttérének eltávolítása (krémszínű kártya kivágása, átlátszó PNG-vé alakítás) */
-  (function(){
-    var img=document.querySelector('.brand-badge img');
-    if(!img)return;
-    var badge=img.parentNode,done=false;
-    function fallback(){badge.classList.add('nyers','kesz');}
-    function run(){
-      if(done)return;done=true;
-      try{
-        var W=img.naturalWidth,H=img.naturalHeight;
-        if(!W||!H){fallback();return;}
-        var s=Math.min(1,900/W),w=Math.round(W*s),h=Math.round(H*s);
-        var c=document.createElement('canvas');c.width=w;c.height=h;
-        var ctx=c.getContext('2d');ctx.drawImage(img,0,0,w,h);
-        var data=ctx.getImageData(0,0,w,h),p=data.data;
-        var minX=w,minY=h,maxX=-1,maxY=-1,x,y,i,r,g,b,mx,mn;
-        for(y=0;y<h;y++){for(x=0;x<w;x++){
-          i=(y*w+x)*4;r=p[i];g=p[i+1];b=p[i+2];
-          mx=Math.max(r,g,b);mn=Math.min(r,g,b);
-          if(mn>185&&mx-mn<45){if(x<minX)minX=x;if(x>maxX)maxX=x;if(y<minY)minY=y;if(y>maxY)maxY=y;}
-        }}
-        if(maxX<0){fallback();return;}
-        var ix=Math.round((maxX-minX)*.035),iy=Math.round((maxY-minY)*.05);
-        minX+=ix;maxX-=ix;minY+=iy;maxY-=iy;
-        if(maxX<=minX||maxY<=minY){fallback();return;}
-        var sr=0,sg=0,sb=0,n=0,rows=[minY+2,maxY-2];
-        rows.forEach(function(yy){
-          for(var xx=minX;xx<=maxX;xx+=3){
-            var k=(yy*w+xx)*4,a=p[k],bb=p[k+1],cc=p[k+2];
-            if(Math.min(a,bb,cc)>185&&Math.max(a,bb,cc)-Math.min(a,bb,cc)<45){sr+=a;sg+=bb;sb+=cc;n++;}
-          }
-        });
-        if(!n){fallback();return;}
-        var br=sr/n,bgc=sg/n,bb2=sb/n;
-        var cw=maxX-minX+1,ch=maxY-minY+1;
-        var c3=document.createElement('canvas');c3.width=cw;c3.height=ch;
-        var ctx3=c3.getContext('2d');
-        var out=ctx3.createImageData(cw,ch),q=out.data;
-        var oMinX=cw,oMinY=ch,oMaxX=-1,oMaxY=-1;
-        var lo=14,hi=70;
-        for(y=0;y<ch;y++){for(x=0;x<cw;x++){
-          i=((y+minY)*w+(x+minX))*4;var o=(y*cw+x)*4;
-          r=p[i];g=p[i+1];b=p[i+2];
-          var d=Math.max(Math.abs(r-br),Math.abs(g-bgc),Math.abs(b-bb2));
-          var a=(d-lo)/(hi-lo);
-          if(a<=0){q[o+3]=0;continue;}
-          if(a>1)a=1;
-          q[o]=Math.max(0,Math.min(255,Math.round(br+(r-br)/a)));
-          q[o+1]=Math.max(0,Math.min(255,Math.round(bgc+(g-bgc)/a)));
-          q[o+2]=Math.max(0,Math.min(255,Math.round(bb2+(b-bb2)/a)));
-          q[o+3]=Math.round(a*255);
-          if(a>.15){if(x<oMinX)oMinX=x;if(x>oMaxX)oMaxX=x;if(y<oMinY)oMinY=y;if(y>oMaxY)oMaxY=y;}
-        }}
-        if(oMaxX<0){fallback();return;}
-        ctx3.putImageData(out,0,0);
-        var pad=4,ow=oMaxX-oMinX+1,oh=oMaxY-oMinY+1;
-        var c2=document.createElement('canvas');c2.width=ow+pad*2;c2.height=oh+pad*2;
-        c2.getContext('2d').drawImage(c3,oMinX,oMinY,ow,oh,pad,pad,ow,oh);
-        var url=c2.toDataURL('image/png');
-        img.onerror=null;
-        img.width=c2.width;img.height=c2.height;
-        img.src=url;
-        badge.classList.add('kesz');
-      }catch(err){fallback();}
-    }
-    if(img.complete&&img.naturalWidth)run();
-    else img.addEventListener('load',run,{once:true});
-  })();
-
   var header=document.getElementById('fejlec');
   var toggle=document.querySelector('.nav-toggle');
   var toTop=document.getElementById('toTop');
+  var heroTitle=document.getElementById('hero-cim');
   document.getElementById('ev').textContent=new Date().getFullYear();
 
   function closeNav(){document.body.classList.remove('nav-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Menü megnyitása');}
@@ -657,12 +578,23 @@ p{margin:0 0 1em}
   });
   document.querySelectorAll('.main-nav a').forEach(function(a){a.addEventListener('click',closeNav);});
 
+  /* A cégnév a logó mellett csak akkor jelenik meg, ha a hero címe már nem látszik */
+  function updateName(){
+    if(!heroTitle){header.classList.add('show-name');return;}
+    var r=heroTitle.getBoundingClientRect();
+    if(r.bottom<header.offsetHeight)header.classList.add('show-name');
+    else header.classList.remove('show-name');
+  }
+
   function onScroll(){
     var y=window.scrollY;
     if(y>40||document.body.classList.contains('nav-open'))header.classList.add('solid');else header.classList.remove('solid');
     if(y>600)toTop.classList.add('show');else toTop.classList.remove('show');
+    updateName();
   }
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',updateName,{passive:true});
+  onScroll();
   toTop.addEventListener('click',function(){
     var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
