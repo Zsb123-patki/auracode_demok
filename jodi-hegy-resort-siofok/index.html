@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jódi-Hegy Resort Siófok – vendégház balatoni panorámával, jakuzzival és szaunával</title>
 <meta name="description" content="Vendégház a siófoki Jódi-hegyen, balatoni panorámával. Privát jakuzzi, kültéri finn szauna, nyugodt kikapcsolódás pároknak. Foglalás: +36 20 214 2726.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2312393b'/%3E%3Ccircle cx='42' cy='22' r='6' fill='%23d4ad66'/%3E%3Cpath d='M8 42 C18 28 26 24 34 32 C40 38 46 34 56 40 L56 46 L8 46Z' fill='%23f3f2ee'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%2312393b'/%3E%3Ccircle cx='44' cy='19' r='3.8' fill='%23d4ad66'/%3E%3Cpath d='M22 31 L32 22 L42 31' fill='none' stroke='%23d4ad66' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M26 29 V37 H38 V29' fill='none' stroke='%23f3f2ee' stroke-width='2.6' stroke-linejoin='round'/%3E%3Cpath d='M8 42 C18 35 26 37 32 38 C40 39 46 36 56 41' fill='none' stroke='%23f3f2ee' stroke-width='2.6' stroke-linecap='round'/%3E%3Cpath d='M16 48 q4 -3 8 0 t8 0 t8 0 t8 0' fill='none' stroke='%23d4ad66' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Figtree:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -80,15 +80,14 @@ p{margin:0 0 1em}
 .btn-pine:hover{background:var(--pine-2)}
 
 /* Header */
-.site-header{position:fixed;inset:0 0 auto 0;z-index:100;color:#fff;transition:background .3s,box-shadow .3s}
+.site-header{position:fixed;inset:0 0 auto 0;z-index:100;color:#fff;background:linear-gradient(180deg,rgba(10,30,31,.78) 0%,rgba(10,30,31,.35) 70%,rgba(10,30,31,0) 100%);transition:background .3s,box-shadow .3s}
 .site-header.solid{background:var(--pine);box-shadow:0 2px 18px rgba(0,0,0,.18)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);gap:1rem}
-.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;min-width:0}
-.brand-photo{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.5);background:var(--pine-2);flex:none}
-.brand-mark{width:34px;height:34px;flex:none;color:var(--gold-light)}
+.brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;min-width:0}
+.brand-logo{width:46px;height:46px;flex:none;color:var(--gold-light)}
 .brand-text{display:flex;flex-direction:column;line-height:1}
-.brand-text strong{font-family:var(--serif);font-size:1.3rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-.brand-text span{font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;opacity:.85;margin-top:.25rem;white-space:nowrap}
+.brand-text strong{font-family:var(--serif);font-size:1.35rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.brand-text span{font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-light);margin-top:.3rem;white-space:nowrap}
 .nav-toggle{background:none;border:1px solid rgba(255,255,255,.5);color:#fff;width:46px;height:46px;display:grid;place-items:center;cursor:pointer;flex:none}
 .nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{display:block;width:20px;height:2px;background:currentColor;position:relative;transition:transform .25s,background .25s}
 .nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0}
@@ -104,13 +103,13 @@ p{margin:0 0 1em}
 .main-nav .nav-call{margin-top:1.2rem;width:100%}
 
 /* Hero */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding-top:calc(var(--header-h) + 2rem)}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;overflow:hidden;padding-top:calc(var(--header-h) + 3rem)}
 .hero-media{position:absolute;inset:0;background:var(--pine)}
 .hero-media img{width:100%;height:100%;object-fit:cover;animation:heroZoom 18s ease-out both}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,31,.55) 0%,rgba(10,30,31,.15) 35%,rgba(10,30,31,.78) 100%)}
-.wrap.hero-content{position:relative;z-index:2;padding-top:1.5rem;padding-bottom:4.5rem}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,31,.6) 0%,rgba(10,30,31,.2) 35%,rgba(10,30,31,.8) 100%)}
+.wrap.hero-content{position:relative;z-index:2;margin-top:auto;padding-top:0;padding-bottom:4.5rem}
 .hero .eyebrow{color:var(--gold-light)}
-.hero h1{font-size:clamp(2.9rem,11vw,6.4rem);font-weight:600;margin-bottom:.25em;max-width:12ch}
+.hero h1{font-size:clamp(2.6rem,9.5vw,5.6rem);font-weight:600;line-height:1.05;margin-bottom:.3em;max-width:12ch}
 .hero-lines{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;font-family:var(--serif);font-size:clamp(1.35rem,4.4vw,2rem);font-style:italic;font-weight:500;margin-bottom:1.6rem}
 .hero-lines span+span::before{content:"|";font-style:normal;color:var(--gold-light);margin-right:1.2rem}
 .hero-lead{max-width:34rem;font-size:1.05rem;opacity:.95;margin-bottom:2rem}
@@ -208,8 +207,8 @@ p{margin:0 0 1em}
 .footer-grid{display:grid;gap:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.14)}
 .footer-logo{display:flex;align-items:center;gap:.9rem;color:#fff}
 .footer-logo svg{width:64px;height:64px;color:var(--gold-light);flex:none}
-.footer-logo strong{font-family:var(--serif);font-size:1.7rem;letter-spacing:.06em;text-transform:uppercase;display:block;line-height:1}
-.footer-logo span{font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;opacity:.85}
+.footer-logo strong{font-family:var(--serif);font-size:1.7rem;letter-spacing:.08em;text-transform:uppercase;display:block;line-height:1}
+.footer-logo span{font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-light)}
 .site-footer h3{font-family:var(--sans);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:.8rem}
 .site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
 .site-footer a{color:#fff;text-decoration:none}
@@ -242,7 +241,7 @@ p{margin:0 0 1em}
 /* Tablet */
 @media (min-width:768px){
   .wrap{padding:0 2rem}
-  .hero{padding-top:calc(var(--header-h) + 2.5rem)}
+  .hero{padding-top:calc(var(--header-h) + 4rem)}
   .booking-form{grid-template-columns:repeat(4,1fr)}
   .field.full{grid-column:span 2}
   .duo{grid-template-columns:1fr 1fr}
@@ -264,13 +263,14 @@ p{margin:0 0 1em}
 @media (min-width:1024px){
   :root{--header-h:88px}
   .nav-toggle{display:none}
+  .brand-logo{width:52px;height:52px}
   .main-nav{position:static;display:flex !important;align-items:center;background:none;padding:0;border:0;gap:1.75rem}
   .main-nav ul{display:flex;gap:1.6rem}
   .main-nav li a{border:0;padding:.4rem 0;font-size:.8rem;letter-spacing:.16em;position:relative}
   .main-nav li a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-light);transition:width .3s}
   .main-nav li a:hover::after{width:100%}
   .main-nav .nav-call{margin:0;width:auto;padding:.7rem 1.1rem;font-size:.78rem}
-  .hero{padding-top:calc(var(--header-h) + 3rem)}
+  .hero{padding-top:calc(var(--header-h) + 5rem)}
   .wrap.hero-content{padding-bottom:9rem}
   .booking{margin:-4.5rem auto 0;max-width:calc(var(--wrap) - 4rem);padding:2.25rem 0;box-shadow:0 20px 50px rgba(0,0,0,.2)}
   .booking-inner{grid-template-columns:.85fr 2fr;align-items:center;gap:2.5rem}
@@ -281,7 +281,7 @@ p{margin:0 0 1em}
   .gallery{grid-auto-rows:240px}
 }
 @media (min-width:1440px){
-  .hero h1{font-size:7rem}
+  .hero h1{font-size:6.4rem}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -297,12 +297,16 @@ p{margin:0 0 1em}
 <header class="site-header" id="fejlec">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="Jódi-Hegy Resort Siófok – vissza az oldal tetejére">
-      <img class="brand-photo" src="https://scontent-phl2-1.xx.fbcdn.net/v/t39.30808-1/903330797_1072723095826718_371056027049577686_n.avif?stp=dst-jpg_tt6&amp;cstp=mx495x500&amp;ctp=p200x200&amp;_nc_cat=100&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=f907e8&amp;_nc_ohc=CHRIh_lohNwQ7kNvwH1um3z&amp;_nc_oc=Adrt434YTgUNtyJUhky7e36OGdfchJUDTcKJ44FHmFGA30132YVxDcnMTthKV2f_ULp-U1RZEvFeVXLdyvjVZCxo&amp;_nc_zt=24&amp;_nc_ht=scontent-phl2-1.xx&amp;_nc_gid=JoYRmRta9g3AFaLl0eke0Q&amp;_nc_ss=70289&amp;oh=00_AQSLEsGArUyvq9GS0Ggw9wC1wTD7AaiOl8ZlJJZwrI1rKQ&amp;oe=6B06423B" alt="A Jódi-Hegy Resort Siófok logója" width="42" height="42" onerror="this.remove()">
-      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="2"></circle>
-        <circle cx="41" cy="22" r="5.5" fill="currentColor"></circle>
-        <path d="M9 41 C17 29 25 25 33 32 C39 37 45 33 55 39" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round"></path>
-        <path d="M16 47 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+        <circle cx="32" cy="32" r="26.5" fill="none" stroke="currentColor" stroke-width=".7" opacity=".55"></circle>
+        <circle cx="44" cy="19" r="3.6" fill="currentColor"></circle>
+        <path d="M22 31 L32 22 L42 31" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M26 29 V37 H38 V29" fill="none" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"></path>
+        <path d="M30.5 37 V33 H33.5 V37" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linejoin="round"></path>
+        <path d="M9 42 C18 35 26 37 32 38 C40 39 46 36 55 41" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M16 47.5 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M21 52.5 q2.75 -2.2 5.5 0 t5.5 0 t5.5 0 t5.5 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".6"></path>
       </svg>
       <span class="brand-text"><strong>Jódi-Hegy</strong><span>Resort · Siófok</span></span>
     </a>
@@ -316,7 +320,7 @@ p{margin:0 0 1em}
         <li><a href="#kapcsolat">Kapcsolat</a></li>
       </ul>
       <a class="btn btn-gold nav-call" href="tel:+36202142726">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.700.7a2 2 0 0 1 1.7 2z"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
         +36 20 214 2726
       </a>
     </nav>
@@ -326,7 +330,7 @@ p{margin:0 0 1em}
 <main id="tartalom">
   <section class="hero" id="top" aria-labelledby="hero-cim">
     <div class="hero-media">
-      <img src="kepek/sajat-01.svg" alt="A Jódi-Hegy Resort vendégháza Siófokon, a Jódi-hegyen" fetchpriority="high" onerror="this.parentNode.classList.add('noimg');this.remove()">
+      <img src="kepek/sajat-01.svg" alt="A Jódi-Hegy Resort vendégháza Siófokon, a Jódi-hegyen" fetchpriority="high" onerror="this.onerror=function(){this.parentNode.classList.add('noimg');this.remove()};this.alt='Balatoni hangulatkép';this.src='https://media.sume.com/artifacts/artf_iYqAv8K89GAlwf48tUjRrcjsOpDq36Oz/images.jpg'">
     </div>
     <div class="wrap hero-content">
       <span class="eyebrow">Siófok · Jódi-hegy</span>
@@ -375,7 +379,7 @@ p{margin:0 0 1em}
   <section class="section" id="rolunk" aria-labelledby="rolunk-cim">
     <div class="wrap intro-grid">
       <div class="intro-media reveal">
-        <img src="kepek/sajat-02.svg" alt="Részlet a Jódi-Hegy Resort vendégházából" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+        <img src="kepek/sajat-02.svg" alt="Részlet a Jódi-Hegy Resort vendégházából" loading="lazy" onerror="this.onerror=function(){this.parentNode.classList.add('noimg');this.remove()};this.alt='Pihentető hangulatkép';this.src='https://media.sume.com/artifacts/artf_eCWmJEfvDl5F8CnCS8fJSdL31O8uDePH/images.jpg'">
       </div>
       <div class="intro-text reveal">
         <span class="eyebrow">Rólunk</span>
@@ -402,7 +406,7 @@ p{margin:0 0 1em}
       </div>
     </article>
     <article class="tile">
-      <img src="kepek/sajat-04.svg" alt="Wellness a Jódi-Hegy Resortban" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()">
+      <img src="kepek/sajat-04.svg" alt="Wellness a Jódi-Hegy Resortban" loading="lazy" onerror="this.onerror=function(){this.parentNode.classList.add('noimg');this.remove()};this.alt='Wellness hangulatkép';this.src='https://media.sume.com/artifacts/artf_guiiH7y4mseNlU6H6LGKAoyAH6ssHS5I/images.jpg'">
       <div class="tile-body reveal">
         <p class="tile-kicker">Wellness</p>
         <h2>Jakuzzi &amp; szauna</h2>
@@ -502,10 +506,15 @@ p{margin:0 0 1em}
       <div>
         <div class="footer-logo">
           <svg viewBox="0 0 64 64" aria-hidden="true">
-            <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
-            <circle cx="41" cy="22" r="5.5" fill="currentColor"></circle>
-            <path d="M9 41 C17 29 25 25 33 32 C39 37 45 33 55 39" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"></path>
-            <path d="M16 47 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+            <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.4"></circle>
+            <circle cx="32" cy="32" r="26.5" fill="none" stroke="currentColor" stroke-width=".6" opacity=".55"></circle>
+            <circle cx="44" cy="19" r="3.6" fill="currentColor"></circle>
+            <path d="M22 31 L32 22 L42 31" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M26 29 V37 H38 V29" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linejoin="round"></path>
+            <path d="M30.5 37 V33 H33.5 V37" fill="none" stroke="#ffffff" stroke-width="1.4" stroke-linejoin="round"></path>
+            <path d="M9 42 C18 35 26 37 32 38 C40 39 46 36 55 41" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"></path>
+            <path d="M16 47.5 q4 -3 8 0 t8 0 t8 0 t8 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+            <path d="M21 52.5 q2.75 -2.2 5.5 0 t5.5 0 t5.5 0 t5.5 0" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".6"></path>
           </svg>
           <div><strong>Jódi-Hegy</strong><span>Resort · Siófok</span></div>
         </div>
