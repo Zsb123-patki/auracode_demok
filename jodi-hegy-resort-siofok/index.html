@@ -103,12 +103,11 @@ p{margin:0 0 1em}
 .main-nav .nav-call{margin-top:1.2rem;width:100%}
 
 /* Hero */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;overflow:hidden;padding-top:calc(var(--header-h) + 3rem)}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-start;color:#fff;overflow:hidden;padding-top:calc(var(--header-h) + 1.75rem)}
 .hero-media{position:absolute;inset:0;background:var(--pine)}
 .hero-media img{width:100%;height:100%;object-fit:cover;animation:heroZoom 18s ease-out both}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,31,.6) 0%,rgba(10,30,31,.2) 35%,rgba(10,30,31,.8) 100%)}
-.wrap.hero-content{position:relative;z-index:2;margin-top:auto;padding-top:0;padding-bottom:4.5rem}
-.hero .eyebrow{color:var(--gold-light)}
+.wrap.hero-content{position:relative;z-index:2;margin-top:0;padding-top:0;padding-bottom:4.5rem}
 .hero h1{font-size:clamp(2.6rem,9.5vw,5.6rem);font-weight:600;line-height:1.05;margin-bottom:.3em;max-width:12ch}
 .hero-lines{display:flex;flex-wrap:wrap;gap:.3rem 1.2rem;font-family:var(--serif);font-size:clamp(1.35rem,4.4vw,2rem);font-style:italic;font-weight:500;margin-bottom:1.6rem}
 .hero-lines span+span::before{content:"|";font-style:normal;color:var(--gold-light);margin-right:1.2rem}
@@ -241,7 +240,7 @@ p{margin:0 0 1em}
 /* Tablet */
 @media (min-width:768px){
   .wrap{padding:0 2rem}
-  .hero{padding-top:calc(var(--header-h) + 4rem)}
+  .hero{padding-top:calc(var(--header-h) + 2.25rem)}
   .booking-form{grid-template-columns:repeat(4,1fr)}
   .field.full{grid-column:span 2}
   .duo{grid-template-columns:1fr 1fr}
@@ -270,7 +269,7 @@ p{margin:0 0 1em}
   .main-nav li a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-light);transition:width .3s}
   .main-nav li a:hover::after{width:100%}
   .main-nav .nav-call{margin:0;width:auto;padding:.7rem 1.1rem;font-size:.78rem}
-  .hero{padding-top:calc(var(--header-h) + 5rem)}
+  .hero{padding-top:calc(var(--header-h) + 2.5rem)}
   .wrap.hero-content{padding-bottom:9rem}
   .booking{margin:-4.5rem auto 0;max-width:calc(var(--wrap) - 4rem);padding:2.25rem 0;box-shadow:0 20px 50px rgba(0,0,0,.2)}
   .booking-inner{grid-template-columns:.85fr 2fr;align-items:center;gap:2.5rem}
@@ -333,7 +332,6 @@ p{margin:0 0 1em}
       <img src="kepek/sajat-01.svg" alt="A Jódi-Hegy Resort vendégháza Siófokon, a Jódi-hegyen" fetchpriority="high" onerror="this.onerror=function(){this.parentNode.classList.add('noimg');this.remove()};this.alt='Balatoni hangulatkép';this.src='https://media.sume.com/artifacts/artf_iYqAv8K89GAlwf48tUjRrcjsOpDq36Oz/images.jpg'">
     </div>
     <div class="wrap hero-content">
-      <span class="eyebrow">Siófok · Jódi-hegy</span>
       <h1 id="hero-cim">Jódi-Hegy Resort</h1>
       <p class="hero-lines"><span>Vendégház</span><span>Balatoni panoráma</span></p>
       <p class="hero-lead">Privát jakuzzi, finn szauna és nyugalom a hegyoldalon. Ahol a pihenés nem opció, hanem alapcsomag.</p>
