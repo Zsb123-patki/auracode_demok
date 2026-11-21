@@ -8,7 +8,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Figtree:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add('js');</script>
+<script>
+document.documentElement.classList.add('js');
+/* Megnyitáskor mindig az oldal tetejéről induljon (nincs görgetés-visszaállítás, nincs ugrás #horgonyra) */
+try{if('scrollRestoration' in history)history.scrollRestoration='manual';}catch(e){}
+if(location.hash){try{history.replaceState(null,'',location.pathname+location.search);}catch(e){}}
+function toTopNow(){try{window.scrollTo({top:0,left:0,behavior:'instant'});}catch(e){window.scrollTo(0,0);}}
+toTopNow();
+window.addEventListener('pageshow',toTopNow);
+window.addEventListener('load',toTopNow);
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -164,6 +173,8 @@ p{margin:0 0 1em}
 .booking-inner{display:grid;gap:1.5rem}
 .booking h2{font-size:clamp(1.8rem,5vw,2.4rem);margin-bottom:.2em}
 .booking-note{font-size:.88rem;color:#d7e2e1;margin:0}
+.demo-badge{display:inline-flex;align-items:center;gap:.45rem;margin-bottom:.9rem;padding:.35rem .7rem;border:1px dashed var(--gold-light);color:var(--gold-light);font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;line-height:1.2}
+.demo-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold-light)}
 .booking-form{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
 .field{display:flex;flex-direction:column;gap:.35rem;min-width:0}
 .field.full{grid-column:1/-1}
@@ -452,8 +463,9 @@ p{margin:0 0 1em}
   <section class="booking" id="foglalas" aria-labelledby="foglalas-cim">
     <div class="wrap booking-inner">
       <div>
+        <span class="demo-badge">Demó foglalási felület</span>
         <h2 id="foglalas-cim">Foglalj most</h2>
-        <p class="booking-note">Add meg a dátumokat, és az e-mail programod megnyílik egy kész ajánlatkéréssel. Gyorsabb? Hívj: <a href="tel:+36202142726">+36 20 214 2726</a></p>
+        <p class="booking-note">Válaszd ki az érkezés és a távozás dátumát. Kérdésed van? Hívj: <a href="tel:+36202142726">+36 20 214 2726</a></p>
       </div>
       <form class="booking-form" id="foglalasForm" novalidate="">
         <div class="field">
@@ -745,16 +757,8 @@ p{margin:0 0 1em}
   var iso=today.toISOString().slice(0,10);
   erk.min=iso;tav.min=iso;
   erk.addEventListener('change',function(){if(erk.value)tav.min=erk.value;});
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!erk.value||!tav.value){msg.textContent='Add meg az érkezés és a távozás dátumát.';(erk.value?tav:erk).focus();return;}
-    if(tav.value<=erk.value){msg.textContent='A távozás legyen későbbi, mint az érkezés.';tav.focus();return;}
-    var v=document.getElementById('vendegek').value||'';
-    var n=document.getElementById('nev').value||'';
-    var body='Szia!\n\nSzállás iránt érdeklődnék a Jódi-Hegy Resortban.\n\nÉrkezés: '+erk.value+'\nTávozás: '+tav.value+'\nVendégek száma: '+v+(n?'\nNév: '+n:'')+'\n\nKöszönöm!';
-    msg.textContent='Megnyílik az e-mail programod a kész üzenettel.';
-    window.location.href='mailto:jodihegyresort@gmail.com?subject='+encodeURIComponent('Szállásfoglalás – '+erk.value+' / '+tav.value)+'&body='+encodeURIComponent(body);
-  });
+  /* Demó: a Foglalás gomb egyelőre nem csinál semmit */
+  form.addEventListener('submit',function(e){e.preventDefault();});
 
   /* Betöltő animáció */
   (function(){
@@ -867,9 +871,6 @@ p{margin:0 0 1em}
       else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
     }
   });
-  /* Az oldal első megnyitásakor, rövid késleltetéssel jelenik meg (munkamenetenként egyszer) */
-  function schedulePopup(){setTimeout(openPopup,2500);}
-  if(document.readyState==='complete')schedulePopup();else window.addEventListener('load',schedulePopup);
 })();
 </script>
 
