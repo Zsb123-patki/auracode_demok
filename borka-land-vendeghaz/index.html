@@ -122,10 +122,6 @@
   .btn-green:hover{background:var(--green-700)}
   .btn-green .arr{background:rgba(255,255,255,.15)}
 
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin-bottom:16px;padding:7px 14px;border-radius:999px;background:rgba(43,85,57,.09);color:var(--green-700)}
-  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
-  .on-dark .eyebrow,.eyebrow.light{background:rgba(224,194,122,.14);color:var(--brass-light)}
-
   section{scroll-margin-top:96px}
 
   /* hero */
@@ -192,7 +188,6 @@
 
   /* section head */
   .section-head{display:grid;gap:14px;margin-bottom:40px}
-  .section-head .eyebrow{margin-bottom:14px}
   .section-head h2{font-size:clamp(2.1rem,5.5vw,3.6rem);margin:0;max-width:15ch}
   .section-head h2 em{color:var(--green-600)}
   .section-head p{color:var(--ink-soft);max-width:46ch;margin:0}
@@ -383,7 +378,6 @@
         <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SbQj12rXxI90fRGBwRskp9DfKfZjXtW37HzxUB7EwelXGSTstvQ_SrzkKfSGPfrhrvqND7d1uOHdUzKUQga43MRneUsPMxXLtBom9ISbBShY7DU6JR_WxPSNgrRgsyE_VBq_DWoD-MZtc=w1920-h1080-k-no" alt="A Borka-land vendégház Deszken – nyitókép a szállásról" fetchpriority="high" onerror="imgFail(this)">
       </div>
       <div class="wrap hero-content">
-        <span class="eyebrow light">Vendégház · Deszk</span>
         <h1 id="hero-title">Ahol a szállás találkozik a <em>nyugalommal.</em></h1>
         <p class="lead">Modern, tiszta vendégház dézsafürdővel és nagy kerttel, csendes környezetben, Szeged szomszédságában.</p>
         <div class="hero-actions">
@@ -402,7 +396,6 @@
   <section class="intro" id="szallas" aria-labelledby="szallas-title">
     <div class="wrap intro-grid">
       <div class="reveal">
-        <span class="eyebrow">A szállás</span>
         <h2 id="szallas-title">Igényes terek, <em>otthonos</em> részletek.</h2>
         <p>A Borka-land vendégház Deszken, a Petőfi utcában várja a pihenni vágyókat.</p>
         <p>Vendégeink a modern, ízléses berendezést, a jól felszerelt tereket és a makulátlan tisztaságot emelik ki. És a szállásadókat, akik figyelmesen, szívből fogadják az érkezőket.</p>
@@ -426,7 +419,6 @@
       <div class="wrap">
         <div class="features-head reveal">
           <div>
-            <span class="eyebrow">Kikapcsolódás</span>
             <h2 id="elmenyek-title">Pihenés a <em>saját</em> udvaron.</h2>
           </div>
           <p>Egy kirándulás után nem kell messzire mennie a lazításért. Ezeket említik leggyakrabban a vendégek.</p>
@@ -468,7 +460,6 @@
         <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RBgMLrF2OWKqpGu0jid0ltBud4a1LdGhmvn7BcHtD-eQCiTWee90ncwPOy0CKHBzPZvGDA3d-pIbE_4jXWVshvOYKxZ3vMbu9SiT9XCp_SVfXyulQwbfIst5tKGWDHaqBwX2F9f-HTb-Zj=w1920-h1080-k-no" alt="A Borka-land vendégház és környezete" loading="lazy" onerror="imgFail(this)">
       </div>
       <div class="band-content reveal">
-        <span class="eyebrow">A környék</span>
         <h2 id="kornyek-title">Jó kiindulópont a <em>Dél-Alföldhöz.</em></h2>
         <p>Deszk Szeged szomszédságában fekszik. A vendégházból könnyen bejárható a környék, este pedig csend és nyugalom várja.</p>
         <ul class="distances">
@@ -483,7 +474,6 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div>
-          <span class="eyebrow">Galéria</span>
           <h2 id="galeria-title">Pillanatképek a <em>vendégházból.</em></h2>
         </div>
         <p>Nézzen körül, mielőtt foglal: belső terek, udvar és a ház részletei.</p>
@@ -507,7 +497,6 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <span class="eyebrow">Vélemények</span>
             <h2 id="velemenyek-title">Amit vendégeink <em>írnak.</em></h2>
           </div>
           <div class="score">
@@ -547,11 +536,10 @@
   <section class="inquiry" id="erdeklodes" aria-labelledby="erdeklodes-title">
     <div class="wrap inquiry-grid">
       <div class="inquiry-text reveal">
-        <span class="eyebrow">Érdeklődés</span>
         <h2 id="erdeklodes-title">Kérdezzen <em>szabad</em> időpontról.</h2>
         <p>Adja meg a tervezett dátumokat, és a gomb egy előre kitöltött SMS-t nyit meg a telefonján. Ha gyorsabb, hívjon minket közvetlenül.</p>
         <a class="tel-card" href="tel:+36304661846">
-          <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.630-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.920z"/></svg></span>
           <span><small>Hívjon minket</small><strong>+36 30 466 1846</strong></span>
         </a>
       </div>
@@ -588,7 +576,6 @@
     <section class="contact on-dark" id="kapcsolat" aria-labelledby="kapcsolat-title">
       <div class="wrap contact-grid">
         <div class="reveal">
-          <span class="eyebrow">Kapcsolat</span>
           <h2 id="kapcsolat-title">Várjuk <em>Deszken.</em></h2>
           <dl>
             <div>
