@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Borka-land vendégház – szállás Deszken, Szeged mellett</title>
 <meta name="description" content="Borka-land vendégház Deszken: modern, tiszta szállás dézsafürdővel, medencével és nagy kerttel, Szegedtől kb. 15 percre. Foglalás telefonon: +36 30 466 1846.">
+<meta name="theme-color" content="#16301f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -39,224 +40,301 @@
 </script>
 <style>
   :root{
+    --green-950:#0d1d13;
     --green-900:#16301f;
     --green-800:#1f3f2b;
     --green-700:#2b5539;
+    --green-600:#3b6d4b;
     --sage:#c9d5c3;
-    --sage-light:#e6ece2;
-    --paper:#f5f6f1;
-    --ink:#18211b;
-    --ink-soft:#3f4a42;
+    --sage-light:#e8eee4;
+    --paper:#f4f5ef;
+    --card:#ffffff;
+    --ink:#141c17;
+    --ink-soft:#4a564d;
+    --line:rgba(20,28,23,.1);
     --brass:#a7802f;
-    --brass-light:#d9b96b;
+    --brass-light:#e0c27a;
     --white:#ffffff;
     --serif:"Fraunces", Georgia, "Times New Roman", serif;
     --sans:"Manrope", "Helvetica Neue", Arial, sans-serif;
-    --wrap:1240px;
+    --wrap:1280px;
+    --r-lg:28px;
+    --r-md:20px;
+    --r-sm:14px;
+    --shadow:0 1px 2px rgba(13,29,19,.04),0 12px 32px -12px rgba(13,29,19,.18);
+    --ease:cubic-bezier(.2,.7,.2,1);
   }
   *,*::before,*::after{box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1rem;line-height:1.65;overflow-x:hidden}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1rem;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
   img{max-width:100%;display:block}
   a{color:inherit}
-  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;margin:0 0 .6em;letter-spacing:-.01em}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;margin:0 0 .5em;letter-spacing:-.025em}
+  h1 em,h2 em{font-style:italic;font-weight:400;color:var(--brass-light)}
   p{margin:0 0 1em}
-  :focus-visible{outline:3px solid var(--brass-light);outline-offset:3px;border-radius:2px}
-  .wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
-  .img-fail{background:var(--sage) !important}
+  :focus-visible{outline:3px solid var(--brass-light);outline-offset:3px;border-radius:6px}
+  .wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 18px}
+  .img-fail{background:linear-gradient(135deg,var(--sage),var(--sage-light)) !important}
 
-  /* skip link */
-  .sr-only{position:absolute;left:-9999px;top:0;z-index:200;background:var(--brass-light);color:var(--green-900);padding:12px 18px;font-weight:700;text-decoration:none}
+  .sr-only{position:absolute;left:-9999px;top:0;z-index:300;background:var(--brass-light);color:var(--green-900);padding:12px 18px;font-weight:700;text-decoration:none;border-radius:999px}
   .sr-only:focus{left:12px;top:12px}
 
-  /* announcement bar */
-  .announcement-bar{background:var(--green-900);color:var(--sage-light);font-size:.8rem;letter-spacing:.04em}
-  .announcement-bar ul{list-style:none;margin:0;padding:8px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 22px;max-width:var(--wrap);margin:0 auto}
-  .announcement-bar li{white-space:nowrap}
+  /* announcement */
+  .announcement-bar{background:var(--green-950);color:var(--sage-light);font-size:.78rem;letter-spacing:.03em}
+  .announcement-bar ul{list-style:none;padding:9px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 28px;max-width:var(--wrap);margin:0 auto}
+  .announcement-bar li{white-space:nowrap;display:flex;align-items:center;gap:8px}
   .announcement-bar li:not(:first-child){display:none}
-  .announcement-bar a{color:var(--brass-light);text-decoration:none;font-weight:600}
+  .announcement-bar .dot{width:6px;height:6px;border-radius:50%;background:var(--brass-light);display:inline-block}
+  .announcement-bar a{color:var(--brass-light);text-decoration:none;font-weight:700}
   .announcement-bar a:hover{text-decoration:underline}
 
-  /* header */
-  .site-header{position:sticky;top:0;z-index:100;background:rgba(245,246,241,.96);backdrop-filter:blur(6px);border-bottom:1px solid rgba(24,33,27,.1)}
-  .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
-  .brand strong{font-family:var(--serif);font-size:1.45rem;font-weight:600;color:var(--green-800)}
-  .brand span{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
-  .nav-toggle{background:none;border:0;width:46px;height:46px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;cursor:pointer;padding:0}
-  .nav-toggle span{display:block;width:26px;height:2px;background:var(--green-900);transition:transform .25s,opacity .25s}
-  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  /* header – floating pill */
+  .site-header{position:sticky;top:10px;z-index:100;padding:0 10px;margin-top:10px}
+  .header-inner{position:relative;display:flex;align-items:center;justify-content:space-between;height:62px;max-width:var(--wrap);margin:0 auto;padding:0 10px 0 22px;background:rgba(255,255,255,.78);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border:1px solid rgba(255,255,255,.7);border-radius:999px;box-shadow:var(--shadow)}
+  .brand{text-decoration:none;display:flex;align-items:center;gap:10px;line-height:1.05}
+  .brand-mark{width:34px;height:34px;border-radius:50%;background:var(--green-800);color:var(--brass-light);display:grid;place-items:center;font-family:var(--serif);font-size:1.05rem;font-weight:600;flex:none}
+  .brand-text{display:flex;flex-direction:column}
+  .brand strong{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--green-900);letter-spacing:-.01em}
+  .brand span.sub{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
+  .nav-toggle{background:var(--green-900);border:0;width:44px;height:44px;border-radius:50%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;padding:0}
+  .nav-toggle span{display:block;width:18px;height:2px;border-radius:2px;background:var(--white);transition:transform .25s,opacity .25s}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
-  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-  .main-nav{position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid rgba(24,33,27,.12);display:none}
-  .main-nav.open{display:block}
-  .main-nav ul{list-style:none;margin:0;padding:8px 20px 20px}
-  .main-nav a{display:block;padding:12px 0;text-decoration:none;font-weight:600;border-bottom:1px solid rgba(24,33,27,.08)}
-  .main-nav .nav-call{margin-top:14px;border:0;background:var(--green-800);color:var(--white);text-align:center;padding:14px}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:.95rem;letter-spacing:.02em;text-decoration:none;padding:15px 26px;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-  .btn-primary{background:var(--brass-light);color:var(--green-900)}
-  .btn-primary:hover{background:#e6c982}
-  .btn-ghost{border-color:rgba(255,255,255,.75);color:var(--white)}
-  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .main-nav{position:absolute;left:0;right:0;top:calc(100% + 8px);background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow);display:none;overflow:hidden}
+  .main-nav.open{display:block;animation:drop .25s var(--ease)}
+  @keyframes drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+  .main-nav ul{list-style:none;margin:0;padding:10px}
+  .main-nav a{display:block;padding:13px 14px;text-decoration:none;font-weight:600;border-radius:12px}
+  .main-nav a:not(.nav-call):hover{background:var(--sage-light)}
+  .main-nav .nav-call{margin-top:6px;background:var(--green-800);color:var(--white);text-align:center;border-radius:999px;padding:14px}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:.94rem;letter-spacing:.01em;text-decoration:none;padding:15px 26px;border:1px solid transparent;border-radius:999px;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s var(--ease),box-shadow .25s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn .arr{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:rgba(0,0,0,.1);font-size:.85rem;transition:transform .25s var(--ease)}
+  .btn:hover .arr{transform:translateX(3px)}
+  .btn-primary{background:var(--brass-light);color:var(--green-950);box-shadow:0 10px 24px -10px rgba(224,194,122,.8)}
+  .btn-primary:hover{background:#ecd194}
+  .btn-ghost{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.4);color:var(--white);backdrop-filter:blur(8px)}
+  .btn-ghost:hover{background:rgba(255,255,255,.22)}
   .btn-green{background:var(--green-800);color:var(--white)}
   .btn-green:hover{background:var(--green-700)}
+  .btn-green .arr{background:rgba(255,255,255,.15)}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin-bottom:16px;padding:7px 14px;border-radius:999px;background:rgba(43,85,57,.09);color:var(--green-700)}
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+  .on-dark .eyebrow,.eyebrow.light{background:rgba(224,194,122,.14);color:var(--brass-light)}
+
+  section{scroll-margin-top:96px}
 
   /* hero */
-  .hero{position:relative;min-height:84vh;min-height:84svh;display:flex;align-items:flex-end;color:var(--white);background:var(--green-800);overflow:hidden}
+  .hero-shell{padding:0 10px;margin-top:-72px}
+  .hero{position:relative;min-height:92vh;min-height:92svh;display:flex;align-items:flex-end;color:var(--white);background:var(--green-800);overflow:hidden;border-radius:0 0 var(--r-lg) var(--r-lg)}
   .hero-media{position:absolute;inset:0}
-  .hero-media img{width:100%;height:100%;object-fit:cover}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,26,17,.15) 0%,rgba(12,26,17,.35) 45%,rgba(12,26,17,.85) 100%)}
-  .hero-content{position:relative;z-index:2;padding-top:120px;padding-bottom:56px}
-  .eyebrow{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:14px;display:block}
-  .hero .eyebrow{color:var(--brass-light)}
-  .hero h1{font-size:clamp(2.3rem,8vw,4.8rem);max-width:15ch;margin-bottom:.4em}
-  .hero p{font-size:1.08rem;max-width:44ch;color:#eef2ec}
-  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .hero-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:heroZoom 14s ease-out forwards}
+  @keyframes heroZoom{to{transform:scale(1)}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,14,.35) 0%,rgba(10,22,14,.1) 30%,rgba(10,22,14,.55) 65%,rgba(10,22,14,.92) 100%)}
+  .hero-content{position:relative;z-index:2;padding-top:150px;padding-bottom:30px}
+  .hero h1{font-size:clamp(2.6rem,9vw,6rem);max-width:13ch;margin-bottom:.35em;font-weight:400}
+  .hero p.lead{font-size:1.08rem;max-width:46ch;color:rgba(255,255,255,.88)}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .hero-chips{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:10px}
+  .hero-chips li{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:var(--r-md);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+  .hero-chips .ic{flex:none;width:40px;height:40px;border-radius:50%;background:rgba(224,194,122,.18);color:var(--brass-light);display:grid;place-items:center;font-weight:800;font-size:.95rem}
+  .hero-chips strong{display:block;font-size:.98rem}
+  .hero-chips small{display:block;color:rgba(255,255,255,.72);font-size:.82rem;line-height:1.3}
 
-  section{scroll-margin-top:80px}
-
-  /* intro split */
-  .intro{padding:72px 0}
+  /* intro */
+  .intro{padding:80px 0}
   .intro-grid{display:grid;gap:40px}
-  .intro .eyebrow{color:var(--green-700)}
-  .intro h2{font-size:clamp(2rem,5vw,3.3rem);max-width:14ch}
-  .intro p{color:var(--ink-soft);max-width:52ch}
-  .rating{display:flex;align-items:center;gap:16px;margin-top:28px;padding-top:24px;border-top:1px solid rgba(24,33,27,.15)}
-  .rating-num{font-family:var(--serif);font-size:3rem;line-height:1;color:var(--green-800)}
-  .stars{color:var(--brass);letter-spacing:2px;font-size:1.05rem}
-  .rating small{display:block;color:var(--ink-soft);font-size:.88rem}
-  .intro-media{position:relative;aspect-ratio:4/5;background:var(--sage);overflow:hidden}
-  .intro-media img{width:100%;height:100%;object-fit:cover}
-  .intro-media .tag{position:absolute;left:0;bottom:0;background:var(--green-800);color:var(--white);padding:14px 20px;font-size:.85rem;font-weight:600;letter-spacing:.04em}
+  .intro h2{font-size:clamp(2.1rem,5.5vw,3.8rem);max-width:13ch}
+  .intro h2 em{color:var(--green-600)}
+  .intro p{color:var(--ink-soft);max-width:52ch;font-size:1.04rem}
+  .rating{display:inline-flex;align-items:center;gap:18px;margin-top:22px;padding:18px 24px 18px 18px;background:var(--card);border-radius:var(--r-md);box-shadow:var(--shadow)}
+  .rating-num{font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--white);background:var(--green-800);border-radius:16px;padding:12px 16px}
+  .stars{color:var(--brass);letter-spacing:3px;font-size:1.05rem}
+  .rating small{display:block;color:var(--ink-soft);font-size:.86rem}
+  .intro-media{position:relative;aspect-ratio:4/5;background:var(--sage);overflow:hidden;border-radius:var(--r-lg);box-shadow:var(--shadow)}
+  .intro-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+  .intro-media:hover img{transform:scale(1.04)}
+  .intro-media .tag{position:absolute;left:16px;bottom:16px;right:16px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);color:var(--green-900);padding:12px 16px;border-radius:999px;font-size:.88rem;font-weight:700;width:max-content;max-width:calc(100% - 32px)}
+  .intro-media .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green-600);box-shadow:0 0 0 4px rgba(59,109,75,.2)}
 
-  /* features */
-  .features{background:var(--green-800);color:var(--sage-light);padding:76px 0}
-  .features-grid{display:grid;gap:40px}
-  .features .eyebrow{color:var(--brass-light)}
-  .features h2{color:var(--white);font-size:clamp(2rem,5vw,3.2rem);max-width:13ch}
-  .features-intro p{color:#d5ded1;max-width:40ch}
-  .feature-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
-  .feature-list li{padding:26px 0;border-top:1px solid rgba(201,213,195,.28);display:grid;grid-template-columns:44px 1fr;gap:14px}
-  .feature-list .num{font-family:var(--serif);color:var(--brass-light);font-size:1.1rem;padding-top:3px}
-  .feature-list h3{color:var(--white);font-size:1.45rem;margin-bottom:.35em}
-  .feature-list p{margin:0;color:#d5ded1;font-size:.97rem}
+  /* features – bento */
+  .features-shell{padding:0 10px}
+  .features{background:var(--green-900);color:var(--sage-light);padding:80px 0;border-radius:var(--r-lg);position:relative;overflow:hidden}
+  .features::before{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(224,194,122,.16),transparent 65%);pointer-events:none}
+  .features-head{display:grid;gap:14px;margin-bottom:40px;position:relative}
+  .features h2{color:var(--white);font-size:clamp(2.1rem,5.5vw,3.6rem);max-width:13ch;margin:0}
+  .features-head p{color:#cbd6c7;max-width:42ch;margin:0}
+  .feature-list{list-style:none;margin:0;padding:0;display:grid;gap:14px;position:relative}
+  .feature-list li{padding:28px;border-radius:var(--r-md);background:rgba(255,255,255,.05);border:1px solid rgba(201,213,195,.14);transition:background .3s,border-color .3s,transform .3s var(--ease);display:flex;flex-direction:column}
+  .feature-list li:hover{background:rgba(255,255,255,.08);border-color:rgba(224,194,122,.35);transform:translateY(-3px)}
+  .feature-list .num{font-family:var(--serif);color:var(--brass-light);font-size:.95rem;width:44px;height:44px;border-radius:50%;border:1px solid rgba(224,194,122,.4);display:grid;place-items:center;margin-bottom:28px}
+  .feature-list h3{color:var(--white);font-size:1.6rem;margin-bottom:.4em}
+  .feature-list p{margin:0;color:#cbd6c7;font-size:.97rem}
+  .feature-list li.highlight{background:linear-gradient(150deg,rgba(224,194,122,.22),rgba(224,194,122,.05));border-color:rgba(224,194,122,.35)}
+  .feature-list li.highlight p{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--white);line-height:1.4}
 
   /* band */
-  .band{position:relative;color:var(--white);background:var(--green-900);overflow:hidden}
+  .band-shell{padding:80px 10px 0}
+  .band{position:relative;color:var(--white);background:var(--green-900);overflow:hidden;border-radius:var(--r-lg);max-width:calc(var(--wrap) + 40px);margin:0 auto}
   .band-media{position:absolute;inset:0}
   .band-media img{width:100%;height:100%;object-fit:cover}
-  .band::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,26,17,.88) 0%,rgba(12,26,17,.62) 60%,rgba(12,26,17,.35) 100%)}
-  .band-content{position:relative;z-index:2;padding-top:96px;padding-bottom:96px}
-  .band .eyebrow{color:var(--brass-light)}
-  .band h2{font-size:clamp(2rem,5vw,3.4rem);max-width:14ch}
-  .band p{max-width:46ch;color:#eef2ec;font-size:1.05rem}
-  .distances{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;list-style:none;padding:0}
-  .distances li{border:1px solid rgba(255,255,255,.55);padding:10px 16px;font-size:.9rem;font-weight:600}
+  .band::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,22,14,.9) 0%,rgba(10,22,14,.6) 55%,rgba(10,22,14,.2) 100%)}
+  .band-content{position:relative;z-index:2;padding:72px 28px}
+  .band h2{font-size:clamp(2.1rem,5.5vw,3.6rem);max-width:14ch}
+  .band p{max-width:46ch;color:rgba(255,255,255,.88);font-size:1.05rem}
+  .distances{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;list-style:none;padding:0}
+  .distances li{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(10px);padding:11px 18px;border-radius:999px;font-size:.9rem;font-weight:700}
+  .distances li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--brass-light)}
 
-  /* gallery */
-  .gallery{padding:76px 0}
-  .section-head{display:grid;gap:12px;margin-bottom:36px}
-  .section-head .eyebrow{color:var(--green-700);margin-bottom:0}
-  .section-head h2{font-size:clamp(2rem,5vw,3.2rem);margin:0;max-width:16ch}
-  .section-head p{color:var(--ink-soft);max-width:48ch;margin:0}
-  .gallery-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:14px}
-  .gallery-grid li{aspect-ratio:4/3;background:var(--sage);overflow:hidden}
-  .gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-  .gallery-grid li:hover img{transform:scale(1.04)}
+  /* section head */
+  .section-head{display:grid;gap:14px;margin-bottom:40px}
+  .section-head .eyebrow{margin-bottom:14px}
+  .section-head h2{font-size:clamp(2.1rem,5.5vw,3.6rem);margin:0;max-width:15ch}
+  .section-head h2 em{color:var(--green-600)}
+  .section-head p{color:var(--ink-soft);max-width:46ch;margin:0}
+
+  /* gallery – bento */
+  .gallery{padding:80px 0}
+  .gallery-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .gallery-grid li{aspect-ratio:1/1;background:var(--sage);overflow:hidden;border-radius:var(--r-sm);position:relative}
+  .gallery-grid li:first-child{grid-column:span 2;aspect-ratio:16/10}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+  .gallery-grid li::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(10,22,14,.25));opacity:0;transition:opacity .4s}
+  .gallery-grid li:hover img{transform:scale(1.06)}
+  .gallery-grid li:hover::after{opacity:1}
 
   /* reviews */
-  .reviews{background:var(--sage-light);padding:76px 0}
-  .reviews .section-head .eyebrow{color:var(--green-700)}
-  .review-grid{display:grid;gap:18px}
-  .review{background:var(--white);padding:28px 26px;border-left:4px solid var(--green-700);margin:0}
-  .review .stars{margin-bottom:12px;display:block}
-  .review blockquote{margin:0 0 18px;color:var(--ink);font-size:.98rem}
-  .review figcaption{font-weight:700;font-size:.9rem;color:var(--green-800);letter-spacing:.06em}
-  .review figcaption span{font-weight:500;color:var(--ink-soft);letter-spacing:0}
+  .reviews-shell{padding:0 10px}
+  .reviews{background:var(--sage-light);padding:80px 0;border-radius:var(--r-lg)}
+  .score{display:flex;align-items:center;gap:16px}
+  .score-big{font-family:var(--serif);font-size:3.4rem;line-height:1;color:var(--green-900)}
+  .score small{display:block;color:var(--ink-soft);font-size:.9rem}
+  .review-grid{display:grid;gap:14px}
+  .review{background:var(--card);padding:30px 28px;margin:0;border-radius:var(--r-md);box-shadow:var(--shadow);position:relative;break-inside:avoid;display:flex;flex-direction:column}
+  .review::before{content:"“";position:absolute;right:24px;top:6px;font-family:var(--serif);font-size:5.5rem;line-height:1;color:var(--sage)}
+  .review .stars{margin-bottom:16px;display:block}
+  .review blockquote{margin:0 0 22px;color:var(--ink);font-size:.98rem;position:relative}
+  .review figcaption{display:flex;align-items:center;gap:12px;font-weight:800;font-size:.92rem;color:var(--green-900);margin-top:auto;padding-top:18px;border-top:1px solid var(--line)}
+  .review .avatar{width:40px;height:40px;border-radius:50%;background:var(--green-800);color:var(--brass-light);display:grid;place-items:center;font-size:.8rem;font-weight:800;letter-spacing:.02em;flex:none}
+  .review figcaption span.src{display:block;font-weight:500;color:var(--ink-soft);font-size:.82rem}
 
-  /* inquiry form */
-  .inquiry{padding:76px 0;background:var(--paper)}
+  /* inquiry */
+  .inquiry{padding:80px 0}
   .inquiry-grid{display:grid;gap:36px}
-  .inquiry h2{font-size:clamp(1.9rem,4.5vw,3rem);max-width:13ch}
-  .inquiry .eyebrow{color:var(--green-700)}
+  .inquiry h2{font-size:clamp(2.1rem,5vw,3.4rem);max-width:12ch}
+  .inquiry h2 em{color:var(--green-600)}
   .inquiry-text p{color:var(--ink-soft);max-width:42ch}
-  .inquiry-text .big-tel{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);color:var(--green-800);text-decoration:none;display:inline-block;margin-top:6px}
-  .inquiry-text .big-tel:hover{text-decoration:underline}
-  form{display:grid;gap:16px;background:var(--white);padding:26px;border:1px solid rgba(24,33,27,.12)}
-  .form-row{display:grid;gap:16px}
-  label{display:block;font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
-  input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--paper);border:1px solid #9aa79c;border-radius:0;padding:12px 14px}
-  input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--green-700);outline-offset:1px}
-  textarea{min-height:110px;resize:vertical}
-  .form-note{font-size:.85rem;color:var(--ink-soft);margin:0}
+  .tel-card{display:flex;align-items:center;gap:16px;margin-top:20px;padding:18px 22px;background:var(--green-900);color:var(--white);border-radius:var(--r-md);text-decoration:none;max-width:420px;transition:transform .25s var(--ease),background .25s}
+  .tel-card:hover{transform:translateY(-3px);background:var(--green-800)}
+  .tel-card .ic{width:48px;height:48px;border-radius:50%;background:var(--brass-light);color:var(--green-950);display:grid;place-items:center;flex:none}
+  .tel-card small{display:block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-light);font-weight:700}
+  .tel-card strong{font-family:var(--serif);font-weight:500;font-size:clamp(1.4rem,4vw,1.9rem);letter-spacing:-.01em}
+  form{display:grid;gap:18px;background:var(--card);padding:26px;border-radius:var(--r-lg);box-shadow:var(--shadow)}
+  .form-row{display:grid;gap:18px}
+  label{display:block;font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:8px}
+  input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--paper);border:1px solid transparent;border-radius:var(--r-sm);padding:14px 16px;transition:border-color .2s,background .2s,box-shadow .2s}
+  input:hover,textarea:hover{border-color:rgba(20,28,23,.18)}
+  input:focus,textarea:focus{outline:none;background:var(--white);border-color:var(--green-600);box-shadow:0 0 0 4px rgba(59,109,75,.15)}
+  textarea{min-height:120px;resize:vertical}
+  form .btn{width:100%;padding:17px 26px}
+  .form-note{font-size:.84rem;color:var(--ink-soft);margin:0;text-align:center}
 
   /* contact */
-  .contact{background:var(--green-900);color:var(--sage-light);padding:76px 0}
+  .contact-shell{padding:0 10px}
+  .contact{background:var(--green-900);color:var(--sage-light);padding:80px 0;border-radius:var(--r-lg)}
   .contact-grid{display:grid;gap:36px}
-  .contact .eyebrow{color:var(--brass-light)}
-  .contact h2{color:var(--white);font-size:clamp(2rem,5vw,3.2rem)}
-  .contact dl{margin:0;display:grid;gap:22px}
-  .contact dt{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-light);font-weight:700;margin-bottom:4px}
-  .contact dd{margin:0;font-size:1.08rem;color:#eef2ec}
-  .contact dd a{color:var(--white);font-weight:600}
-  .contact .btn{margin-top:28px}
-  .map{min-height:340px;background:var(--green-800);border:1px solid rgba(201,213,195,.25)}
-  .map iframe{display:block;width:100%;height:100%;min-height:340px;border:0}
+  .contact h2{color:var(--white);font-size:clamp(2.1rem,5.5vw,3.6rem)}
+  .contact dl{margin:0;display:grid;gap:12px}
+  .contact dl > div{padding:18px 20px;border-radius:var(--r-md);background:rgba(255,255,255,.05);border:1px solid rgba(201,213,195,.14)}
+  .contact dt{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-light);font-weight:800;margin-bottom:4px}
+  .contact dd{margin:0;font-size:1.05rem;color:#eef2ec}
+  .contact dd a{color:var(--white);font-weight:700;text-decoration:none}
+  .contact dd a:hover{text-decoration:underline}
+  .contact .btn{margin-top:24px}
+  .map{min-height:340px;background:var(--green-800);border-radius:var(--r-md);overflow:hidden;border:1px solid rgba(201,213,195,.18)}
+  .map iframe{display:block;width:100%;height:100%;min-height:340px;border:0;filter:saturate(.85)}
 
   /* footer */
-  .site-footer{background:#0f2016;color:#c3cdc0;padding:44px 0 28px;font-size:.92rem}
-  .footer-grid{display:grid;gap:18px}
-  .site-footer strong{font-family:var(--serif);font-size:1.3rem;color:var(--white);font-weight:500}
-  .site-footer a{color:#e6ece2}
-  .credit{margin-top:28px;padding-top:18px;border-top:1px solid rgba(201,213,195,.18);font-size:.78rem;color:#a9b6a6}
-  .credit a{color:var(--brass-light)}
+  .site-footer{color:var(--ink-soft);padding:48px 0 32px;font-size:.92rem}
+  .footer-grid{display:grid;gap:16px;align-items:center}
+  .site-footer strong{font-family:var(--serif);font-size:1.35rem;color:var(--green-900);font-weight:500}
+  .site-footer a{color:var(--green-800);font-weight:700}
+  .credit{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:.78rem;color:#6b766e}
+  .credit a{color:var(--green-700)}
+
+  /* mobile sticky CTA */
+  .mobile-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:90;display:flex;gap:8px;padding:8px;background:rgba(13,29,19,.88);backdrop-filter:blur(14px);border-radius:999px;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);transform:translateY(140%);transition:transform .4s var(--ease)}
+  .mobile-cta.show{transform:none}
+  .mobile-cta a{flex:1;text-align:center;padding:13px 10px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.9rem}
+  .mobile-cta .c1{background:var(--brass-light);color:var(--green-950)}
+  .mobile-cta .c2{color:var(--white)}
 
   /* reveal */
-  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
   .js .reveal.in{opacity:1;transform:none}
 
   @media (min-width:768px){
-    .wrap{padding:0 36px}
-    .announcement-bar ul{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
-    .announcement-bar li:not(:first-child){display:block}
-    .hero-content{padding-bottom:80px}
-    .intro{padding:110px 0}
-    .intro-grid{grid-template-columns:1.05fr 1fr;align-items:center;gap:64px}
+    .wrap{padding:0 40px}
+    .announcement-bar ul{gap:4px 40px}
+    .announcement-bar li:not(:first-child){display:flex}
+    .site-header{padding:0 16px}
+    .hero-shell,.features-shell,.reviews-shell,.contact-shell{padding:0 16px}
+    .band-shell{padding:110px 16px 0}
+    .hero{border-radius:var(--r-lg)}
+    .hero-content{padding-bottom:48px}
+    .hero-chips{grid-template-columns:repeat(3,1fr);max-width:900px}
+    .intro{padding:120px 0}
+    .intro-grid{grid-template-columns:1.05fr 1fr;align-items:center;gap:72px}
     .features{padding:110px 0}
-    .feature-list{grid-template-columns:1fr 1fr;column-gap:40px}
-    .band-content{padding-top:140px;padding-bottom:140px}
-    .gallery,.reviews,.inquiry,.contact{padding:110px 0}
-    .section-head{grid-template-columns:1fr 1fr;align-items:end}
-    .gallery-grid{grid-template-columns:repeat(2,1fr);gap:18px}
-    .review-grid{grid-template-columns:1fr 1fr;gap:22px}
+    .features-head{grid-template-columns:1fr 1fr;align-items:end}
+    .feature-list{grid-template-columns:1fr 1fr}
+    .band-content{padding:130px 64px}
+    .gallery,.inquiry{padding:120px 0}
+    .reviews,.contact{padding:110px 0}
+    .section-head{grid-template-columns:1fr auto;align-items:end;gap:40px}
+    .gallery-grid{grid-template-columns:repeat(3,1fr);gap:14px}
+    .gallery-grid li{aspect-ratio:4/3}
+    .gallery-grid li:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+    .review-grid{display:block;columns:2;column-gap:16px}
+    .review{margin-bottom:16px}
     .form-row{grid-template-columns:1fr 1fr}
-    form{padding:34px}
-    .contact-grid{grid-template-columns:1fr 1.25fr;gap:56px}
-    .map,.map iframe{min-height:420px}
-    .footer-grid{grid-template-columns:repeat(3,1fr)}
+    form{padding:38px}
+    .contact-grid{grid-template-columns:1fr 1.25fr;gap:56px;align-items:stretch}
+    .map,.map iframe{min-height:460px;height:100%}
+    .footer-grid{grid-template-columns:1.2fr 1fr 1fr}
+    .mobile-cta{display:none}
   }
   @media (min-width:1024px){
     .nav-toggle{display:none}
-    .main-nav{position:static;display:block;background:none;border:0}
-    .main-nav ul{display:flex;align-items:center;gap:28px;padding:0}
-    .main-nav a{border:0;padding:6px 0;font-size:.92rem}
-    .main-nav a:not(.nav-call):hover{color:var(--green-700);text-decoration:underline;text-underline-offset:6px}
-    .main-nav .nav-call{margin:0;padding:11px 20px}
+    .header-inner{height:66px;padding:0 8px 0 24px}
+    .main-nav{position:static;display:block;background:none;border:0;box-shadow:none;backdrop-filter:none;overflow:visible}
+    .main-nav ul{display:flex;align-items:center;gap:4px;padding:0}
+    .main-nav a{padding:9px 14px;font-size:.9rem;border-radius:999px}
+    .main-nav .nav-call{margin:0 0 0 8px;padding:12px 20px}
     .main-nav .nav-call:hover{background:var(--green-700)}
-    .header-inner{height:78px}
-    .features-grid{grid-template-columns:.85fr 1.4fr;gap:72px}
-    .inquiry-grid{grid-template-columns:.9fr 1.2fr;gap:72px;align-items:start}
+    .feature-list{grid-template-columns:repeat(3,1fr)}
+    .feature-list li.highlight{grid-column:span 2;grid-row:span 1}
+    .inquiry-grid{grid-template-columns:.9fr 1.15fr;gap:80px;align-items:center}
   }
   @media (min-width:1280px){
-    .gallery-grid{grid-template-columns:repeat(3,1fr)}
-    .gallery-grid li:nth-child(1){grid-column:span 2;aspect-ratio:auto}
-    .hero h1{max-width:14ch}
+    .gallery-grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:230px}
+    .gallery-grid li,.gallery-grid li:first-child{aspect-ratio:auto}
+    .gallery-grid li:nth-child(1){grid-column:span 2;grid-row:span 2}
+    .gallery-grid li:nth-child(6){grid-column:span 2}
+    .gallery-grid li:nth-child(8){grid-row:span 2}
+    .gallery-grid li:nth-child(9){grid-column:span 3}
+    .review-grid{columns:2}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     *,*::before,*::after{transition:none !important;animation:none !important}
     .js .reveal{opacity:1;transform:none}
-    .gallery-grid li:hover img{transform:none}
+    .hero-media img{transform:none}
+    .gallery-grid li:hover img,.intro-media:hover img{transform:none}
   }
 </style>
 </head>
@@ -267,16 +345,19 @@
 <div class="w-full announcement-bar" role="region" aria-label="Rövid információk">
   <ul>
     <li><span aria-hidden="true">★</span> 5,0 a Google-on, 6 értékelés alapján</li>
-    <li>Deszk, Szeged szomszédságában</li>
+    <li><span class="dot" aria-hidden="true"></span> Deszk, Szeged szomszédságában</li>
     <li>Foglalás: <a href="tel:+36304661846">+36 30 466 1846</a></li>
   </ul>
 </div>
 
 <header class="site-header">
-  <div class="wrap header-inner">
+  <div class="header-inner">
     <a class="brand" href="#content" aria-label="Borka-land vendégház – kezdőlap">
-      <strong>Borka-land</strong>
-      <span>vendégház · Deszk</span>
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span class="brand-text">
+        <strong>Borka-land</strong>
+        <span class="sub">vendégház · Deszk</span>
+      </span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menü megnyitása">
       <span></span><span></span><span></span>
@@ -296,26 +377,33 @@
 
 <main id="content" class="page-section--main" tabindex="-1">
 
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-media">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SbQj12rXxI90fRGBwRskp9DfKfZjXtW37HzxUB7EwelXGSTstvQ_SrzkKfSGPfrhrvqND7d1uOHdUzKUQga43MRneUsPMxXLtBom9ISbBShY7DU6JR_WxPSNgrRgsyE_VBq_DWoD-MZtc=w1920-h1080-k-no" alt="A Borka-land vendégház Deszken – nyitókép a szállásról" fetchpriority="high" onerror="imgFail(this)">
-    </div>
-    <div class="wrap hero-content">
-      <span class="eyebrow">Vendégház · Deszk</span>
-      <h1 id="hero-title">Ahol a szállás találkozik a nyugalommal.</h1>
-      <p>Modern, tiszta vendégház dézsafürdővel és nagy kerttel, csendes környezetben, Szeged szomszédságában.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="tel:+36304661846">Foglalás telefonon</a>
-        <a class="btn btn-ghost" href="#galeria">Képek a házról</a>
+  <div class="hero-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SbQj12rXxI90fRGBwRskp9DfKfZjXtW37HzxUB7EwelXGSTstvQ_SrzkKfSGPfrhrvqND7d1uOHdUzKUQga43MRneUsPMxXLtBom9ISbBShY7DU6JR_WxPSNgrRgsyE_VBq_DWoD-MZtc=w1920-h1080-k-no" alt="A Borka-land vendégház Deszken – nyitókép a szállásról" fetchpriority="high" onerror="imgFail(this)">
       </div>
-    </div>
-  </section>
+      <div class="wrap hero-content">
+        <span class="eyebrow light">Vendégház · Deszk</span>
+        <h1 id="hero-title">Ahol a szállás találkozik a <em>nyugalommal.</em></h1>
+        <p class="lead">Modern, tiszta vendégház dézsafürdővel és nagy kerttel, csendes környezetben, Szeged szomszédságában.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:+36304661846">Foglalás telefonon <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#galeria">Képek a házról</a>
+        </div>
+        <ul class="hero-chips" aria-label="Röviden a vendégházról">
+          <li><span class="ic" aria-hidden="true">★</span><span><strong>5,0 a Google-on</strong><small>6 értékelés alapján</small></span></li>
+          <li><span class="ic" aria-hidden="true">◎</span><span><strong>Szeged: kb. 15 perc</strong><small>Deszk, Petőfi u. 14/a</small></span></li>
+          <li><span class="ic" aria-hidden="true">≈</span><span><strong>Dézsafürdő · medence</strong><small>jakuzzi és nagy kert</small></span></li>
+        </ul>
+      </div>
+    </section>
+  </div>
 
   <section class="intro" id="szallas" aria-labelledby="szallas-title">
     <div class="wrap intro-grid">
       <div class="reveal">
         <span class="eyebrow">A szállás</span>
-        <h2 id="szallas-title">Igényes terek, otthonos részletek.</h2>
+        <h2 id="szallas-title">Igényes terek, <em>otthonos</em> részletek.</h2>
         <p>A Borka-land vendégház Deszken, a Petőfi utcában várja a pihenni vágyókat.</p>
         <p>Vendégeink a modern, ízléses berendezést, a jól felszerelt tereket és a makulátlan tisztaságot emelik ki. És a szállásadókat, akik figyelmesen, szívből fogadják az érkezőket.</p>
         <div class="rating">
@@ -333,67 +421,70 @@
     </div>
   </section>
 
-  <section class="features" id="elmenyek" aria-labelledby="elmenyek-title">
-    <div class="wrap features-grid">
-      <div class="features-intro reveal">
-        <span class="eyebrow">Kikapcsolódás</span>
-        <h2 id="elmenyek-title">Pihenés a saját udvaron.</h2>
-        <p>Egy kirándulás után nem kell messzire mennie a lazításért. Ezeket említik leggyakrabban a vendégek.</p>
-      </div>
-      <ul class="feature-list">
-        <li class="reveal">
-          <span class="num">01</span>
+  <div class="features-shell">
+    <section class="features on-dark" id="elmenyek" aria-labelledby="elmenyek-title">
+      <div class="wrap">
+        <div class="features-head reveal">
           <div>
+            <span class="eyebrow">Kikapcsolódás</span>
+            <h2 id="elmenyek-title">Pihenés a <em>saját</em> udvaron.</h2>
+          </div>
+          <p>Egy kirándulás után nem kell messzire mennie a lazításért. Ezeket említik leggyakrabban a vendégek.</p>
+        </div>
+        <ul class="feature-list">
+          <li class="reveal highlight">
+            <span class="num">01</span>
             <h3>Dézsafürdő</h3>
             <p>Vendégeink kedvence: „A dézsa fürdő a legjobb, kár lenne kihagyni.”</p>
-          </div>
-        </li>
-        <li class="reveal">
-          <span class="num">02</span>
-          <div>
+          </li>
+          <li class="reveal">
+            <span class="num">02</span>
             <h3>Medence és jakuzzi</h3>
             <p>Frissülés és ellazulás, hogy a pihenés valóban pihenés legyen.</p>
-          </div>
-        </li>
-        <li class="reveal">
-          <span class="num">03</span>
-          <div>
+          </li>
+          <li class="reveal">
+            <span class="num">03</span>
             <h3>Nagy kert, csendes környék</h3>
             <p>Tágas udvar és nyugodt utca, ahol tényleg fel lehet töltődni.</p>
-          </div>
-        </li>
-        <li class="reveal">
-          <span class="num">04</span>
-          <div>
+          </li>
+          <li class="reveal" style="grid-column:auto">
+            <span class="num">04</span>
             <h3>Jól felszerelt szállás</h3>
             <p>Modern bútorok, kényelmes terek. Minden megvan, amire egy ott-tartózkodás alatt szükség lehet.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+          </li>
+          <li class="reveal">
+            <span class="num">05</span>
+            <h3>Figyelmes vendéglátás</h3>
+            <p>A vendégek visszatérően kiemelik a kedves, segítőkész szállásadókat és a vendégváró tálat, borokat.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
 
-  <section class="band" id="kornyek" aria-labelledby="kornyek-title">
-    <div class="band-media">
-      <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RBgMLrF2OWKqpGu0jid0ltBud4a1LdGhmvn7BcHtD-eQCiTWee90ncwPOy0CKHBzPZvGDA3d-pIbE_4jXWVshvOYKxZ3vMbu9SiT9XCp_SVfXyulQwbfIst5tKGWDHaqBwX2F9f-HTb-Zj=w1920-h1080-k-no" alt="A Borka-land vendégház és környezete" loading="lazy" onerror="imgFail(this)">
-    </div>
-    <div class="wrap band-content reveal">
-      <span class="eyebrow">A környék</span>
-      <h2 id="kornyek-title">Jó kiindulópont a Dél-Alföldhöz.</h2>
-      <p>Deszk Szeged szomszédságában fekszik. A vendégházból könnyen bejárható a környék, este pedig csend és nyugalom várja.</p>
-      <ul class="distances">
-        <li>Szeged: kb. 15 perc</li>
-        <li>Makó: a közelben</li>
-      </ul>
-    </div>
-  </section>
+  <div class="band-shell">
+    <section class="band on-dark" id="kornyek" aria-labelledby="kornyek-title">
+      <div class="band-media">
+        <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RBgMLrF2OWKqpGu0jid0ltBud4a1LdGhmvn7BcHtD-eQCiTWee90ncwPOy0CKHBzPZvGDA3d-pIbE_4jXWVshvOYKxZ3vMbu9SiT9XCp_SVfXyulQwbfIst5tKGWDHaqBwX2F9f-HTb-Zj=w1920-h1080-k-no" alt="A Borka-land vendégház és környezete" loading="lazy" onerror="imgFail(this)">
+      </div>
+      <div class="band-content reveal">
+        <span class="eyebrow">A környék</span>
+        <h2 id="kornyek-title">Jó kiindulópont a <em>Dél-Alföldhöz.</em></h2>
+        <p>Deszk Szeged szomszédságában fekszik. A vendégházból könnyen bejárható a környék, este pedig csend és nyugalom várja.</p>
+        <ul class="distances">
+          <li>Szeged: kb. 15 perc</li>
+          <li>Makó: a közelben</li>
+        </ul>
+      </div>
+    </section>
+  </div>
 
   <section class="gallery" id="galeria" aria-labelledby="galeria-title">
     <div class="wrap">
       <div class="section-head reveal">
         <div>
           <span class="eyebrow">Galéria</span>
-          <h2 id="galeria-title">Pillanatképek a vendégházból.</h2>
+          <h2 id="galeria-title">Pillanatképek a <em>vendégházból.</em></h2>
         </div>
         <p>Nézzen körül, mielőtt foglal: belső terek, udvar és a ház részletei.</p>
       </div>
@@ -411,47 +502,58 @@
     </div>
   </section>
 
-  <section class="reviews" id="velemenyek" aria-labelledby="velemenyek-title">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div>
-          <span class="eyebrow">Vélemények</span>
-          <h2 id="velemenyek-title">Amit vendégeink írnak.</h2>
+  <div class="reviews-shell">
+    <section class="reviews" id="velemenyek" aria-labelledby="velemenyek-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Vélemények</span>
+            <h2 id="velemenyek-title">Amit vendégeink <em>írnak.</em></h2>
+          </div>
+          <div class="score">
+            <span class="score-big">5,0</span>
+            <div>
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <small><strong>5,0 / 5</strong> átlag a Google-on, 6 értékelés alapján.</small>
+            </div>
+          </div>
         </div>
-        <p><strong>5,0 / 5</strong> átlag a Google-on, 6 értékelés alapján.</p>
+        <div class="review-grid">
+          <figure class="review reveal">
+            <span class="stars" aria-label="5 csillagból 5">★★★★★</span>
+            <blockquote>Abszolút jár az 5 csillag 🙂<br>Három éjszakát töltöttünk el itt, és teljes mértékben elégedettek vagyunk. A szállásadók nagyon figyelmesek, kedvesek, segítőkészek. A vendégváró tálat és borokat, hűtött ásványvizet külön köszönjük!😊<br>A szállás makulátlanul tiszta, jól felszerelt, mindenre gondoltak amire csak szükség lehet az ott-tartózkodás idején.<br>A környék bejárásához remek kiindulópont a vendégház, Makó és Szeged is közel van. Visszatérve egy-egy kirándulás után pedig jó lazítani, pihenni a dézsában🙂 A jakuzzi is szuper volt!<br>Szeretettel ajánljuk mindenkinek🙂<br>Biztosan visszatérünk még😊</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">TA</span><span>T. A.<span class="src">Google-értékelés</span></span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" aria-label="5 csillagból 5">★★★★★</span>
+            <blockquote>Nagyon jól éreztük magunkat a vendégházban! A szállás modern, ízlésesen berendezett és minden szükséges felszereléssel rendelkezik. Külön kiemelnénk a medencét és a dézsafürdőt, amelyek tökéletes kikapcsolódást biztosítottak. A nagy udvar remek lehetőséget nyújtott a pihenésre, a környék pedig csendes és nyugodt, így igazán feltöltődhettünk.<br><br>A szállásadók rendkívül kedvesek, segítőkészek és vendégszeretők voltak, mindenben a rendelkezésünkre álltak. Mindenkinek szívből ajánljuk ezt a vendégházat, aki nyugodt, igényes környezetben szeretne kikapcsolódni. Biztosan visszatérünk még!</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">BM</span><span>B. M.<span class="src">Google-értékelés</span></span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" aria-label="5 csillagból 5">★★★★★</span>
+            <blockquote>4 fővel érkeztünk, biztosan nem utoljára. A szállásadók nagyon kedvesek, a hely nyugodt, pihenésre tökéletesen alkalmas. Nem kevés szálláson megfordultunk már, de jó eséllyel ez a legszebb, legtisztább, ahol valaha jártunk. Modern bútorok, kényelmes terek, és minden van, amire csak szükség lehet, még állandó otthonnak is szívesen elfogadnánk. A dézsa fürdő a legjobb, kár lenne kihagyni. A szállásadók szívből, szeretettel várják a vendégeket, ilyennel ritkán találkozunk. Köszönjük szépen a bort és a tálat, nagyon finom volt! Mindenkinek ajánlom, ezzel a hellyel nem lehet mellélőni!</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">GF</span><span>G. F.<span class="src">Google-értékelés</span></span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" aria-label="5 csillagból 5">★★★★★</span>
+            <blockquote>Egy éjszakát töltöttünk el, fantasztikus volt. Minden elérhető távolságban (15percre Szegedtől). A dézsa ideális kikapcsolódást kínál, hatalmas kert, pazar szobák, makulátlan tisztaság. Köszönjük!! Még megyünk!</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">IS</span><span>I. S.<span class="src">Google-értékelés</span></span></figcaption>
+          </figure>
+        </div>
       </div>
-      <div class="review-grid">
-        <figure class="review reveal">
-          <span class="stars" aria-label="5 csillagból 5">★★★★★</span>
-          <blockquote>Abszolút jár az 5 csillag 🙂<br>Három éjszakát töltöttünk el itt, és teljes mértékben elégedettek vagyunk. A szállásadók nagyon figyelmesek, kedvesek, segítőkészek. A vendégváró tálat és borokat, hűtött ásványvizet külön köszönjük!😊<br>A szállás makulátlanul tiszta, jól felszerelt, mindenre gondoltak amire csak szükség lehet az ott-tartózkodás idején.<br>A környék bejárásához remek kiindulópont a vendégház, Makó és Szeged is közel van. Visszatérve egy-egy kirándulás után pedig jó lazítani, pihenni a dézsában🙂 A jakuzzi is szuper volt!<br>Szeretettel ajánljuk mindenkinek🙂<br>Biztosan visszatérünk még😊</blockquote>
-          <figcaption>T. A. <span>· Google-értékelés</span></figcaption>
-        </figure>
-        <figure class="review reveal">
-          <span class="stars" aria-label="5 csillagból 5">★★★★★</span>
-          <blockquote>Nagyon jól éreztük magunkat a vendégházban! A szállás modern, ízlésesen berendezett és minden szükséges felszereléssel rendelkezik. Külön kiemelnénk a medencét és a dézsafürdőt, amelyek tökéletes kikapcsolódást biztosítottak. A nagy udvar remek lehetőséget nyújtott a pihenésre, a környék pedig csendes és nyugodt, így igazán feltöltődhettünk.<br><br>A szállásadók rendkívül kedvesek, segítőkészek és vendégszeretők voltak, mindenben a rendelkezésünkre álltak. Mindenkinek szívből ajánljuk ezt a vendégházat, aki nyugodt, igényes környezetben szeretne kikapcsolódni. Biztosan visszatérünk még!</blockquote>
-          <figcaption>B. M. <span>· Google-értékelés</span></figcaption>
-        </figure>
-        <figure class="review reveal">
-          <span class="stars" aria-label="5 csillagból 5">★★★★★</span>
-          <blockquote>4 fővel érkeztünk, biztosan nem utoljára. A szállásadók nagyon kedvesek, a hely nyugodt, pihenésre tökéletesen alkalmas. Nem kevés szálláson megfordultunk már, de jó eséllyel ez a legszebb, legtisztább, ahol valaha jártunk. Modern bútorok, kényelmes terek, és minden van, amire csak szükség lehet, még állandó otthonnak is szívesen elfogadnánk. A dézsa fürdő a legjobb, kár lenne kihagyni. A szállásadók szívből, szeretettel várják a vendégeket, ilyennel ritkán találkozunk. Köszönjük szépen a bort és a tálat, nagyon finom volt! Mindenkinek ajánlom, ezzel a hellyel nem lehet mellélőni!</blockquote>
-          <figcaption>G. F. <span>· Google-értékelés</span></figcaption>
-        </figure>
-        <figure class="review reveal">
-          <span class="stars" aria-label="5 csillagból 5">★★★★★</span>
-          <blockquote>Egy éjszakát töltöttünk el, fantasztikus volt. Minden elérhető távolságban (15percre Szegedtől). A dézsa ideális kikapcsolódást kínál, hatalmas kert, pazar szobák, makulátlan tisztaság. Köszönjük!! Még megyünk!</blockquote>
-          <figcaption>I. S. <span>· Google-értékelés</span></figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <section class="inquiry" id="erdeklodes" aria-labelledby="erdeklodes-title">
     <div class="wrap inquiry-grid">
       <div class="inquiry-text reveal">
         <span class="eyebrow">Érdeklődés</span>
-        <h2 id="erdeklodes-title">Kérdezzen szabad időpontról.</h2>
+        <h2 id="erdeklodes-title">Kérdezzen <em>szabad</em> időpontról.</h2>
         <p>Adja meg a tervezett dátumokat, és a gomb egy előre kitöltött SMS-t nyit meg a telefonján. Ha gyorsabb, hívjon minket közvetlenül.</p>
-        <a class="big-tel" href="tel:+36304661846">+36 30 466 1846</a>
+        <a class="tel-card" href="tel:+36304661846">
+          <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span><small>Hívjon minket</small><strong>+36 30 466 1846</strong></span>
+        </a>
       </div>
       <form id="inquiry-form" class="reveal" novalidate>
         <div>
@@ -476,38 +578,40 @@
           <label for="f-uz">Megjegyzés (nem kötelező)</label>
           <textarea id="f-uz" name="uzenet"></textarea>
         </div>
-        <button class="btn btn-green" type="submit">SMS összeállítása</button>
+        <button class="btn btn-green" type="submit">SMS összeállítása <span class="arr" aria-hidden="true">→</span></button>
         <p class="form-note" id="form-note" aria-live="polite">Az űrlap nem küld adatot sehova, csak az SMS szövegét készíti el.</p>
       </form>
     </div>
   </section>
 
-  <section class="contact" id="kapcsolat" aria-labelledby="kapcsolat-title">
-    <div class="wrap contact-grid">
-      <div class="reveal">
-        <span class="eyebrow">Kapcsolat</span>
-        <h2 id="kapcsolat-title">Várjuk Deszken.</h2>
-        <dl>
-          <div>
-            <dt>Cím</dt>
-            <dd>6772 Deszk, Petőfi u. 14/a</dd>
-          </div>
-          <div>
-            <dt>Telefon</dt>
-            <dd><a href="tel:+36304661846">+36 30 466 1846</a></dd>
-          </div>
-          <div>
-            <dt>Nyitvatartás</dt>
-            <dd>A foglalást és az érkezés idejét kérjük, telefonon egyeztesse.</dd>
-          </div>
-        </dl>
-        <a class="btn btn-primary" href="tel:+36304661846">Hívás most</a>
+  <div class="contact-shell">
+    <section class="contact on-dark" id="kapcsolat" aria-labelledby="kapcsolat-title">
+      <div class="wrap contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">Kapcsolat</span>
+          <h2 id="kapcsolat-title">Várjuk <em>Deszken.</em></h2>
+          <dl>
+            <div>
+              <dt>Cím</dt>
+              <dd>6772 Deszk, Petőfi u. 14/a</dd>
+            </div>
+            <div>
+              <dt>Telefon</dt>
+              <dd><a href="tel:+36304661846">+36 30 466 1846</a></dd>
+            </div>
+            <div>
+              <dt>Nyitvatartás</dt>
+              <dd>A foglalást és az érkezés idejét kérjük, telefonon egyeztesse.</dd>
+            </div>
+          </dl>
+          <a class="btn btn-primary" href="tel:+36304661846">Hívás most <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+        <div class="map reveal">
+          <iframe title="Borka-land vendégház térképen – Deszk, Petőfi u. 14/a" src="https://www.google.com/maps?q=Deszk%2C%20Pet%C5%91fi%20u.%2014%2Fa%2C%206772%20Magyarorsz%C3%A1g&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
       </div>
-      <div class="map reveal">
-        <iframe title="Borka-land vendégház térképen – Deszk, Petőfi u. 14/a" src="https://www.google.com/maps?q=Deszk%2C%20Pet%C5%91fi%20u.%2014%2Fa%2C%206772%20Magyarorsz%C3%A1g&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
 </main>
 
@@ -521,6 +625,11 @@
     <p class="credit">Készítette: <a href="https://auracode.hu" target="_blank" rel="noopener">AuraCode</a></p>
   </div>
 </footer>
+
+<div class="mobile-cta" id="mobile-cta" aria-label="Gyors foglalás">
+  <a class="c1" href="tel:+36304661846">Hívás</a>
+  <a class="c2" href="#erdeklodes">Érdeklődés</a>
+</div>
 
 <script>
   (function(){
@@ -551,6 +660,17 @@
       }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
       items.forEach(function(el){ io.observe(el); });
     }
+
+    var cta = document.getElementById('mobile-cta');
+    var hero = document.querySelector('.hero');
+    var contact = document.getElementById('kapcsolat');
+    function onScroll(){
+      var past = hero.getBoundingClientRect().bottom < 0;
+      var atContact = contact.getBoundingClientRect().top < window.innerHeight * 0.6;
+      cta.classList.toggle('show', past && !atContact);
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
 
     var form = document.getElementById('inquiry-form');
     var note = document.getElementById('form-note');
