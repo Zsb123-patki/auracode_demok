@@ -80,15 +80,6 @@
   .sr-only{position:absolute;left:-9999px;top:0;z-index:300;background:var(--brass-light);color:var(--green-900);padding:12px 18px;font-weight:700;text-decoration:none;border-radius:999px}
   .sr-only:focus{left:12px;top:12px}
 
-  /* announcement */
-  .announcement-bar{background:var(--green-950);color:var(--sage-light);font-size:.78rem;letter-spacing:.03em}
-  .announcement-bar ul{list-style:none;padding:9px 20px;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 28px;max-width:var(--wrap);margin:0 auto}
-  .announcement-bar li{white-space:nowrap;display:flex;align-items:center;gap:8px}
-  .announcement-bar li:not(:first-child){display:none}
-  .announcement-bar .dot{width:6px;height:6px;border-radius:50%;background:var(--brass-light);display:inline-block}
-  .announcement-bar a{color:var(--brass-light);text-decoration:none;font-weight:700}
-  .announcement-bar a:hover{text-decoration:underline}
-
   /* header – floating pill */
   .site-header{position:sticky;top:10px;z-index:100;padding:0 10px;margin-top:10px}
   .header-inner{position:relative;display:flex;align-items:center;justify-content:space-between;height:62px;max-width:var(--wrap);margin:0 auto;padding:0 10px 0 22px;background:rgba(255,255,255,.78);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border:1px solid rgba(255,255,255,.7);border-radius:999px;box-shadow:var(--shadow)}
@@ -299,8 +290,6 @@
 
   @media (min-width:768px){
     .wrap{padding:0 40px}
-    .announcement-bar ul{gap:4px 40px}
-    .announcement-bar li:not(:first-child){display:flex}
     .site-header{padding:0 16px}
     .hero-shell,.features-shell,.reviews-shell,.contact-shell{padding:0 16px}
     .hero-shell{margin-top:14px}
@@ -367,14 +356,6 @@
 <body>
 
 <a class="sr-only" href="#content">Ugrás a tartalomhoz</a>
-
-<div class="w-full announcement-bar" role="region" aria-label="Rövid információk">
-  <ul>
-    <li><span aria-hidden="true">★</span> 5,0 a Google-on, 6 értékelés alapján</li>
-    <li><span class="dot" aria-hidden="true"></span> Deszk, Szeged szomszédságában</li>
-    <li>Foglalás: <a href="tel:+36304661846">+36 30 466 1846</a></li>
-  </ul>
-</div>
 
 <header class="site-header">
   <div class="header-inner">
