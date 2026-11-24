@@ -180,7 +180,7 @@
   .features-quote blockquote{margin:0;position:relative;padding-left:22px;border-left:2px solid var(--brass-light);font-size:clamp(1.2rem,2.4vw,1.55rem);line-height:1.4;font-weight:500;color:var(--white);max-width:30ch}
   .features-quote cite{display:block;margin-top:14px;padding-left:24px;font-style:normal;font-size:.86rem;color:#a9b8a6}
   .feature-rows{list-style:none;margin:0;padding:0}
-  .feature-rows li{display:grid;gap:6px;padding:26px 0;border-bottom:1px solid rgba(201,213,195,.18)}
+  .feature-rows li{position:relative;display:grid;gap:6px;padding:26px 0;border-bottom:1px solid rgba(201,213,195,.18)}
   .feature-rows .kind{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#8fa38c}
   .feature-rows h3{color:var(--white);font-size:1.3rem;margin:0;letter-spacing:-.02em;transition:color .3s}
   .feature-rows p{margin:0;color:#cbd6c7;font-size:.97rem;max-width:44ch}
@@ -285,6 +285,18 @@
   .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
   .js .reveal.in{opacity:1;transform:none}
 
+  /* feature-sorok: görgetésre alulról becsúszó vázlatpontok */
+  .js .feature-rows li{border-bottom-color:transparent}
+  .js .feature-rows li::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:rgba(201,213,195,.18);transform:scaleX(0);transform-origin:left center;transition:transform 1.2s var(--ease) calc(var(--d, 0s) + .25s)}
+  .js .feature-rows li.in::after{transform:scaleX(1)}
+  .js .feature-rows li.reveal{--d:0s;opacity:0;transform:translateY(90px);transition:opacity .8s var(--ease) var(--d),transform 1.1s var(--ease) var(--d)}
+  .js .feature-rows li.reveal.in{opacity:1;transform:none}
+  .js .feature-rows li.reveal > *{opacity:0;transform:translateY(34px);transition:opacity .7s var(--ease),transform .9s var(--ease),color .3s}
+  .js .feature-rows li.reveal > :nth-child(1){transition-delay:calc(var(--d) + .1s),calc(var(--d) + .1s),0s}
+  .js .feature-rows li.reveal > :nth-child(2){transition-delay:calc(var(--d) + .22s),calc(var(--d) + .22s),0s}
+  .js .feature-rows li.reveal > :nth-child(3){transition-delay:calc(var(--d) + .34s),calc(var(--d) + .34s),0s}
+  .js .feature-rows li.reveal.in > *{opacity:1;transform:none}
+
   @media (min-width:768px){
     .wrap{padding:0 40px}
     .announcement-bar ul{gap:4px 40px}
@@ -343,6 +355,8 @@
     html{scroll-behavior:auto}
     *,*::before,*::after{transition:none !important;animation:none !important}
     .js .reveal{opacity:1;transform:none}
+    .js .feature-rows li.reveal,.js .feature-rows li.reveal > *{opacity:1;transform:none}
+    .js .feature-rows li::after{transform:scaleX(1)}
     .hero-media img{transform:none}
     .gallery-grid li:hover img,.intro-media:hover .intro-parallax img,.features-photo:hover img{transform:none}
     .js .hero-media,.js .band-media,.js .intro-parallax{inset:0;transform:none !important}
@@ -660,6 +674,9 @@
 
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var items = document.querySelectorAll('.reveal');
+    var rows = [], others = [];
+    items.forEach(function(el){ (el.closest('.feature-rows') ? rows : others).push(el); });
+
     if (reduce || !('IntersectionObserver' in window)) {
       items.forEach(function(el){ el.classList.add('in'); });
     } else {
@@ -668,7 +685,19 @@
           if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
         });
       }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
-      items.forEach(function(el){ io.observe(el); });
+      others.forEach(function(el){ io.observe(el); });
+
+      /* feature-sorok: alulról becsúszás, egyszerre látható soroknál lépcsőzetesen */
+      var rowIo = new IntersectionObserver(function(entries){
+        var visible = entries.filter(function(en){ return en.isIntersecting; });
+        visible.sort(function(a,b){ return a.boundingClientRect.top - b.boundingClientRect.top; });
+        visible.forEach(function(en, i){
+          en.target.style.setProperty('--d', (i * 0.15).toFixed(2) + 's');
+          en.target.classList.add('in');
+          rowIo.unobserve(en.target);
+        });
+      }, {threshold:0.2, rootMargin:'0px 0px -60px 0px'});
+      rows.forEach(function(el){ rowIo.observe(el); });
     }
 
     var cta = document.getElementById('mobile-cta');
