@@ -224,6 +224,7 @@
   /* inquiry */
   .inquiry{padding:80px 0}
   .inquiry-grid{display:grid;gap:36px}
+  .inquiry-grid > *{min-width:0}
   .inquiry h2{font-size:clamp(2.1rem,5vw,3.4rem);max-width:12ch}
   .inquiry h2 em{color:var(--green-600)}
   .inquiry-text p{color:var(--ink-soft);max-width:42ch}
@@ -232,15 +233,22 @@
   .tel-card .ic{width:48px;height:48px;border-radius:50%;background:var(--brass-light);color:var(--green-950);display:grid;place-items:center;flex:none}
   .tel-card small{display:block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-light);font-weight:700}
   .tel-card strong{font-family:var(--sans);font-weight:700;font-size:clamp(1.35rem,4vw,1.8rem);letter-spacing:-.02em}
-  form{display:grid;gap:18px;background:var(--card);padding:26px;border-radius:var(--r-lg);box-shadow:var(--shadow)}
-  .form-row{display:grid;gap:18px}
+  form{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;background:var(--card);padding:22px;border-radius:var(--r-lg);box-shadow:var(--shadow);min-width:0;overflow:hidden}
+  form > div,.form-row > div{min-width:0}
+  .form-row{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
   label{display:block;font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:8px}
-  input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--paper);border:1px solid transparent;border-radius:var(--r-sm);padding:14px 16px;transition:border-color .2s,background .2s,box-shadow .2s}
+  input,select,textarea{display:block;width:100%;max-width:100%;min-width:0;font:inherit;color:var(--ink);background:var(--paper);border:1px solid transparent;border-radius:var(--r-sm);padding:14px 16px;transition:border-color .2s,background .2s,box-shadow .2s}
+  /* dátummezők: mobilon (főleg iOS Safarin) ne lógjanak ki a fehér blokkból */
+  input[type="date"]{-webkit-appearance:none;appearance:none;min-height:54px;line-height:1.4;text-align:left;position:relative}
+  input[type="date"]::-webkit-date-and-time-value{text-align:left;margin:0;min-height:1.4em}
+  input[type="date"]::-webkit-datetime-edit{padding:0}
+  input[type="date"]::-webkit-calendar-picker-indicator{cursor:pointer;opacity:.6}
   input:hover,textarea:hover{border-color:rgba(20,28,23,.18)}
   input:focus,textarea:focus{outline:none;background:var(--white);border-color:var(--green-600);box-shadow:0 0 0 4px rgba(59,109,75,.15)}
   textarea{min-height:120px;resize:vertical}
   form .btn{width:100%;padding:17px 26px}
   .form-note{font-size:.84rem;color:var(--ink-soft);margin:0;text-align:center}
+  .field-hint{display:block;margin-top:6px;font-size:.76rem;color:var(--ink-soft)}
 
   /* contact */
   .contact-shell{padding:0 10px}
@@ -310,7 +318,7 @@
     .gallery-grid li:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
     .review-grid{display:block;columns:2;column-gap:16px}
     .review{margin-bottom:16px}
-    .form-row{grid-template-columns:1fr 1fr}
+    .form-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
     form{padding:38px}
     .contact-grid{grid-template-columns:1fr 1.25fr;gap:56px;align-items:stretch}
     .map,.map iframe{min-height:460px;height:100%}
@@ -569,11 +577,13 @@
         <div class="form-row">
           <div>
             <label for="f-erk">Érkezés</label>
-            <input id="f-erk" name="erkezes" type="date" required>
+            <input id="f-erk" name="erkezes" type="date" required aria-describedby="f-erk-hint">
+            <span class="field-hint" id="f-erk-hint">Koppintson a dátum kiválasztásához</span>
           </div>
           <div>
             <label for="f-tav">Távozás</label>
-            <input id="f-tav" name="tavozas" type="date" required>
+            <input id="f-tav" name="tavozas" type="date" required aria-describedby="f-tav-hint">
+            <span class="field-hint" id="f-tav-hint">Koppintson a dátum kiválasztásához</span>
           </div>
         </div>
         <div>
@@ -729,6 +739,30 @@
 
     var form = document.getElementById('inquiry-form');
     var note = document.getElementById('form-note');
+
+    /* dátummezők: alapértelmezett érték (ma / holnap), hogy mobilon is látszódjon, hogy dátumot kell megadni */
+    function pad(n){ return (n < 10 ? '0' : '') + n; }
+    function ymd(d){ return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+    function addDays(str, n){
+      var p = str.split('-');
+      var d = new Date(+p[0], +p[1] - 1, +p[2]);
+      d.setDate(d.getDate() + n);
+      return ymd(d);
+    }
+    var erkInput = form.erkezes;
+    var tavInput = form.tavozas;
+    var today = ymd(new Date());
+    erkInput.min = today;
+    if (!erkInput.value) erkInput.value = today;
+    tavInput.min = addDays(erkInput.value, 1);
+    if (!tavInput.value) tavInput.value = addDays(erkInput.value, 1);
+    erkInput.addEventListener('change', function(){
+      if (!erkInput.value) return;
+      var minTav = addDays(erkInput.value, 1);
+      tavInput.min = minTav;
+      if (!tavInput.value || tavInput.value <= erkInput.value) tavInput.value = minTav;
+    });
+
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var nev = form.nev.value.trim();
