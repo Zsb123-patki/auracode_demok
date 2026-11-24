@@ -124,14 +124,14 @@
 
   section{scroll-margin-top:96px}
 
-  /* hero – egységes betűtípus (DM Sans) */
-  .hero-shell{padding:0 10px;margin-top:-72px}
-  .hero{position:relative;min-height:92vh;min-height:92svh;display:flex;align-items:flex-end;color:var(--white);background:var(--green-800);overflow:hidden;border-radius:0 0 var(--r-lg) var(--r-lg);font-family:var(--sans)}
+  /* hero – egységes betűtípus (DM Sans), a header alatt, átfedés nélkül */
+  .hero-shell{padding:0 10px;margin-top:12px}
+  .hero{position:relative;min-height:calc(92vh - 90px);min-height:calc(92svh - 90px);display:flex;align-items:flex-end;color:var(--white);background:var(--green-800);overflow:hidden;border-radius:var(--r-lg);font-family:var(--sans)}
   .hero-media{position:absolute;inset:0}
   .hero-media img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:heroZoom 14s ease-out forwards}
   @keyframes heroZoom{to{transform:scale(1)}}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,14,.35) 0%,rgba(10,22,14,.1) 30%,rgba(10,22,14,.55) 65%,rgba(10,22,14,.92) 100%);z-index:1}
-  .hero-content{position:relative;z-index:2;padding-top:150px;padding-bottom:30px}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,14,.25) 0%,rgba(10,22,14,.1) 30%,rgba(10,22,14,.55) 65%,rgba(10,22,14,.92) 100%);z-index:1}
+  .hero-content{position:relative;z-index:2;padding-top:90px;padding-bottom:30px}
   .hero h1{font-family:var(--sans);font-size:clamp(2.4rem,8vw,5.4rem);max-width:13ch;margin-bottom:.35em;font-weight:700;letter-spacing:-.035em;line-height:1.02}
   .hero h1 em{font-family:var(--sans);font-style:normal;font-weight:700;color:var(--brass-light)}
   .hero p.lead{font-size:1.08rem;max-width:46ch;color:rgba(255,255,255,.88)}
@@ -286,9 +286,10 @@
     .announcement-bar li:not(:first-child){display:flex}
     .site-header{padding:0 16px}
     .hero-shell,.features-shell,.reviews-shell,.contact-shell{padding:0 16px}
+    .hero-shell{margin-top:14px}
     .band-shell{padding:110px 16px 0}
     .hero{border-radius:var(--r-lg)}
-    .hero-content{padding-bottom:48px}
+    .hero-content{padding-top:110px;padding-bottom:48px}
     .hero-chips{grid-template-columns:repeat(3,1fr);max-width:900px}
     .intro{padding:120px 0}
     .intro-grid{grid-template-columns:1.05fr 1fr;align-items:center;gap:72px}
@@ -551,7 +552,7 @@
         <h2 id="erdeklodes-title">Kérdezzen <em>szabad</em> időpontról.</h2>
         <p>Adja meg a tervezett dátumokat, és a gomb egy előre kitöltött SMS-t nyit meg a telefonján. Ha gyorsabb, hívjon minket közvetlenül.</p>
         <a class="tel-card" href="tel:+36304661846">
-          <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.920v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.270-1.270a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.920z"/></svg></span>
+          <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.920v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.630-3.070 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.120 4.180 2 2 0 0 1 4.110 2h3a2 2 0 0 1 2 1.720c.130.960.360 1.900.700 2.810a2 2 0 0 1-.450 2.110L8.090 9.910a16 16 0 0 0 6 6l1.270-1.270a2 2 0 0 1 2.110-.450c.910.340 1.850.570 2.810.700A2 2 0 0 1 22 16.920z"/></svg></span>
           <span><small>Hívjon minket</small><strong>+36 30 466 1846</strong></span>
         </a>
       </div>
