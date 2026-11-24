@@ -165,21 +165,26 @@
   .intro-media .tag{position:absolute;z-index:2;left:16px;bottom:16px;right:16px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);color:var(--green-900);padding:12px 16px;border-radius:999px;font-size:.88rem;font-weight:700;width:max-content;max-width:calc(100% - 32px)}
   .intro-media .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green-600);box-shadow:0 0 0 4px rgba(59,109,75,.2)}
 
-  /* features – bento */
+  /* features – szerkesztőségi elrendezés */
   .features-shell{padding:0 10px}
   .features{background:var(--green-900);color:var(--sage-light);padding:80px 0;border-radius:var(--r-lg);position:relative;overflow:hidden}
-  .features::before{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-200px;border-radius:50%;background:radial-gradient(circle,rgba(224,194,122,.16),transparent 65%);pointer-events:none}
-  .features-head{display:grid;gap:14px;margin-bottom:40px;position:relative}
-  .features h2{color:var(--white);font-size:clamp(2.1rem,5.5vw,3.6rem);max-width:13ch;margin:0}
-  .features-head p{color:#cbd6c7;max-width:42ch;margin:0}
-  .feature-list{list-style:none;margin:0;padding:0;display:grid;gap:14px;position:relative}
-  .feature-list li{padding:28px;border-radius:var(--r-md);background:rgba(255,255,255,.05);border:1px solid rgba(201,213,195,.14);transition:background .3s,border-color .3s,transform .3s var(--ease);display:flex;flex-direction:column}
-  .feature-list li:hover{background:rgba(255,255,255,.08);border-color:rgba(224,194,122,.35);transform:translateY(-3px)}
-  .feature-list .num{font-family:var(--sans);font-weight:700;color:var(--brass-light);font-size:.9rem;width:44px;height:44px;border-radius:50%;border:1px solid rgba(224,194,122,.4);display:grid;place-items:center;margin-bottom:28px}
-  .feature-list h3{color:var(--white);font-size:1.5rem;margin-bottom:.4em}
-  .feature-list p{margin:0;color:#cbd6c7;font-size:.97rem}
-  .feature-list li.highlight{background:linear-gradient(150deg,rgba(224,194,122,.22),rgba(224,194,122,.05));border-color:rgba(224,194,122,.35)}
-  .feature-list li.highlight p{font-family:var(--sans);font-style:normal;font-weight:500;font-size:1.15rem;color:var(--white);line-height:1.45}
+  .features-grid{display:grid;gap:48px}
+  .features-aside h2{color:var(--white);font-size:clamp(2.1rem,5.5vw,3.6rem);max-width:12ch;margin:0 0 20px}
+  .features-aside > p{color:#cbd6c7;max-width:38ch;margin:0}
+  .features-photo{margin:32px 0 0;position:relative;aspect-ratio:4/3;border-radius:var(--r-md);overflow:hidden;background:var(--green-800)}
+  .features-photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+  .features-photo:hover img{transform:scale(1.04)}
+  .features-quote{margin:0 0 8px;padding:0 0 40px;border-bottom:1px solid rgba(201,213,195,.18)}
+  .features-quote .eyebrow{display:block;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--brass-light);margin-bottom:14px}
+  .features-quote h3{color:var(--white);font-size:clamp(2rem,4.5vw,3rem);margin:0 0 22px;letter-spacing:-.035em}
+  .features-quote blockquote{margin:0;position:relative;padding-left:22px;border-left:2px solid var(--brass-light);font-size:clamp(1.2rem,2.4vw,1.55rem);line-height:1.4;font-weight:500;color:var(--white);max-width:30ch}
+  .features-quote cite{display:block;margin-top:14px;padding-left:24px;font-style:normal;font-size:.86rem;color:#a9b8a6}
+  .feature-rows{list-style:none;margin:0;padding:0}
+  .feature-rows li{display:grid;gap:6px;padding:26px 0;border-bottom:1px solid rgba(201,213,195,.18)}
+  .feature-rows .kind{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#8fa38c}
+  .feature-rows h3{color:var(--white);font-size:1.3rem;margin:0;letter-spacing:-.02em;transition:color .3s}
+  .feature-rows p{margin:0;color:#cbd6c7;font-size:.97rem;max-width:44ch}
+  .feature-rows li:hover h3{color:var(--brass-light)}
 
   /* band */
   .band-shell{padding:80px 10px 0}
@@ -294,8 +299,7 @@
     .intro{padding:120px 0}
     .intro-grid{grid-template-columns:1.05fr 1fr;align-items:center;gap:72px}
     .features{padding:110px 0}
-    .features-head{grid-template-columns:1fr 1fr;align-items:end}
-    .feature-list{grid-template-columns:1fr 1fr}
+    .feature-rows li{grid-template-columns:150px 1fr 1.2fr;gap:24px;align-items:baseline;padding:30px 0}
     .band-content{padding:130px 64px}
     .gallery,.inquiry{padding:120px 0}
     .reviews,.contact{padding:110px 0}
@@ -320,8 +324,10 @@
     .main-nav a{padding:9px 14px;font-size:.9rem;border-radius:999px}
     .main-nav .nav-call{margin:0 0 0 8px;padding:12px 20px}
     .main-nav .nav-call:hover{background:var(--green-700)}
-    .feature-list{grid-template-columns:repeat(3,1fr)}
-    .feature-list li.highlight{grid-column:span 2;grid-row:span 1}
+    .features-grid{grid-template-columns:5fr 7fr;gap:88px;align-items:start}
+    .features-aside{position:sticky;top:110px}
+    .features-photo{aspect-ratio:4/5;max-width:420px}
+    .feature-rows li{grid-template-columns:130px 1fr 1.3fr}
     .inquiry-grid{grid-template-columns:.9fr 1.15fr;gap:80px;align-items:center}
   }
   @media (min-width:1280px){
@@ -338,7 +344,7 @@
     *,*::before,*::after{transition:none !important;animation:none !important}
     .js .reveal{opacity:1;transform:none}
     .hero-media img{transform:none}
-    .gallery-grid li:hover img,.intro-media:hover .intro-parallax img{transform:none}
+    .gallery-grid li:hover img,.intro-media:hover .intro-parallax img,.features-photo:hover img{transform:none}
     .js .hero-media,.js .band-media,.js .intro-parallax{inset:0;transform:none !important}
     .js .hero-content{transform:none !important;opacity:1 !important}
   }
@@ -429,40 +435,44 @@
 
   <div class="features-shell">
     <section class="features on-dark" id="elmenyek" aria-labelledby="elmenyek-title">
-      <div class="wrap">
-        <div class="features-head reveal">
-          <div>
-            <h2 id="elmenyek-title">Pihenés a <em>saját</em> udvaron.</h2>
-          </div>
+      <div class="wrap features-grid">
+        <div class="features-aside reveal">
+          <h2 id="elmenyek-title">Pihenés a <em>saját</em> udvaron.</h2>
           <p>Egy kirándulás után nem kell messzire mennie a lazításért. Ezeket említik leggyakrabban a vendégek.</p>
+          <figure class="features-photo">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RjbFMrgGHdmJivVDkWqP1ag-y_cPqI3Glpy1GWLKILwbGtTna0MUTiTglDG6anJrr-QHlU68kxMOsv8JGbS6O-_vw586Nutap_A_pRyrVtpv-Pm6gw6A_ew5gW-6Um_wOQWjfhS7JPKFHw=w1920-h1080-k-no" alt="Részlet a Borka-land vendégházból" loading="lazy" onerror="imgFail(this)">
+          </figure>
         </div>
-        <ul class="feature-list">
-          <li class="reveal highlight">
-            <span class="num">01</span>
+        <div class="features-main">
+          <div class="features-quote reveal">
+            <span class="eyebrow">Vendégeink kedvence</span>
             <h3>Dézsafürdő</h3>
-            <p>Vendégeink kedvence: „A dézsa fürdő a legjobb, kár lenne kihagyni.”</p>
-          </li>
-          <li class="reveal">
-            <span class="num">02</span>
-            <h3>Medence és jakuzzi</h3>
-            <p>Frissülés és ellazulás, hogy a pihenés valóban pihenés legyen.</p>
-          </li>
-          <li class="reveal">
-            <span class="num">03</span>
-            <h3>Nagy kert, csendes környék</h3>
-            <p>Tágas udvar és nyugodt utca, ahol tényleg fel lehet töltődni.</p>
-          </li>
-          <li class="reveal" style="grid-column:auto">
-            <span class="num">04</span>
-            <h3>Jól felszerelt szállás</h3>
-            <p>Modern bútorok, kényelmes terek. Minden megvan, amire egy ott-tartózkodás alatt szükség lehet.</p>
-          </li>
-          <li class="reveal">
-            <span class="num">05</span>
-            <h3>Figyelmes vendéglátás</h3>
-            <p>A vendégek visszatérően kiemelik a kedves, segítőkész szállásadókat és a vendégváró tálat, borokat.</p>
-          </li>
-        </ul>
+            <blockquote>„A dézsa fürdő a legjobb, kár lenne kihagyni.”</blockquote>
+            <cite>G. F., Google-értékelés</cite>
+          </div>
+          <ul class="feature-rows">
+            <li class="reveal">
+              <span class="kind">Udvar</span>
+              <h3>Medence és jakuzzi</h3>
+              <p>Frissülés és ellazulás, hogy a pihenés valóban pihenés legyen.</p>
+            </li>
+            <li class="reveal">
+              <span class="kind">Környezet</span>
+              <h3>Nagy kert, csendes környék</h3>
+              <p>Tágas udvar és nyugodt utca, ahol tényleg fel lehet töltődni.</p>
+            </li>
+            <li class="reveal">
+              <span class="kind">A ház</span>
+              <h3>Jól felszerelt szállás</h3>
+              <p>Modern bútorok, kényelmes terek. Minden megvan, amire egy ott-tartózkodás alatt szükség lehet.</p>
+            </li>
+            <li class="reveal">
+              <span class="kind">Szállásadók</span>
+              <h3>Figyelmes vendéglátás</h3>
+              <p>A vendégek visszatérően kiemelik a kedves, segítőkész szállásadókat és a vendégváró tálat, borokat.</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </div>
